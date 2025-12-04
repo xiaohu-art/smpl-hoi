@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smpl-hoi"
+version = "0.1.0"
+description = "SMPL-HOI: Human-Object Interaction pipeline based on SMPL"
+authors = [
+    { name="Your Name", email="your.email@example.com" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+dependencies = []
+
+[tool.setuptools]
+packages = ["smpl_hoi"]
+
+[project.entry-points."active_adaptation.projects"]
+smpl_hoi = "smpl_hoi"
