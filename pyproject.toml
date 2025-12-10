@@ -17,7 +17,9 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent"
 ]
-dependencies = []
+dependencies = [
+    "joblib"
+]
 
 [tool.setuptools]
 packages = ["smpl_hoi"]
