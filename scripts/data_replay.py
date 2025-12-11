@@ -53,7 +53,7 @@ from isaaclab.utils.math import matrix_from_quat, quat_from_matrix, quat_unique,
 import active_adaptation as aa
 aa.set_backend("isaac")
 
-from smpl_hoi.smpl_hoi_asset import SMPL, LARGEBOX
+from smpl_hoi.asset import SMPL, LARGEBOX
 
 SMPLH_BONE_ORDER_NAMES = [
     "Pelvis",
@@ -495,7 +495,7 @@ def process_single_motion(sim: sim_utils.SimulationContext, scene: InteractiveSc
 
             log["bps_object_geo"] = motion.bps_object_geo.cpu().numpy().copy()
             print(f"[INFO]: Motion processed successfully")
-            # break
+            break
     
     return log
 

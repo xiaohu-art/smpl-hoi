@@ -1,2 +1,5 @@
-from . import smpl_hoi_asset
-from . import smpl_hoi_command
+from . import asset
+from . import command
+from . import observation
+from . import reward
+from . import termination
