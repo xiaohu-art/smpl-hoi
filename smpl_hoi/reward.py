@@ -44,3 +44,30 @@ class track_kp_ori(Reward[SMPLHOITask]):
         body_quat = self.robot.data.body_quat_w[:, self.key_body_ids, :]
         error = (quat_error_magnitude(ref_kp_quat, body_quat) ** 2).mean(-1, True)
         return torch.exp(-error)
+
+class track_obj_pos(Reward[SMPLHOITask]):
+    def __init__(self, env, weight: float = 1.0) -> None:
+        super().__init__(env, weight)
+        self.robot = self.command_manager.robot
+        self.object = self.command_manager.object
+
+    def compute(self) -> torch.Tensor:
+        t = self.env.episode_length_buf - 1
+        ref_obj_pos = self.command_manager.motion.object_pos_w[t]
+        ref_obj_pos.add_(self.command_manager.env_origin)
+        obj_pos = self.object.data.root_pos_w
+        error = ((ref_obj_pos - obj_pos)**2).sum(dim=-1).mean(-1, True)
+        return torch.exp(-error)
+
+class track_obj_ori(Reward[SMPLHOITask]):
+    def __init__(self, env, weight: float = 1.0) -> None:
+        super().__init__(env, weight)
+        self.robot = self.command_manager.robot
+        self.object = self.command_manager.object
+
+    def compute(self) -> torch.Tensor:
+        t = self.env.episode_length_buf - 1
+        ref_obj_quat = self.command_manager.motion.object_quat_w[t]
+        obj_quat = self.object.data.root_quat_w
+        error = (quat_error_magnitude(ref_obj_quat, obj_quat) ** 2).mean(-1, True)
+        return torch.exp(-error)

@@ -153,7 +153,8 @@ def set_points(pts_prim, points):
     pts_prim.GetPointsAttr().Set(arr)
 
 bps_points_prim = create_points_prim("/World/BPSPointCloud", point_size=0.04, color=(0.2, 0.9, 0.9))
-contact_body_points_prim = create_points_prim("/World/ContactBodyPoints", point_size=0.04, color=(0.9, 0.2, 0.9))
+contact_body_points_prim_pos = create_points_prim("/World/ContactBodyPointsPos", point_size=0.04, color=(0.2, 0.9, 0.2))
+contact_body_points_prim_neg = create_points_prim("/World/ContactBodyPointsNeg", point_size=0.08, color=(0.9, 0.2, 0.2))
 
 def render_bps_points(bps, bps_object_geo, obj_rot, obj_trans):
     """
@@ -174,9 +175,17 @@ def render_contact_body_points(body_pos_w, contact):
     body_pos_w: torch.Tensor, shape (N, 3)
     contact: torch.Tensor, shape (N)
     """
-    contact = contact.cpu().numpy().astype(bool)
-    contact_body_pos_w = body_pos_w[contact].cpu().numpy().copy()
-    set_points(contact_body_points_prim, contact_body_pos_w)
+    contact_np = contact.cpu().numpy()
+    
+    # Positive contacts (1)
+    mask_pos = (contact_np > 0.5)
+    points_pos = body_pos_w[mask_pos].cpu().numpy().copy() if mask_pos.any() else np.empty((0, 3))
+    set_points(contact_body_points_prim_pos, points_pos)
+
+    # Negative contacts (-1)
+    mask_neg = (contact_np < -0.5)
+    points_neg = body_pos_w[mask_neg].cpu().numpy().copy() if mask_neg.any() else np.empty((0, 3))
+    set_points(contact_body_points_prim_neg, points_neg)
 
 class MotionLoader:
     def __init__(
@@ -397,10 +406,10 @@ def process_single_motion(sim: sim_utils.SimulationContext, scene: InteractiveSc
         "body_quat_w": [],
         "body_lin_vel_w": [],
         "body_ang_vel_w": [],
-        "object_body_pos_w": [],
-        "object_body_quat_w": [],
-        "object_body_lin_vel_w": [],
-        "object_body_ang_vel_w": [],
+        "object_pos_w": [],
+        "object_quat_w": [],
+        "object_lin_vel_w": [],
+        "object_ang_vel_w": [],
         # ==== BPS Point Cloud ====
         "bps_object_geo": [],
         # ==== Contacts ====
@@ -470,10 +479,10 @@ def process_single_motion(sim: sim_utils.SimulationContext, scene: InteractiveSc
             log["body_quat_w"].append(robot.data.body_quat_w[0, :].cpu().numpy().copy())
             log["body_lin_vel_w"].append(robot.data.body_lin_vel_w[0, :].cpu().numpy().copy())
             log["body_ang_vel_w"].append(robot.data.body_ang_vel_w[0, :].cpu().numpy().copy())
-            log["object_body_pos_w"].append(object.data.body_pos_w[0, :].cpu().numpy().copy())
-            log["object_body_quat_w"].append(object.data.body_quat_w[0, :].cpu().numpy().copy())
-            log["object_body_lin_vel_w"].append(object.data.body_lin_vel_w[0, :].cpu().numpy().copy())
-            log["object_body_ang_vel_w"].append(object.data.body_ang_vel_w[0, :].cpu().numpy().copy())
+            log["object_pos_w"].append(object.data.root_pos_w[0, :].cpu().numpy().copy())
+            log["object_quat_w"].append(object.data.root_quat_w[0, :].cpu().numpy().copy())
+            log["object_lin_vel_w"].append(object.data.root_lin_vel_w[0, :].cpu().numpy().copy())
+            log["object_ang_vel_w"].append(object.data.root_ang_vel_w[0, :].cpu().numpy().copy())
             log["contact"].append(human_contact_reordered[0, :].cpu().numpy().copy().astype(bool))
 
         if reset_flag and not file_saved:
@@ -485,10 +494,10 @@ def process_single_motion(sim: sim_utils.SimulationContext, scene: InteractiveSc
                 "body_quat_w",
                 "body_lin_vel_w",
                 "body_ang_vel_w",
-                "object_body_pos_w",
-                "object_body_quat_w",
-                "object_body_lin_vel_w",
-                "object_body_ang_vel_w",
+                "object_pos_w",
+                "object_quat_w",
+                "object_lin_vel_w",
+                "object_ang_vel_w",
                 "contact",
             ):
                 log[k] = np.stack(log[k], axis=0)
