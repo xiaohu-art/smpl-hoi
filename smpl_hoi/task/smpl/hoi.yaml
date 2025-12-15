@@ -28,7 +28,7 @@ input:
     _target_: active_adaptation.envs.mdp.action.JointPosition
     action_scaling: {
       .*(Hip|Torso|Knee|Ankle|Shoulder|Elbow|Wrist).*: 0.5,
-      # .*(Index|Middle|Pinky|Ring|Thumb).*: 0.1,
+      .*(Index|Middle|Pinky|Ring|Thumb).*: 0.1,
     }
     alpha_range: [0.7, 0.9]
 
@@ -43,13 +43,6 @@ command:
               "L_Thorax", "L_Shoulder", "L_Elbow", "L_Wrist", 
               "R_Thorax", "R_Shoulder", "R_Elbow", "R_Wrist"
             ]
-  contact_body: [
-              "L_Hip", "L_Knee", "L_Ankle", "L_Toe", 
-              "R_Hip", "R_Knee", "R_Ankle", "R_Toe", 
-              "Torso", "Spine", "Chest", "Neck", "Head", 
-              "L_Thorax", "L_Shoulder", "L_Elbow", "L_Wrist", "L_Index3", "L_Middle3", "L_Pinky3", "L_Ring3","L_Thumb3", 
-              "R_Thorax", "R_Shoulder", "R_Elbow", "R_Wrist", "R_Index3", "R_Middle3", "R_Pinky3", "R_Ring3","R_Thumb3"
-              ]
 
 observation:
   policy:
@@ -67,17 +60,15 @@ observation:
     ref_obj_linvel_gap: {}
     ref_obj_angvel_gap: {}
 
-    interaction_guidance: {}
+    # interaction_guidance: {}
 
 reward:
   loco:
-    track_kp_pos:       {weight: 1.0}
-    track_kp_ori:       {weight: 1.0}
-
-    track_obj_pos:       {weight: 1.0}
-    track_obj_ori:       {weight: 1.0}
-
-    joint_acc_l2:       {weight: 1.0e-7}
+    track_kp:       {weight: 1.0}
+    track_obj:      {weight: 1.0}
+    track_cg:       {weight: 1.0}
+    
+    joint_acc_l2:   {weight: 1.0e-7}
 
 # randomization:
 #   reset_joint_states_uniform:
@@ -86,4 +77,7 @@ reward:
 #     rel: true
 
 termination:
-  max_timesteps: {}
+  max_timesteps:  {}
+  body_pos_reset: {}
+  obj_pos_reset:  {}
+  cg_reset:       {}

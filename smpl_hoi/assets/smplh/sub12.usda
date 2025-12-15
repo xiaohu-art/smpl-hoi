@@ -7,8 +7,8 @@
                 double radius = 5
             }
             dictionary Perspective = {
-                double3 position = (1.3314630067498432, 1.331463006749845, 1.3314630943113293)
-                double3 target = (-3.9780384986087824e-8, -3.9780382765641775e-8, 7.95607677517296e-8)
+                double3 position = (1.5198236391111166, 1.5198236391111184, 1.5198237221767683)
+                double3 target = (-3.978038565222164e-8, -3.9780383209730985e-8, 7.95607677517296e-8)
             }
             dictionary Right = {
                 double3 position = (0, -5, 0)
@@ -27,7 +27,7 @@
         }
     }
     defaultPrim = "sub12"
-    doc = """Generated from Composed Stage of root layer /home/ubuntu/Desktop/IsaacSim51/smpl-hoi/smpl_hoi/assets/sub12/sub12.usd
+    doc = """Generated from Composed Stage of root layer /home/ubuntu/Desktop/IsaacSim51/smpl-hoi/smpl_hoi/assets/smplh/sub12/sub12.usd
 """
     endTimeCode = 0
     metersPerUnit = 1
@@ -37,49 +37,26 @@
 
 over "Flattened_Prototype_1"
 {
-    def Xform "R_Index2" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
+    def Xform "L_Ring1"
     {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (-0.056868210434913635, 0, -0.058626994490623474, 0.9966588616371155)
+        quatd xformOp:orient = (0.9965766627254765, 0, 0.08116745982237367, 0.015709832375410508)
         double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.012450000271201134, -0.0013500000350177288, -0.00014999999257270247)
+        double3 xformOp:translate = (0.01575000025331974, 0.0004999999655410647, -0.0026499999221414328)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
-        def Capsule "R_Index2"
+        def Capsule "L_Ring1" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
         {
             uniform token axis = "X"
-            float3[] extent = [(-0.0156985, -0.0082, -0.0082), (0.0156985, 0.0082, 0.0082)]
-            double height = 0.014996999874711037
-            double radius = 0.008200000040233135
+            float3[] extent = [(-0.018480971, -0.0089, -0.0089), (0.018480971, 0.0089, 0.0089)]
+            double height = 0.01916194148361683
+            double radius = 0.008899999782443047
         }
     }
 }
 
 over "Flattened_Prototype_2"
-{
-    def Xform "Torso" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (0.7345722683048678, 0, -0.017968014851609784, 0.6782924791575482)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.006099999882280827, 0.0758500024676323, 0.0017999999690800905)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "Torso"
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.08327644, -0.0757, -0.0757), (0.08327644, 0.0757, 0.0757)]
-            double height = 0.015152890235185623
-            double radius = 0.07569999992847443
-        }
-    }
-}
-
-over "Flattened_Prototype_3"
 {
     def Xform "Head"
     {
@@ -98,454 +75,7 @@ over "Flattened_Prototype_3"
     }
 }
 
-over "Flattened_Prototype_4"
-{
-    def Xform "R_Ring2"
-    {
-        quatd xformOp:orient = (0.14783412218093872, 0, 0.9424552917480469, -0.29987213015556335)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.012550000101327896, -0.0012000000569969416, -0.003599999938160181)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "R_Ring2" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.016195092, -0.0083, -0.0083), (0.016195092, 0.0083, 0.0083)]
-            double height = 0.015790186822414398
-            double radius = 0.008299999870359898
-        }
-    }
-}
-
-over "Flattened_Prototype_5"
-{
-    def Xform "L_Thorax"
-    {
-        quatd xformOp:orient = (0.9729978686790771, 0, 0.061531817856343624, 0.22246118820759467)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.06469999998807907, 0.031300000846385956, -0.008700000122189522)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "L_Thorax" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.09152718, -0.0481, -0.0481), (0.09152718, 0.0481, 0.0481)]
-            double height = 0.08685436099767685
-            double radius = 0.04809999838471413
-        }
-    }
-}
-
-over "Flattened_Prototype_6"
-{
-    def Xform "R_Elbow" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (0.023862794041633606, 0, 0.9984362721443176, 0.05055374279618263)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.1379999965429306, 0.0004000000189989805, -0.006550000049173832)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "R_Elbow"
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.1269944, -0.0441, -0.0441), (0.1269944, 0.0441, 0.0441)]
-            double height = 0.16578881442546844
-            double radius = 0.04410000145435333
-        }
-    }
-}
-
-over "Flattened_Prototype_7"
-{
-    def Xform "Torso"
-    {
-        quatd xformOp:orient = (0.7345722683048678, 0, -0.017968014851609784, 0.6782924791575482)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.006099999882280827, 0.0758500024676323, 0.0017999999690800905)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "Torso" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.08327644, -0.0757, -0.0757), (0.08327644, 0.0757, 0.0757)]
-            double height = 0.015152890235185623
-            double radius = 0.07569999992847443
-        }
-    }
-}
-
-over "Flattened_Prototype_8"
-{
-    def Xform "R_Thorax"
-    {
-        quatd xformOp:orient = (0.2338610738515854, 0, 0.2095106989145279, 0.949428379535675)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.059800002723932266, 0.029899999499320984, -0.006550000049173832)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "R_Thorax" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.09710909, -0.0568, -0.0568), (0.09710909, 0.0568, 0.0568)]
-            double height = 0.08061817288398743
-            double radius = 0.0568000003695488
-        }
-    }
-}
-
-over "Flattened_Prototype_9"
-{
-    def Xform "Head" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (1, 0, 0, 0)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0, 0, 0)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Sphere "Head"
-        {
-            float3[] extent = [(-0.111, -0.111, -0.111), (0.111, 0.111, 0.111)]
-            double radius = 0.11100000143051147
-        }
-    }
-}
-
-over "Flattened_Prototype_10"
-{
-    def Xform "R_Ring3"
-    {
-        quatd xformOp:orient = (0.11310730129480362, 0, 0.9916479587554932, -0.06197800487279892)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.011549999937415123, -0.00020000000949949026, -0.0026000000070780516)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "R_Ring3" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.0138324965, -0.0067, -0.0067), (0.0138324965, 0.0067, 0.0067)]
-            double height = 0.01426499243825674
-            double radius = 0.0066999997943639755
-        }
-    }
-}
-
-over "Flattened_Prototype_11"
-{
-    def Xform "R_Pinky3" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (0.28139692544937134, 0, 0.959040641784668, -0.032509855926036835)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.007699999958276749, -0.00009999999747378752, -0.00494999997317791)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "R_Pinky3"
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.011065573, -0.0056, -0.0056), (0.011065573, 0.0056, 0.0056)]
-            double height = 0.010931147262454033
-            double radius = 0.00559999980032444
-        }
-    }
-}
-
-over "Flattened_Prototype_12"
-{
-    def Xform "R_Middle2"
-    {
-        quatd xformOp:orient = (0.10658076405525208, 0, 0.8577841520309448, -0.5028389692306519)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.01295000035315752, -0.0013500000350177288, -0.0024500000290572643)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "R_Middle2" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.015730165, -0.0078, -0.0078), (0.015730165, 0.0078, 0.0078)]
-            double height = 0.01586032845079899
-            double radius = 0.007799999788403511
-        }
-    }
-}
-
-over "Flattened_Prototype_13"
-{
-    def Xform "Neck" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (0.7593479162934494, 0, -0.06678523641827391, 0.6472484375932188)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.011799999512732029, 0.07594999670982361, 0.007899999618530273)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "Neck"
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.09123899, -0.0449, -0.0449), (0.09123899, 0.0449, 0.0449)]
-            double height = 0.09267798811197281
-            double radius = 0.04490000009536743
-        }
-    }
-}
-
-over "Flattened_Prototype_14"
-{
-    def Xform "L_Middle1" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (0.9976052425914776, 0, 0.0684697344819811, 0.009781391571605609)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.016850000247359276, 0.0003000000142492354, -0.002400000113993883)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "L_Middle1"
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.020848049, -0.0106, -0.0106), (0.020848049, 0.0106, 0.0106)]
-            double height = 0.020496098324656487
-            double radius = 0.010599999688565731
-        }
-    }
-}
-
-over "Flattened_Prototype_15"
-{
-    def Xform "Pelvis" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (1, 0, 0, 0)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0, 0, 0)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Sphere "Pelvis"
-        {
-            float3[] extent = [(-0.1044, -0.1044, -0.1044), (0.1044, 0.1044, 0.1044)]
-            double radius = 0.10440000146627426
-        }
-    }
-}
-
-over "Flattened_Prototype_16"
-{
-    def Xform "L_Hip" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (0.762141590744386, 0, 0.010747349654155657, -0.6473212106512461)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.03215000033378601, -0.19574999809265137, -0.0032500000670552254)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "L_Hip"
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.17883304, -0.0598, -0.0598), (0.17883304, 0.0598, 0.0598)]
-            double height = 0.23806609213352203
-            double radius = 0.05979999899864197
-        }
-    }
-}
-
-over "Flattened_Prototype_17"
-{
-    def Xform "L_Knee" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (-0.6643343567848206, 0, -0.07046355307102203, 0.7441067695617676)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.025100000202655792, -0.2121499925851822, -0.02005000039935112)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "L_Knee"
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.18540812, -0.0567, -0.0567), (0.18540812, 0.0567, 0.0567)]
-            double height = 0.2574162185192108
-            double radius = 0.056699998676776886
-        }
-    }
-}
-
-over "Flattened_Prototype_18"
-{
-    def Xform "L_Pinky1" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (0.9508774976920986, 0, 0.3058752385291702, -0.04766886631023184)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.008949999697506428, -0.0009999999310821295, -0.006350000388920307)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "L_Pinky1"
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.014018536, -0.0074, -0.0074), (0.014018536, 0.0074, 0.0074)]
-            double height = 0.01323707029223442
-            double radius = 0.007400000002235174
-        }
-    }
-}
-
-over "Flattened_Prototype_19"
-{
-    def Xform "L_Index1" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (0.9981472614739636, 0, -0.05394374885504803, 0.02814456040882738)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.01769999973475933, 0.0009999999310821295, 0.0019500000635161996)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "L_Index1"
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.02087907, -0.0102, -0.0102), (0.02087907, 0.0102, 0.0102)]
-            double height = 0.02135813795030117
-            double radius = 0.010200000368058681
-        }
-    }
-}
-
-over "Flattened_Prototype_20"
-{
-    def Xform "Chest" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (0.6907657384872437, 0, 0.11243358254432678, 0.71428382396698)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.00215000007301569, 0.05420000106096268, -0.008349999785423279)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "Chest"
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.111572206, -0.1061, -0.1061), (0.111572206, 0.1061, 0.1061)]
-            double height = 0.010944405570626259
-            double radius = 0.10610000044107437
-        }
-    }
-}
-
-over "Flattened_Prototype_21"
-{
-    def Xform "R_Ring1"
-    {
-        quatd xformOp:orient = (0.0826738104224205, 0, 0.9784189462661743, 0.18937142193317413)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.01575000025331974, 0.0004999999655410647, -0.0026499999221414328)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "R_Ring1" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.01858097, -0.009, -0.009), (0.01858097, 0.009, 0.009)]
-            double height = 0.01916194148361683
-            double radius = 0.008999999612569809
-        }
-    }
-}
-
-over "Flattened_Prototype_22"
-{
-    def Xform "L_Index2" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (0.9983816910021797, 0, 0.0033394193183419935, -0.05677012631633813)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.012450000271201134, -0.0013500000350177288, -0.00014999999257270247)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "L_Index2"
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.0156985, -0.0082, -0.0082), (0.0156985, 0.0082, 0.0082)]
-            double height = 0.014996999874711037
-            double radius = 0.008200000040233135
-        }
-    }
-}
-
-over "Flattened_Prototype_23"
-{
-    def Xform "R_Wrist" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (1, 0, 0, 0)
-        double3 xformOp:scale = (0.057100001722574234, 0.0066999997943639755, 0.05290000140666962)
-        double3 xformOp:translate = (-0.048900000751018524, -0.008200000040233135, -0.004000000189989805)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Cube "R_Wrist"
-        {
-            float3[] extent = [(-0.0571, -0.0067, -0.0529), (0.0571, 0.0067, 0.0529)]
-        }
-    }
-}
-
-over "Flattened_Prototype_24"
-{
-    def Xform "L_Pinky2"
-    {
-        quatd xformOp:orient = (0.9541576743560495, 0, 0.2936501131458413, -0.05790284131061107)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.008700000122189522, -0.0010999999940395355, -0.005950000137090683)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "L_Pinky2" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.013435021, -0.0071, -0.0071), (0.013435021, 0.0071, 0.0071)]
-            double height = 0.012670042924582958
-            double radius = 0.0071000000461936
-        }
-    }
-}
-
-over "Flattened_Prototype_25"
+over "Flattened_Prototype_3"
 {
     def Xform "L_Thumb3" (
         apiSchemas = ["MaterialBindingAPI"]
@@ -567,159 +97,47 @@ over "Flattened_Prototype_25"
     }
 }
 
-over "Flattened_Prototype_26"
+over "Flattened_Prototype_4"
 {
-    def Xform "R_Middle3" (
+    def Xform "R_Index2" (
         apiSchemas = ["MaterialBindingAPI"]
     )
     {
         rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (0.061604760587215424, 0, 0.9575433731079102, -0.28163042664527893)
+        quatd xformOp:orient = (-0.056868210434913635, 0, -0.058626994490623474, 0.9966588616371155)
         double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.011949999257922173, -0.00035000001662410796, -0.0014500000979751348)
+        double3 xformOp:translate = (-0.012450000271201134, -0.0013500000350177288, -0.00014999999257270247)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
-        def Capsule "R_Middle3"
+        def Capsule "R_Index2"
         {
             uniform token axis = "X"
-            float3[] extent = [(-0.014404685, -0.0072, -0.0072), (0.014404685, 0.0072, 0.0072)]
-            double height = 0.014409370720386505
-            double radius = 0.007199999876320362
+            float3[] extent = [(-0.0156985, -0.0082, -0.0082), (0.0156985, 0.0082, 0.0082)]
+            double height = 0.014996999874711037
+            double radius = 0.008200000040233135
         }
     }
 }
 
-over "Flattened_Prototype_27"
+over "Flattened_Prototype_5"
 {
-    def Xform "L_Ring2" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
+    def Xform "L_Ankle"
     {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (0.9890121643108031, 0, 0.14087498436549373, -0.044823859677736284)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.012550000101327896, -0.0012000000569969416, -0.003599999938160181)
+        quatd xformOp:orient = (1, 0, 0, 0)
+        double3 xformOp:scale = (0.05570000037550926, 0.022600000724196434, 0.0989999994635582)
+        double3 xformOp:translate = (0.023499999195337296, -0.031700000166893005, 0.07050000131130219)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
-        def Capsule "L_Ring2"
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.016195092, -0.0083, -0.0083), (0.016195092, 0.0083, 0.0083)]
-            double height = 0.015790186822414398
-            double radius = 0.008299999870359898
-        }
-    }
-}
-
-over "Flattened_Prototype_28"
-{
-    def Xform "Spine"
-    {
-        quatd xformOp:orient = (0.6474868059158325, 0, -0.27440521121025085, 0.7109588980674744)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.0050999997183680534, 0.02865000069141388, 0.011099999770522118)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "Spine" (
+        def Cube "L_Ankle" (
             apiSchemas = ["PhysicsCollisionAPI"]
         )
         {
-            uniform token axis = "X"
-            float3[] extent = [(-0.09349556, -0.0904, -0.0904), (0.09349556, 0.0904, 0.0904)]
-            double height = 0.006191122345626354
-            double radius = 0.09040000289678574
+            float3[] extent = [(-0.0557, -0.0226, -0.099), (0.0557, 0.0226, 0.099)]
         }
     }
 }
 
-over "Flattened_Prototype_29"
-{
-    def Xform "R_Thorax" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (0.2338610738515854, 0, 0.2095106989145279, 0.949428379535675)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.059800002723932266, 0.029899999499320984, -0.006550000049173832)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "R_Thorax"
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.09710909, -0.0568, -0.0568), (0.09710909, 0.0568, 0.0568)]
-            double height = 0.08061817288398743
-            double radius = 0.0568000003695488
-        }
-    }
-}
-
-over "Flattened_Prototype_30"
-{
-    def Xform "R_Ring3" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (0.11310730129480362, 0, 0.9916479587554932, -0.06197800487279892)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.011549999937415123, -0.00020000000949949026, -0.0026000000070780516)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "R_Ring3"
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.0138324965, -0.0067, -0.0067), (0.0138324965, 0.0067, 0.0067)]
-            double height = 0.01426499243825674
-            double radius = 0.0066999997943639755
-        }
-    }
-}
-
-over "Flattened_Prototype_31"
-{
-    def Xform "L_Ring2"
-    {
-        quatd xformOp:orient = (0.9890121643108031, 0, 0.14087498436549373, -0.044823859677736284)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.012550000101327896, -0.0012000000569969416, -0.003599999938160181)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "L_Ring2" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.016195092, -0.0083, -0.0083), (0.016195092, 0.0083, 0.0083)]
-            double height = 0.015790186822414398
-            double radius = 0.008299999870359898
-        }
-    }
-}
-
-over "Flattened_Prototype_32"
-{
-    def Xform "R_Shoulder" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (-0.10184653848409653, 0, -0.5464382171630859, 0.8312837481498718)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.13780000805854797, -0.023800000548362732, -0.015699999406933784)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "R_Shoulder"
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.137752, -0.0533, -0.0533), (0.137752, 0.0533, 0.0533)]
-            double height = 0.16890399158000946
-            double radius = 0.053300000727176666
-        }
-    }
-}
-
-over "Flattened_Prototype_33"
+over "Flattened_Prototype_6"
 {
     def Xform "R_Ring1" (
         apiSchemas = ["MaterialBindingAPI"]
@@ -741,449 +159,7 @@ over "Flattened_Prototype_33"
     }
 }
 
-over "Flattened_Prototype_34"
-{
-    def Xform "L_Elbow" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (0.998883368903108, 0, 0.0029107683736329516, 0.047154456267587616)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.14259999990463257, 0.013500000350177288, -0.000800000037997961)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "L_Elbow"
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.12898384, -0.043, -0.043), (0.12898384, 0.043, 0.043)]
-            double height = 0.17196767032146454
-            double radius = 0.0430000014603138
-        }
-    }
-}
-
-over "Flattened_Prototype_35"
-{
-    def Xform "L_Toe" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (1, 0, 0, 0)
-        double3 xformOp:scale = (0.05350000038743019, 0.009100000374019146, 0.05469999834895134)
-        double3 xformOp:translate = (-0.023499999195337296, 0.018300000578165054, 0.07150000333786011)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Cube "L_Toe"
-        {
-            float3[] extent = [(-0.0535, -0.0091, -0.0547), (0.0535, 0.0091, 0.0547)]
-        }
-    }
-}
-
-over "Flattened_Prototype_36"
-{
-    def Xform "R_Pinky1" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (0.3095674514770508, 0, 0.939536452293396, -0.14642125368118286)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.008949999697506428, -0.0009999999310821295, -0.006350000388920307)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "R_Pinky1"
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.014018536, -0.0074, -0.0074), (0.014018536, 0.0074, 0.0074)]
-            double height = 0.01323707029223442
-            double radius = 0.007400000002235174
-        }
-    }
-}
-
-over "Flattened_Prototype_37"
-{
-    def Xform "L_Thumb1" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (0.8753388894510735, 0, -0.4827041750378448, 0.027901972431794438)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.009150000289082527, 0.000800000037997961, 0.014449999667704105)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "L_Thumb1"
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.023735967, -0.0135, -0.0135), (0.023735967, 0.0135, 0.0135)]
-            double height = 0.020471932366490364
-            double radius = 0.013500000350177288
-        }
-    }
-}
-
-over "Flattened_Prototype_38"
-{
-    def Xform "Chest"
-    {
-        quatd xformOp:orient = (0.6907657384872437, 0, 0.11243358254432678, 0.71428382396698)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.00215000007301569, 0.05420000106096268, -0.008349999785423279)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "Chest" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.111572206, -0.1061, -0.1061), (0.111572206, 0.1061, 0.1061)]
-            double height = 0.010944405570626259
-            double radius = 0.10610000044107437
-        }
-    }
-}
-
-over "Flattened_Prototype_39"
-{
-    def Xform "R_Index3"
-    {
-        quatd xformOp:orient = (-0.043971020728349686, 0, 0.909485936164856, 0.4134027361869812)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.01145000010728836, -0.00035000001662410796, 0.0008499999530613422)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "R_Index3" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.014276591, -0.0074, -0.0074), (0.014276591, 0.0074, 0.0074)]
-            double height = 0.013753182254731655
-            double radius = 0.007400000002235174
-        }
-    }
-}
-
-over "Flattened_Prototype_40"
-{
-    def Xform "R_Pinky1"
-    {
-        quatd xformOp:orient = (0.3095674514770508, 0, 0.939536452293396, -0.14642125368118286)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.008949999697506428, -0.0009999999310821295, -0.006350000388920307)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "R_Pinky1" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.014018536, -0.0074, -0.0074), (0.014018536, 0.0074, 0.0074)]
-            double height = 0.01323707029223442
-            double radius = 0.007400000002235174
-        }
-    }
-}
-
-over "Flattened_Prototype_41"
-{
-    def Xform "L_Ring1"
-    {
-        quatd xformOp:orient = (0.9965766627254765, 0, 0.08116745982237367, 0.015709832375410508)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.01575000025331974, 0.0004999999655410647, -0.0026499999221414328)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "L_Ring1" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.018480971, -0.0089, -0.0089), (0.018480971, 0.0089, 0.0089)]
-            double height = 0.01916194148361683
-            double radius = 0.008899999782443047
-        }
-    }
-}
-
-over "Flattened_Prototype_42"
-{
-    def Xform "R_Index1" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (-0.06084444373846054, 0, 0.8849422335624695, -0.4617089331150055)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.01769999973475933, 0.0009999999310821295, 0.0019500000635161996)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "R_Index1"
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.02087907, -0.0102, -0.0102), (0.02087907, 0.0102, 0.0102)]
-            double height = 0.02135813795030117
-            double radius = 0.010200000368058681
-        }
-    }
-}
-
-over "Flattened_Prototype_43"
-{
-    def Xform "L_Thumb2"
-    {
-        quatd xformOp:orient = (0.9391188904203339, 0, -0.33025663097011165, -0.0947958872990218)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.011049999855458736, -0.0025500000920146704, 0.008999999612569809)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "L_Thumb2" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.019305456, -0.0106, -0.0106), (0.019305456, 0.0106, 0.0106)]
-            double height = 0.017410915344953537
-            double radius = 0.010599999688565731
-        }
-    }
-}
-
-over "Flattened_Prototype_44"
-{
-    def Xform "R_Hip" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (-0.6613003015518188, 0, -0.027701513841748238, 0.749609649181366)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.023599999025464058, -0.18719999492168427, -0.006949999835342169)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "R_Hip"
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.17287026, -0.0596, -0.0596), (0.17287026, 0.0596, 0.0596)]
-            double height = 0.22654052078723907
-            double radius = 0.05959999933838844
-        }
-    }
-}
-
-over "Flattened_Prototype_45"
-{
-    def Xform "R_Thumb1" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (-0.48350992798805237, 0, 0.87388014793396, -0.05051329731941223)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.009150000289082527, 0.000800000037997961, 0.014449999667704105)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "R_Thumb1"
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.023735967, -0.0135, -0.0135), (0.023735967, 0.0135, 0.0135)]
-            double height = 0.020471932366490364
-            double radius = 0.013500000350177288
-        }
-    }
-}
-
-over "Flattened_Prototype_46"
-{
-    def Xform "L_Ring3"
-    {
-        quatd xformOp:orient = (0.995288403863795, 0, 0.09676990183092403, -0.006048120261416653)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.01355000026524067, -0.00020000000949949026, -0.0026000000070780516)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "L_Ring3" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.014806173, -0.0065, -0.0065), (0.014806173, 0.0065, 0.0065)]
-            double height = 0.016612345352768898
-            double radius = 0.006500000134110451
-        }
-    }
-}
-
-over "Flattened_Prototype_47"
-{
-    def Xform "R_Pinky3"
-    {
-        quatd xformOp:orient = (0.28139692544937134, 0, 0.959040641784668, -0.032509855926036835)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.007699999958276749, -0.00009999999747378752, -0.00494999997317791)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "R_Pinky3" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.011065573, -0.0056, -0.0056), (0.011065573, 0.0056, 0.0056)]
-            double height = 0.010931147262454033
-            double radius = 0.00559999980032444
-        }
-    }
-}
-
-over "Flattened_Prototype_48"
-{
-    def Xform "L_Toe"
-    {
-        quatd xformOp:orient = (1, 0, 0, 0)
-        double3 xformOp:scale = (0.05350000038743019, 0.009100000374019146, 0.05469999834895134)
-        double3 xformOp:translate = (-0.023499999195337296, 0.018300000578165054, 0.07150000333786011)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Cube "L_Toe" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            float3[] extent = [(-0.0535, -0.0091, -0.0547), (0.0535, 0.0091, 0.0547)]
-        }
-    }
-}
-
-over "Flattened_Prototype_49"
-{
-    def Xform "R_Pinky2"
-    {
-        quatd xformOp:orient = (0.299304336309433, 0, 0.9361323118209839, -0.1845894604921341)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.008700000122189522, -0.0010999999940395355, -0.005950000137090683)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "R_Pinky2" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.013435021, -0.0071, -0.0071), (0.013435021, 0.0071, 0.0071)]
-            double height = 0.012670042924582958
-            double radius = 0.0071000000461936
-        }
-    }
-}
-
-over "Flattened_Prototype_50"
-{
-    def Xform "Pelvis"
-    {
-        quatd xformOp:orient = (1, 0, 0, 0)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0, 0, 0)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Sphere "Pelvis" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            float3[] extent = [(-0.1044, -0.1044, -0.1044), (0.1044, 0.1044, 0.1044)]
-            double radius = 0.10440000146627426
-        }
-    }
-}
-
-over "Flattened_Prototype_51"
-{
-    def Xform "Spine" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (0.6474868059158325, 0, -0.27440521121025085, 0.7109588980674744)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.0050999997183680534, 0.02865000069141388, 0.011099999770522118)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "Spine"
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.09349556, -0.0904, -0.0904), (0.09349556, 0.0904, 0.0904)]
-            double height = 0.006191122345626354
-            double radius = 0.09040000289678574
-        }
-    }
-}
-
-over "Flattened_Prototype_52"
-{
-    def Xform "L_Pinky3"
-    {
-        quatd xformOp:orient = (0.972426678549562, 0, 0.233074942045853, -0.00790084598241873)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.009700000286102295, -0.00009999999747378752, -0.00494999997317791)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "L_Pinky3" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.011907879, -0.0054, -0.0054), (0.011907879, 0.0054, 0.0054)]
-            double height = 0.01301575917750597
-            double radius = 0.005400000140070915
-        }
-    }
-}
-
-over "Flattened_Prototype_53"
-{
-    def Xform "L_Thorax" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (0.9729978686790771, 0, 0.061531817856343624, 0.22246118820759467)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.06469999998807907, 0.031300000846385956, -0.008700000122189522)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "L_Thorax"
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.09152718, -0.0481, -0.0481), (0.09152718, 0.0481, 0.0481)]
-            double height = 0.08685436099767685
-            double radius = 0.04809999838471413
-        }
-    }
-}
-
-over "Flattened_Prototype_54"
-{
-    def Xform "L_Middle2"
-    {
-        quatd xformOp:orient = (0.9943040508858394, 0, 0.09194699022724011, -0.053899959274548985)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.01295000035315752, -0.0013500000350177288, -0.0024500000290572643)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "L_Middle2" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.015730165, -0.0078, -0.0078), (0.015730165, 0.0078, 0.0078)]
-            double height = 0.01586032845079899
-            double radius = 0.007799999788403511
-        }
-    }
-}
-
-over "Flattened_Prototype_55"
+over "Flattened_Prototype_7"
 {
     def Xform "L_Ring3" (
         apiSchemas = ["MaterialBindingAPI"]
@@ -1205,7 +181,578 @@ over "Flattened_Prototype_55"
     }
 }
 
-over "Flattened_Prototype_56"
+over "Flattened_Prototype_8"
+{
+    def Xform "L_Index3"
+    {
+        quatd xformOp:orient = (0.9992986543582658, 0, -0.03408953844229361, -0.015495247794461816)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.013450000435113907, -0.00035000001662410796, 0.0008499999530613422)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "L_Index3" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.015172639, -0.0071, -0.0071), (0.015172639, 0.0071, 0.0071)]
+            double height = 0.01614527776837349
+            double radius = 0.0071000000461936
+        }
+    }
+}
+
+over "Flattened_Prototype_9"
+{
+    def Xform "L_Thorax" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (0.9729978686790771, 0, 0.061531817856343624, 0.22246118820759467)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.06469999998807907, 0.031300000846385956, -0.008700000122189522)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "L_Thorax"
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.09152718, -0.0481, -0.0481), (0.09152718, 0.0481, 0.0481)]
+            double height = 0.08685436099767685
+            double radius = 0.04809999838471413
+        }
+    }
+}
+
+over "Flattened_Prototype_10"
+{
+    def Xform "L_Hip" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (0.762141590744386, 0, 0.010747349654155657, -0.6473212106512461)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.03215000033378601, -0.19574999809265137, -0.0032500000670552254)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "L_Hip"
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.17883304, -0.0598, -0.0598), (0.17883304, 0.0598, 0.0598)]
+            double height = 0.23806609213352203
+            double radius = 0.05979999899864197
+        }
+    }
+}
+
+over "Flattened_Prototype_11"
+{
+    def Xform "R_Ring2" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (0.14783412218093872, 0, 0.9424552917480469, -0.29987213015556335)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.012550000101327896, -0.0012000000569969416, -0.003599999938160181)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "R_Ring2"
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.016195092, -0.0083, -0.0083), (0.016195092, 0.0083, 0.0083)]
+            double height = 0.015790186822414398
+            double radius = 0.008299999870359898
+        }
+    }
+}
+
+over "Flattened_Prototype_12"
+{
+    def Xform "L_Thumb2"
+    {
+        quatd xformOp:orient = (0.9391188904203339, 0, -0.33025663097011165, -0.0947958872990218)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.011049999855458736, -0.0025500000920146704, 0.008999999612569809)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "L_Thumb2" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.019305456, -0.0106, -0.0106), (0.019305456, 0.0106, 0.0106)]
+            double height = 0.017410915344953537
+            double radius = 0.010599999688565731
+        }
+    }
+}
+
+over "Flattened_Prototype_13"
+{
+    def Xform "R_Thorax"
+    {
+        quatd xformOp:orient = (0.2338610738515854, 0, 0.2095106989145279, 0.949428379535675)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.059800002723932266, 0.029899999499320984, -0.006550000049173832)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "R_Thorax" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.09710909, -0.0568, -0.0568), (0.09710909, 0.0568, 0.0568)]
+            double height = 0.08061817288398743
+            double radius = 0.0568000003695488
+        }
+    }
+}
+
+over "Flattened_Prototype_14"
+{
+    def Xform "R_Toe"
+    {
+        quatd xformOp:orient = (1, 0, 0, 0)
+        double3 xformOp:scale = (0.05350000038743019, 0.008899999782443047, 0.05469999834895134)
+        double3 xformOp:translate = (0.018400000408291817, 0.012900000438094139, 0.07500000298023224)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Cube "R_Toe" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            float3[] extent = [(-0.0535, -0.0089, -0.0547), (0.0535, 0.0089, 0.0547)]
+        }
+    }
+}
+
+over "Flattened_Prototype_15"
+{
+    def Xform "L_Wrist" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (1, 0, 0, 0)
+        double3 xformOp:scale = (0.05559999868273735, 0.006599999964237213, 0.05290000140666962)
+        double3 xformOp:translate = (0.04919999837875366, -0.006300000008195639, -0.0034000000450760126)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Cube "L_Wrist"
+        {
+            float3[] extent = [(-0.0556, -0.0066, -0.0529), (0.0556, 0.0066, 0.0529)]
+        }
+    }
+}
+
+over "Flattened_Prototype_16"
+{
+    def Xform "Head" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (1, 0, 0, 0)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Sphere "Head"
+        {
+            float3[] extent = [(-0.111, -0.111, -0.111), (0.111, 0.111, 0.111)]
+            double radius = 0.11100000143051147
+        }
+    }
+}
+
+over "Flattened_Prototype_17"
+{
+    def Xform "L_Pinky3" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (0.972426678549562, 0, 0.233074942045853, -0.00790084598241873)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.009700000286102295, -0.00009999999747378752, -0.00494999997317791)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "L_Pinky3"
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.011907879, -0.0054, -0.0054), (0.011907879, 0.0054, 0.0054)]
+            double height = 0.01301575917750597
+            double radius = 0.005400000140070915
+        }
+    }
+}
+
+over "Flattened_Prototype_18"
+{
+    def Xform "Spine" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (0.6474868059158325, 0, -0.27440521121025085, 0.7109588980674744)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.0050999997183680534, 0.02865000069141388, 0.011099999770522118)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "Spine"
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.09349556, -0.0904, -0.0904), (0.09349556, 0.0904, 0.0904)]
+            double height = 0.006191122345626354
+            double radius = 0.09040000289678574
+        }
+    }
+}
+
+over "Flattened_Prototype_19"
+{
+    def Xform "R_Thumb3" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (-0.38362598419189453, 0, 0.9121261239051819, 0.14441995322704315)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.010050000622868538, -0.0015499999281018972, 0.010000000707805157)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "R_Thumb3"
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.018473506, -0.0099, -0.0099), (0.018473506, 0.0099, 0.0099)]
+            double height = 0.017147012054920197
+            double radius = 0.00989999994635582
+        }
+    }
+}
+
+over "Flattened_Prototype_20"
+{
+    def Xform "L_Ring2" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (0.9890121643108031, 0, 0.14087498436549373, -0.044823859677736284)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.012550000101327896, -0.0012000000569969416, -0.003599999938160181)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "L_Ring2"
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.016195092, -0.0083, -0.0083), (0.016195092, 0.0083, 0.0083)]
+            double height = 0.015790186822414398
+            double radius = 0.008299999870359898
+        }
+    }
+}
+
+over "Flattened_Prototype_21"
+{
+    def Xform "R_Pinky2"
+    {
+        quatd xformOp:orient = (0.299304336309433, 0, 0.9361323118209839, -0.1845894604921341)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.008700000122189522, -0.0010999999940395355, -0.005950000137090683)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "R_Pinky2" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.013435021, -0.0071, -0.0071), (0.013435021, 0.0071, 0.0071)]
+            double height = 0.012670042924582958
+            double radius = 0.0071000000461936
+        }
+    }
+}
+
+over "Flattened_Prototype_22"
+{
+    def Xform "L_Elbow" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (0.998883368903108, 0, 0.0029107683736329516, 0.047154456267587616)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.14259999990463257, 0.013500000350177288, -0.000800000037997961)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "L_Elbow"
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.12898384, -0.043, -0.043), (0.12898384, 0.043, 0.043)]
+            double height = 0.17196767032146454
+            double radius = 0.0430000014603138
+        }
+    }
+}
+
+over "Flattened_Prototype_23"
+{
+    def Xform "R_Middle2"
+    {
+        quatd xformOp:orient = (0.10658076405525208, 0, 0.8577841520309448, -0.5028389692306519)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.01295000035315752, -0.0013500000350177288, -0.0024500000290572643)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "R_Middle2" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.015730165, -0.0078, -0.0078), (0.015730165, 0.0078, 0.0078)]
+            double height = 0.01586032845079899
+            double radius = 0.007799999788403511
+        }
+    }
+}
+
+over "Flattened_Prototype_24"
+{
+    def Xform "R_Thumb2"
+    {
+        quatd xformOp:orient = (-0.3435923159122467, 0, 0.9026692509651184, 0.2590995132923126)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.011049999855458736, -0.0025500000920146704, 0.008999999612569809)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "R_Thumb2" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.019305456, -0.0106, -0.0106), (0.019305456, 0.0106, 0.0106)]
+            double height = 0.017410915344953537
+            double radius = 0.010599999688565731
+        }
+    }
+}
+
+over "Flattened_Prototype_25"
+{
+    def Xform "R_Middle1"
+    {
+        quatd xformOp:orient = (0.06886578351259232, 0, 0.991948664188385, 0.10628021508455276)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.016850000247359276, 0.00024999998277053237, -0.002400000113993883)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "R_Middle1" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.020847194, -0.0106, -0.0106), (0.020847194, 0.0106, 0.0106)]
+            double height = 0.02049439027905464
+            double radius = 0.010599999688565731
+        }
+    }
+}
+
+over "Flattened_Prototype_26"
+{
+    def Xform "L_Thorax"
+    {
+        quatd xformOp:orient = (0.9729978686790771, 0, 0.061531817856343624, 0.22246118820759467)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.06469999998807907, 0.031300000846385956, -0.008700000122189522)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "L_Thorax" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.09152718, -0.0481, -0.0481), (0.09152718, 0.0481, 0.0481)]
+            double height = 0.08685436099767685
+            double radius = 0.04809999838471413
+        }
+    }
+}
+
+over "Flattened_Prototype_27"
+{
+    def Xform "R_Middle3"
+    {
+        quatd xformOp:orient = (0.061604760587215424, 0, 0.9575433731079102, -0.28163042664527893)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.011949999257922173, -0.00035000001662410796, -0.0014500000979751348)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "R_Middle3" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.014404685, -0.0072, -0.0072), (0.014404685, 0.0072, 0.0072)]
+            double height = 0.014409370720386505
+            double radius = 0.007199999876320362
+        }
+    }
+}
+
+over "Flattened_Prototype_28"
+{
+    def Xform "L_Index2" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (0.9983816910021797, 0, 0.0033394193183419935, -0.05677012631633813)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.012450000271201134, -0.0013500000350177288, -0.00014999999257270247)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "L_Index2"
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.0156985, -0.0082, -0.0082), (0.0156985, 0.0082, 0.0082)]
+            double height = 0.014996999874711037
+            double radius = 0.008200000040233135
+        }
+    }
+}
+
+over "Flattened_Prototype_29"
+{
+    def Xform "R_Wrist" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (1, 0, 0, 0)
+        double3 xformOp:scale = (0.057100001722574234, 0.0066999997943639755, 0.05290000140666962)
+        double3 xformOp:translate = (-0.048900000751018524, -0.008200000040233135, -0.004000000189989805)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Cube "R_Wrist"
+        {
+            float3[] extent = [(-0.0571, -0.0067, -0.0529), (0.0571, 0.0067, 0.0529)]
+        }
+    }
+}
+
+over "Flattened_Prototype_30"
+{
+    def Xform "L_Thumb1" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (0.8753388894510735, 0, -0.4827041750378448, 0.027901972431794438)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.009150000289082527, 0.000800000037997961, 0.014449999667704105)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "L_Thumb1"
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.023735967, -0.0135, -0.0135), (0.023735967, 0.0135, 0.0135)]
+            double height = 0.020471932366490364
+            double radius = 0.013500000350177288
+        }
+    }
+}
+
+over "Flattened_Prototype_31"
+{
+    def Xform "L_Thumb2" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (0.9391188904203339, 0, -0.33025663097011165, -0.0947958872990218)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.011049999855458736, -0.0025500000920146704, 0.008999999612569809)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "L_Thumb2"
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.019305456, -0.0106, -0.0106), (0.019305456, 0.0106, 0.0106)]
+            double height = 0.017410915344953537
+            double radius = 0.010599999688565731
+        }
+    }
+}
+
+over "Flattened_Prototype_32"
+{
+    def Xform "R_Index1" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (-0.06084444373846054, 0, 0.8849422335624695, -0.4617089331150055)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.01769999973475933, 0.0009999999310821295, 0.0019500000635161996)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "R_Index1"
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.02087907, -0.0102, -0.0102), (0.02087907, 0.0102, 0.0102)]
+            double height = 0.02135813795030117
+            double radius = 0.010200000368058681
+        }
+    }
+}
+
+over "Flattened_Prototype_33"
+{
+    def Xform "Chest"
+    {
+        quatd xformOp:orient = (0.6907657384872437, 0, 0.11243358254432678, 0.71428382396698)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.00215000007301569, 0.05420000106096268, -0.008349999785423279)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "Chest" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.111572206, -0.1061, -0.1061), (0.111572206, 0.1061, 0.1061)]
+            double height = 0.010944405570626259
+            double radius = 0.10610000044107437
+        }
+    }
+}
+
+over "Flattened_Prototype_34"
+{
+    def Xform "L_Knee"
+    {
+        quatd xformOp:orient = (-0.6643343567848206, 0, -0.07046355307102203, 0.7441067695617676)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.025100000202655792, -0.2121499925851822, -0.02005000039935112)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "L_Knee" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.18540812, -0.0567, -0.0567), (0.18540812, 0.0567, 0.0567)]
+            double height = 0.2574162185192108
+            double radius = 0.056699998676776886
+        }
+    }
+}
+
+over "Flattened_Prototype_35"
 {
     def Xform "L_Elbow"
     {
@@ -1226,92 +773,110 @@ over "Flattened_Prototype_56"
     }
 }
 
-over "Flattened_Prototype_57"
+over "Flattened_Prototype_36"
 {
-    def Xform "R_Hip"
-    {
-        quatd xformOp:orient = (-0.6613003015518188, 0, -0.027701513841748238, 0.749609649181366)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.023599999025464058, -0.18719999492168427, -0.006949999835342169)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "R_Hip" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.17287026, -0.0596, -0.0596), (0.17287026, 0.0596, 0.0596)]
-            double height = 0.22654052078723907
-            double radius = 0.05959999933838844
-        }
-    }
-}
-
-over "Flattened_Prototype_58"
-{
-    def Xform "L_Index3" (
+    def Xform "Torso" (
         apiSchemas = ["MaterialBindingAPI"]
     )
     {
         rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (0.9992986543582658, 0, -0.03408953844229361, -0.015495247794461816)
+        quatd xformOp:orient = (0.7345722683048678, 0, -0.017968014851609784, 0.6782924791575482)
         double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.013450000435113907, -0.00035000001662410796, 0.0008499999530613422)
+        double3 xformOp:translate = (0.006099999882280827, 0.0758500024676323, 0.0017999999690800905)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
-        def Capsule "L_Index3"
+        def Capsule "Torso"
         {
             uniform token axis = "X"
-            float3[] extent = [(-0.015172639, -0.0071, -0.0071), (0.015172639, 0.0071, 0.0071)]
-            double height = 0.01614527776837349
-            double radius = 0.0071000000461936
+            float3[] extent = [(-0.08327644, -0.0757, -0.0757), (0.08327644, 0.0757, 0.0757)]
+            double height = 0.015152890235185623
+            double radius = 0.07569999992847443
         }
     }
 }
 
-over "Flattened_Prototype_59"
+over "Flattened_Prototype_37"
 {
-    def Xform "R_Thumb1"
+    def Xform "R_Shoulder" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
     {
-        quatd xformOp:orient = (-0.48350992798805237, 0, 0.87388014793396, -0.05051329731941223)
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (-0.10184653848409653, 0, -0.5464382171630859, 0.8312837481498718)
         double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.009150000289082527, 0.000800000037997961, 0.014449999667704105)
+        double3 xformOp:translate = (-0.13780000805854797, -0.023800000548362732, -0.015699999406933784)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
-        def Capsule "R_Thumb1" (
+        def Capsule "R_Shoulder"
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.137752, -0.0533, -0.0533), (0.137752, 0.0533, 0.0533)]
+            double height = 0.16890399158000946
+            double radius = 0.053300000727176666
+        }
+    }
+}
+
+over "Flattened_Prototype_38"
+{
+    def Xform "L_Toe" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (1, 0, 0, 0)
+        double3 xformOp:scale = (0.05350000038743019, 0.009100000374019146, 0.05469999834895134)
+        double3 xformOp:translate = (-0.023499999195337296, 0.018300000578165054, 0.07150000333786011)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Cube "L_Toe"
+        {
+            float3[] extent = [(-0.0535, -0.0091, -0.0547), (0.0535, 0.0091, 0.0547)]
+        }
+    }
+}
+
+over "Flattened_Prototype_39"
+{
+    def Xform "L_Index1" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (0.9981472614739636, 0, -0.05394374885504803, 0.02814456040882738)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.01769999973475933, 0.0009999999310821295, 0.0019500000635161996)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "L_Index1"
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.02087907, -0.0102, -0.0102), (0.02087907, 0.0102, 0.0102)]
+            double height = 0.02135813795030117
+            double radius = 0.010200000368058681
+        }
+    }
+}
+
+over "Flattened_Prototype_40"
+{
+    def Xform "L_Toe"
+    {
+        quatd xformOp:orient = (1, 0, 0, 0)
+        double3 xformOp:scale = (0.05350000038743019, 0.009100000374019146, 0.05469999834895134)
+        double3 xformOp:translate = (-0.023499999195337296, 0.018300000578165054, 0.07150000333786011)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Cube "L_Toe" (
             apiSchemas = ["PhysicsCollisionAPI"]
         )
         {
-            uniform token axis = "X"
-            float3[] extent = [(-0.023735967, -0.0135, -0.0135), (0.023735967, 0.0135, 0.0135)]
-            double height = 0.020471932366490364
-            double radius = 0.013500000350177288
+            float3[] extent = [(-0.0535, -0.0091, -0.0547), (0.0535, 0.0091, 0.0547)]
         }
     }
 }
 
-over "Flattened_Prototype_60"
-{
-    def Xform "L_Shoulder"
-    {
-        quatd xformOp:orient = (0.9858098082899902, 0, 0.07925277160865957, -0.14797979514004594)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.12880000472068787, -0.039799999445676804, -0.021299999207258224)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "L_Shoulder" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.13611665, -0.0542, -0.0542), (0.13611665, 0.0542, 0.0542)]
-            double height = 0.16383332014083862
-            double radius = 0.05420000106096268
-        }
-    }
-}
-
-over "Flattened_Prototype_61"
+over "Flattened_Prototype_41"
 {
     def Xform "L_Index2"
     {
@@ -1332,51 +897,7 @@ over "Flattened_Prototype_61"
     }
 }
 
-over "Flattened_Prototype_62"
-{
-    def Xform "R_Index3" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (-0.043971020728349686, 0, 0.909485936164856, 0.4134027361869812)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.01145000010728836, -0.00035000001662410796, 0.0008499999530613422)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "R_Index3"
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.014276591, -0.0074, -0.0074), (0.014276591, 0.0074, 0.0074)]
-            double height = 0.013753182254731655
-            double radius = 0.007400000002235174
-        }
-    }
-}
-
-over "Flattened_Prototype_63"
-{
-    def Xform "R_Thumb2" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (-0.3435923159122467, 0, 0.9026692509651184, 0.2590995132923126)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.011049999855458736, -0.0025500000920146704, 0.008999999612569809)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "R_Thumb2"
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.019305456, -0.0106, -0.0106), (0.019305456, 0.0106, 0.0106)]
-            double height = 0.017410915344953537
-            double radius = 0.010599999688565731
-        }
-    }
-}
-
-over "Flattened_Prototype_64"
+over "Flattened_Prototype_42"
 {
     def Xform "L_Pinky2" (
         apiSchemas = ["MaterialBindingAPI"]
@@ -1398,22 +919,487 @@ over "Flattened_Prototype_64"
     }
 }
 
-over "Flattened_Prototype_65"
+over "Flattened_Prototype_43"
 {
-    def Xform "L_Index3"
+    def Xform "R_Pinky2" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
     {
-        quatd xformOp:orient = (0.9992986543582658, 0, -0.03408953844229361, -0.015495247794461816)
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (0.299304336309433, 0, 0.9361323118209839, -0.1845894604921341)
         double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.013450000435113907, -0.00035000001662410796, 0.0008499999530613422)
+        double3 xformOp:translate = (-0.008700000122189522, -0.0010999999940395355, -0.005950000137090683)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
-        def Capsule "L_Index3" (
+        def Capsule "R_Pinky2"
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.013435021, -0.0071, -0.0071), (0.013435021, 0.0071, 0.0071)]
+            double height = 0.012670042924582958
+            double radius = 0.0071000000461936
+        }
+    }
+}
+
+over "Flattened_Prototype_44"
+{
+    def Xform "L_Middle3"
+    {
+        quatd xformOp:orient = (0.9986034268446257, 0, 0.05068497614140525, -0.014907345759591682)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.013949999585747719, -0.00035000001662410796, -0.0014500000979751348)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "L_Middle3" (
             apiSchemas = ["PhysicsCollisionAPI"]
         )
         {
             uniform token axis = "X"
-            float3[] extent = [(-0.015172639, -0.0071, -0.0071), (0.015172639, 0.0071, 0.0071)]
-            double height = 0.01614527776837349
+            float3[] extent = [(-0.015296875, -0.0069, -0.0069), (0.015296875, 0.0069, 0.0069)]
+            double height = 0.0167937483638525
+            double radius = 0.006899999920278788
+        }
+    }
+}
+
+over "Flattened_Prototype_45"
+{
+    def Xform "R_Pinky1" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (0.3095674514770508, 0, 0.939536452293396, -0.14642125368118286)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.008949999697506428, -0.0009999999310821295, -0.006350000388920307)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "R_Pinky1"
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.014018536, -0.0074, -0.0074), (0.014018536, 0.0074, 0.0074)]
+            double height = 0.01323707029223442
+            double radius = 0.007400000002235174
+        }
+    }
+}
+
+over "Flattened_Prototype_46"
+{
+    def Xform "R_Ring3"
+    {
+        quatd xformOp:orient = (0.11310730129480362, 0, 0.9916479587554932, -0.06197800487279892)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.011549999937415123, -0.00020000000949949026, -0.0026000000070780516)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "R_Ring3" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.0138324965, -0.0067, -0.0067), (0.0138324965, 0.0067, 0.0067)]
+            double height = 0.01426499243825674
+            double radius = 0.0066999997943639755
+        }
+    }
+}
+
+over "Flattened_Prototype_47"
+{
+    def Xform "L_Ring2"
+    {
+        quatd xformOp:orient = (0.9890121643108031, 0, 0.14087498436549373, -0.044823859677736284)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.012550000101327896, -0.0012000000569969416, -0.003599999938160181)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "L_Ring2" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.016195092, -0.0083, -0.0083), (0.016195092, 0.0083, 0.0083)]
+            double height = 0.015790186822414398
+            double radius = 0.008299999870359898
+        }
+    }
+}
+
+over "Flattened_Prototype_48"
+{
+    def Xform "Pelvis" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (1, 0, 0, 0)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Sphere "Pelvis"
+        {
+            float3[] extent = [(-0.1044, -0.1044, -0.1044), (0.1044, 0.1044, 0.1044)]
+            double radius = 0.10440000146627426
+        }
+    }
+}
+
+over "Flattened_Prototype_49"
+{
+    def Xform "L_Thumb1"
+    {
+        quatd xformOp:orient = (0.8753388894510735, 0, -0.4827041750378448, 0.027901972431794438)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.009150000289082527, 0.000800000037997961, 0.014449999667704105)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "L_Thumb1" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.023735967, -0.0135, -0.0135), (0.023735967, 0.0135, 0.0135)]
+            double height = 0.020471932366490364
+            double radius = 0.013500000350177288
+        }
+    }
+}
+
+over "Flattened_Prototype_50"
+{
+    def Xform "Spine"
+    {
+        quatd xformOp:orient = (0.6474868059158325, 0, -0.27440521121025085, 0.7109588980674744)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.0050999997183680534, 0.02865000069141388, 0.011099999770522118)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "Spine" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.09349556, -0.0904, -0.0904), (0.09349556, 0.0904, 0.0904)]
+            double height = 0.006191122345626354
+            double radius = 0.09040000289678574
+        }
+    }
+}
+
+over "Flattened_Prototype_51"
+{
+    def Xform "R_Thumb1" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (-0.48350992798805237, 0, 0.87388014793396, -0.05051329731941223)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.009150000289082527, 0.000800000037997961, 0.014449999667704105)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "R_Thumb1"
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.023735967, -0.0135, -0.0135), (0.023735967, 0.0135, 0.0135)]
+            double height = 0.020471932366490364
+            double radius = 0.013500000350177288
+        }
+    }
+}
+
+over "Flattened_Prototype_52"
+{
+    def Xform "L_Shoulder"
+    {
+        quatd xformOp:orient = (0.9858098082899902, 0, 0.07925277160865957, -0.14797979514004594)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.12880000472068787, -0.039799999445676804, -0.021299999207258224)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "L_Shoulder" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.13611665, -0.0542, -0.0542), (0.13611665, 0.0542, 0.0542)]
+            double height = 0.16383332014083862
+            double radius = 0.05420000106096268
+        }
+    }
+}
+
+over "Flattened_Prototype_53"
+{
+    def Xform "L_Middle1" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (0.9976052425914776, 0, 0.0684697344819811, 0.009781391571605609)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.016850000247359276, 0.0003000000142492354, -0.002400000113993883)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "L_Middle1"
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.020848049, -0.0106, -0.0106), (0.020848049, 0.0106, 0.0106)]
+            double height = 0.020496098324656487
+            double radius = 0.010599999688565731
+        }
+    }
+}
+
+over "Flattened_Prototype_54"
+{
+    def Xform "R_Index2"
+    {
+        quatd xformOp:orient = (-0.056868210434913635, 0, -0.058626994490623474, 0.9966588616371155)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.012450000271201134, -0.0013500000350177288, -0.00014999999257270247)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "R_Index2" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.0156985, -0.0082, -0.0082), (0.0156985, 0.0082, 0.0082)]
+            double height = 0.014996999874711037
+            double radius = 0.008200000040233135
+        }
+    }
+}
+
+over "Flattened_Prototype_55"
+{
+    def Xform "R_Hip" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (-0.6613003015518188, 0, -0.027701513841748238, 0.749609649181366)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.023599999025464058, -0.18719999492168427, -0.006949999835342169)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "R_Hip"
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.17287026, -0.0596, -0.0596), (0.17287026, 0.0596, 0.0596)]
+            double height = 0.22654052078723907
+            double radius = 0.05959999933838844
+        }
+    }
+}
+
+over "Flattened_Prototype_56"
+{
+    def Xform "R_Knee"
+    {
+        quatd xformOp:orient = (0.7228565920174842, 0, 0.06074209420473249, -0.6883231298542143)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.009950000792741776, -0.21904999017715454, -0.019299998879432678)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "R_Knee" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.1883949, -0.0563, -0.0563), (0.1883949, 0.0563, 0.0563)]
+            double height = 0.26418980956077576
+            double radius = 0.056299999356269836
+        }
+    }
+}
+
+over "Flattened_Prototype_57"
+{
+    def Xform "R_Middle2" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (0.10658076405525208, 0, 0.8577841520309448, -0.5028389692306519)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.01295000035315752, -0.0013500000350177288, -0.0024500000290572643)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "R_Middle2"
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.015730165, -0.0078, -0.0078), (0.015730165, 0.0078, 0.0078)]
+            double height = 0.01586032845079899
+            double radius = 0.007799999788403511
+        }
+    }
+}
+
+over "Flattened_Prototype_58"
+{
+    def Xform "R_Hip"
+    {
+        quatd xformOp:orient = (-0.6613003015518188, 0, -0.027701513841748238, 0.749609649181366)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.023599999025464058, -0.18719999492168427, -0.006949999835342169)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "R_Hip" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.17287026, -0.0596, -0.0596), (0.17287026, 0.0596, 0.0596)]
+            double height = 0.22654052078723907
+            double radius = 0.05959999933838844
+        }
+    }
+}
+
+over "Flattened_Prototype_59"
+{
+    def Xform "L_Pinky3"
+    {
+        quatd xformOp:orient = (0.972426678549562, 0, 0.233074942045853, -0.00790084598241873)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.009700000286102295, -0.00009999999747378752, -0.00494999997317791)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "L_Pinky3" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.011907879, -0.0054, -0.0054), (0.011907879, 0.0054, 0.0054)]
+            double height = 0.01301575917750597
+            double radius = 0.005400000140070915
+        }
+    }
+}
+
+over "Flattened_Prototype_60"
+{
+    def Xform "L_Index1"
+    {
+        quatd xformOp:orient = (0.9981472614739636, 0, -0.05394374885504803, 0.02814456040882738)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.01769999973475933, 0.0009999999310821295, 0.0019500000635161996)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "L_Index1" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.02087907, -0.0102, -0.0102), (0.02087907, 0.0102, 0.0102)]
+            double height = 0.02135813795030117
+            double radius = 0.010200000368058681
+        }
+    }
+}
+
+over "Flattened_Prototype_61"
+{
+    def Xform "L_Hip"
+    {
+        quatd xformOp:orient = (0.762141590744386, 0, 0.010747349654155657, -0.6473212106512461)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.03215000033378601, -0.19574999809265137, -0.0032500000670552254)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "L_Hip" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.17883304, -0.0598, -0.0598), (0.17883304, 0.0598, 0.0598)]
+            double height = 0.23806609213352203
+            double radius = 0.05979999899864197
+        }
+    }
+}
+
+over "Flattened_Prototype_62"
+{
+    def Xform "R_Ring2"
+    {
+        quatd xformOp:orient = (0.14783412218093872, 0, 0.9424552917480469, -0.29987213015556335)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.012550000101327896, -0.0012000000569969416, -0.003599999938160181)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "R_Ring2" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.016195092, -0.0083, -0.0083), (0.016195092, 0.0083, 0.0083)]
+            double height = 0.015790186822414398
+            double radius = 0.008299999870359898
+        }
+    }
+}
+
+over "Flattened_Prototype_63"
+{
+    def Xform "R_Toe" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (1, 0, 0, 0)
+        double3 xformOp:scale = (0.05350000038743019, 0.008899999782443047, 0.05469999834895134)
+        double3 xformOp:translate = (0.018400000408291817, 0.012900000438094139, 0.07500000298023224)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Cube "R_Toe"
+        {
+            float3[] extent = [(-0.0535, -0.0089, -0.0547), (0.0535, 0.0089, 0.0547)]
+        }
+    }
+}
+
+over "Flattened_Prototype_64"
+{
+    def Xform "R_Pinky3"
+    {
+        quatd xformOp:orient = (0.28139692544937134, 0, 0.959040641784668, -0.032509855926036835)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.007699999958276749, -0.00009999999747378752, -0.00494999997317791)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "R_Pinky3" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.011065573, -0.0056, -0.0056), (0.011065573, 0.0056, 0.0056)]
+            double height = 0.010931147262454033
+            double radius = 0.00559999980032444
+        }
+    }
+}
+
+over "Flattened_Prototype_65"
+{
+    def Xform "L_Pinky2"
+    {
+        quatd xformOp:orient = (0.9541576743560495, 0, 0.2936501131458413, -0.05790284131061107)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.008700000122189522, -0.0010999999940395355, -0.005950000137090683)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "L_Pinky2" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.013435021, -0.0071, -0.0071), (0.013435021, 0.0071, 0.0071)]
+            double height = 0.012670042924582958
             double radius = 0.0071000000461936
         }
     }
@@ -1442,26 +1428,338 @@ over "Flattened_Prototype_66"
 
 over "Flattened_Prototype_67"
 {
-    def Xform "R_Shoulder"
+    def Xform "R_Index3" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
     {
-        quatd xformOp:orient = (-0.10184653848409653, 0, -0.5464382171630859, 0.8312837481498718)
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (-0.043971020728349686, 0, 0.909485936164856, 0.4134027361869812)
         double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.13780000805854797, -0.023800000548362732, -0.015699999406933784)
+        double3 xformOp:translate = (-0.01145000010728836, -0.00035000001662410796, 0.0008499999530613422)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
-        def Capsule "R_Shoulder" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
+        def Capsule "R_Index3"
         {
             uniform token axis = "X"
-            float3[] extent = [(-0.137752, -0.0533, -0.0533), (0.137752, 0.0533, 0.0533)]
-            double height = 0.16890399158000946
-            double radius = 0.053300000727176666
+            float3[] extent = [(-0.014276591, -0.0074, -0.0074), (0.014276591, 0.0074, 0.0074)]
+            double height = 0.013753182254731655
+            double radius = 0.007400000002235174
         }
     }
 }
 
 over "Flattened_Prototype_68"
+{
+    def Xform "R_Ankle" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (1, 0, 0, 0)
+        double3 xformOp:scale = (0.05570000037550926, 0.027000000700354576, 0.0989999994635582)
+        double3 xformOp:translate = (-0.018400000408291817, -0.031099999323487282, 0.07400000095367432)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Cube "R_Ankle"
+        {
+            float3[] extent = [(-0.0557, -0.027, -0.099), (0.0557, 0.027, 0.099)]
+        }
+    }
+}
+
+over "Flattened_Prototype_69"
+{
+    def Xform "R_Elbow"
+    {
+        quatd xformOp:orient = (0.023862794041633606, 0, 0.9984362721443176, 0.05055374279618263)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.1379999965429306, 0.0004000000189989805, -0.006550000049173832)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "R_Elbow" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.1269944, -0.0441, -0.0441), (0.1269944, 0.0441, 0.0441)]
+            double height = 0.16578881442546844
+            double radius = 0.04410000145435333
+        }
+    }
+}
+
+over "Flattened_Prototype_70"
+{
+    def Xform "L_Pinky1"
+    {
+        quatd xformOp:orient = (0.9508774976920986, 0, 0.3058752385291702, -0.04766886631023184)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.008949999697506428, -0.0009999999310821295, -0.006350000388920307)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "L_Pinky1" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.014018536, -0.0074, -0.0074), (0.014018536, 0.0074, 0.0074)]
+            double height = 0.01323707029223442
+            double radius = 0.007400000002235174
+        }
+    }
+}
+
+over "Flattened_Prototype_71"
+{
+    def Xform "R_Index3"
+    {
+        quatd xformOp:orient = (-0.043971020728349686, 0, 0.909485936164856, 0.4134027361869812)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.01145000010728836, -0.00035000001662410796, 0.0008499999530613422)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "R_Index3" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.014276591, -0.0074, -0.0074), (0.014276591, 0.0074, 0.0074)]
+            double height = 0.013753182254731655
+            double radius = 0.007400000002235174
+        }
+    }
+}
+
+over "Flattened_Prototype_72"
+{
+    def Xform "R_Pinky1"
+    {
+        quatd xformOp:orient = (0.3095674514770508, 0, 0.939536452293396, -0.14642125368118286)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.008949999697506428, -0.0009999999310821295, -0.006350000388920307)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "R_Pinky1" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.014018536, -0.0074, -0.0074), (0.014018536, 0.0074, 0.0074)]
+            double height = 0.01323707029223442
+            double radius = 0.007400000002235174
+        }
+    }
+}
+
+over "Flattened_Prototype_73"
+{
+    def Xform "L_Ankle" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (1, 0, 0, 0)
+        double3 xformOp:scale = (0.05570000037550926, 0.022600000724196434, 0.0989999994635582)
+        double3 xformOp:translate = (0.023499999195337296, -0.031700000166893005, 0.07050000131130219)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Cube "L_Ankle"
+        {
+            float3[] extent = [(-0.0557, -0.0226, -0.099), (0.0557, 0.0226, 0.099)]
+        }
+    }
+}
+
+over "Flattened_Prototype_74"
+{
+    def Xform "Chest" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (0.6907657384872437, 0, 0.11243358254432678, 0.71428382396698)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.00215000007301569, 0.05420000106096268, -0.008349999785423279)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "Chest"
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.111572206, -0.1061, -0.1061), (0.111572206, 0.1061, 0.1061)]
+            double height = 0.010944405570626259
+            double radius = 0.10610000044107437
+        }
+    }
+}
+
+over "Flattened_Prototype_75"
+{
+    def Xform "R_Index1"
+    {
+        quatd xformOp:orient = (-0.06084444373846054, 0, 0.8849422335624695, -0.4617089331150055)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.01769999973475933, 0.0009999999310821295, 0.0019500000635161996)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "R_Index1" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.02087907, -0.0102, -0.0102), (0.02087907, 0.0102, 0.0102)]
+            double height = 0.02135813795030117
+            double radius = 0.010200000368058681
+        }
+    }
+}
+
+over "Flattened_Prototype_76"
+{
+    def Xform "R_Ankle"
+    {
+        quatd xformOp:orient = (1, 0, 0, 0)
+        double3 xformOp:scale = (0.05570000037550926, 0.027000000700354576, 0.0989999994635582)
+        double3 xformOp:translate = (-0.018400000408291817, -0.031099999323487282, 0.07400000095367432)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Cube "R_Ankle" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            float3[] extent = [(-0.0557, -0.027, -0.099), (0.0557, 0.027, 0.099)]
+        }
+    }
+}
+
+over "Flattened_Prototype_77"
+{
+    def Xform "L_Middle2"
+    {
+        quatd xformOp:orient = (0.9943040508858394, 0, 0.09194699022724011, -0.053899959274548985)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.01295000035315752, -0.0013500000350177288, -0.0024500000290572643)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "L_Middle2" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.015730165, -0.0078, -0.0078), (0.015730165, 0.0078, 0.0078)]
+            double height = 0.01586032845079899
+            double radius = 0.007799999788403511
+        }
+    }
+}
+
+over "Flattened_Prototype_78"
+{
+    def Xform "Pelvis"
+    {
+        quatd xformOp:orient = (1, 0, 0, 0)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Sphere "Pelvis" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            float3[] extent = [(-0.1044, -0.1044, -0.1044), (0.1044, 0.1044, 0.1044)]
+            double radius = 0.10440000146627426
+        }
+    }
+}
+
+over "Flattened_Prototype_79"
+{
+    def Xform "Neck" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (0.7593479162934494, 0, -0.06678523641827391, 0.6472484375932188)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.011799999512732029, 0.07594999670982361, 0.007899999618530273)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "Neck"
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.09123899, -0.0449, -0.0449), (0.09123899, 0.0449, 0.0449)]
+            double height = 0.09267798811197281
+            double radius = 0.04490000009536743
+        }
+    }
+}
+
+over "Flattened_Prototype_80"
+{
+    def Xform "R_Thumb2" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (-0.3435923159122467, 0, 0.9026692509651184, 0.2590995132923126)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.011049999855458736, -0.0025500000920146704, 0.008999999612569809)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "R_Thumb2"
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.019305456, -0.0106, -0.0106), (0.019305456, 0.0106, 0.0106)]
+            double height = 0.017410915344953537
+            double radius = 0.010599999688565731
+        }
+    }
+}
+
+over "Flattened_Prototype_81"
+{
+    def Xform "R_Pinky3" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (0.28139692544937134, 0, 0.959040641784668, -0.032509855926036835)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.007699999958276749, -0.00009999999747378752, -0.00494999997317791)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "R_Pinky3"
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.011065573, -0.0056, -0.0056), (0.011065573, 0.0056, 0.0056)]
+            double height = 0.010931147262454033
+            double radius = 0.00559999980032444
+        }
+    }
+}
+
+over "Flattened_Prototype_82"
+{
+    def Xform "R_Ring3" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (0.11310730129480362, 0, 0.9916479587554932, -0.06197800487279892)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.011549999937415123, -0.00020000000949949026, -0.0026000000070780516)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "R_Ring3"
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.0138324965, -0.0067, -0.0067), (0.0138324965, 0.0067, 0.0067)]
+            double height = 0.01426499243825674
+            double radius = 0.0066999997943639755
+        }
+    }
+}
+
+over "Flattened_Prototype_83"
 {
     def Xform "L_Middle2" (
         apiSchemas = ["MaterialBindingAPI"]
@@ -1483,7 +1781,25 @@ over "Flattened_Prototype_68"
     }
 }
 
-over "Flattened_Prototype_69"
+over "Flattened_Prototype_84"
+{
+    def Xform "R_Wrist"
+    {
+        quatd xformOp:orient = (1, 0, 0, 0)
+        double3 xformOp:scale = (0.057100001722574234, 0.0066999997943639755, 0.05290000140666962)
+        double3 xformOp:translate = (-0.048900000751018524, -0.008200000040233135, -0.004000000189989805)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Cube "R_Wrist" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            float3[] extent = [(-0.0571, -0.0067, -0.0529), (0.0571, 0.0067, 0.0529)]
+        }
+    }
+}
+
+over "Flattened_Prototype_85"
 {
     def Xform "L_Shoulder" (
         apiSchemas = ["MaterialBindingAPI"]
@@ -1505,424 +1821,7 @@ over "Flattened_Prototype_69"
     }
 }
 
-over "Flattened_Prototype_70"
-{
-    def Xform "L_Knee"
-    {
-        quatd xformOp:orient = (-0.6643343567848206, 0, -0.07046355307102203, 0.7441067695617676)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.025100000202655792, -0.2121499925851822, -0.02005000039935112)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "L_Knee" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.18540812, -0.0567, -0.0567), (0.18540812, 0.0567, 0.0567)]
-            double height = 0.2574162185192108
-            double radius = 0.056699998676776886
-        }
-    }
-}
-
-over "Flattened_Prototype_71"
-{
-    def Xform "L_Hip"
-    {
-        quatd xformOp:orient = (0.762141590744386, 0, 0.010747349654155657, -0.6473212106512461)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.03215000033378601, -0.19574999809265137, -0.0032500000670552254)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "L_Hip" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.17883304, -0.0598, -0.0598), (0.17883304, 0.0598, 0.0598)]
-            double height = 0.23806609213352203
-            double radius = 0.05979999899864197
-        }
-    }
-}
-
-over "Flattened_Prototype_72"
-{
-    def Xform "L_Wrist" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (1, 0, 0, 0)
-        double3 xformOp:scale = (0.05559999868273735, 0.006599999964237213, 0.05290000140666962)
-        double3 xformOp:translate = (0.04919999837875366, -0.006300000008195639, -0.0034000000450760126)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Cube "L_Wrist"
-        {
-            float3[] extent = [(-0.0556, -0.0066, -0.0529), (0.0556, 0.0066, 0.0529)]
-        }
-    }
-}
-
-over "Flattened_Prototype_73"
-{
-    def Xform "R_Ring2" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (0.14783412218093872, 0, 0.9424552917480469, -0.29987213015556335)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.012550000101327896, -0.0012000000569969416, -0.003599999938160181)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "R_Ring2"
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.016195092, -0.0083, -0.0083), (0.016195092, 0.0083, 0.0083)]
-            double height = 0.015790186822414398
-            double radius = 0.008299999870359898
-        }
-    }
-}
-
-over "Flattened_Prototype_74"
-{
-    def Xform "R_Index2"
-    {
-        quatd xformOp:orient = (-0.056868210434913635, 0, -0.058626994490623474, 0.9966588616371155)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.012450000271201134, -0.0013500000350177288, -0.00014999999257270247)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "R_Index2" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.0156985, -0.0082, -0.0082), (0.0156985, 0.0082, 0.0082)]
-            double height = 0.014996999874711037
-            double radius = 0.008200000040233135
-        }
-    }
-}
-
-over "Flattened_Prototype_75"
-{
-    def Xform "R_Middle1"
-    {
-        quatd xformOp:orient = (0.06886578351259232, 0, 0.991948664188385, 0.10628021508455276)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.016850000247359276, 0.00024999998277053237, -0.002400000113993883)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "R_Middle1" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.020847194, -0.0106, -0.0106), (0.020847194, 0.0106, 0.0106)]
-            double height = 0.02049439027905464
-            double radius = 0.010599999688565731
-        }
-    }
-}
-
-over "Flattened_Prototype_76"
-{
-    def Xform "R_Thumb3" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (-0.38362598419189453, 0, 0.9121261239051819, 0.14441995322704315)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.010050000622868538, -0.0015499999281018972, 0.010000000707805157)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "R_Thumb3"
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.018473506, -0.0099, -0.0099), (0.018473506, 0.0099, 0.0099)]
-            double height = 0.017147012054920197
-            double radius = 0.00989999994635582
-        }
-    }
-}
-
-over "Flattened_Prototype_77"
-{
-    def Xform "L_Ring1" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (0.9965766627254765, 0, 0.08116745982237367, 0.015709832375410508)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.01575000025331974, 0.0004999999655410647, -0.0026499999221414328)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "L_Ring1"
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.018480971, -0.0089, -0.0089), (0.018480971, 0.0089, 0.0089)]
-            double height = 0.01916194148361683
-            double radius = 0.008899999782443047
-        }
-    }
-}
-
-over "Flattened_Prototype_78"
-{
-    def Xform "R_Middle2" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (0.10658076405525208, 0, 0.8577841520309448, -0.5028389692306519)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.01295000035315752, -0.0013500000350177288, -0.0024500000290572643)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "R_Middle2"
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.015730165, -0.0078, -0.0078), (0.015730165, 0.0078, 0.0078)]
-            double height = 0.01586032845079899
-            double radius = 0.007799999788403511
-        }
-    }
-}
-
-over "Flattened_Prototype_79"
-{
-    def Xform "L_Middle3" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (0.9986034268446257, 0, 0.05068497614140525, -0.014907345759591682)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.013949999585747719, -0.00035000001662410796, -0.0014500000979751348)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "L_Middle3"
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.015296875, -0.0069, -0.0069), (0.015296875, 0.0069, 0.0069)]
-            double height = 0.0167937483638525
-            double radius = 0.006899999920278788
-        }
-    }
-}
-
-over "Flattened_Prototype_80"
-{
-    def Xform "L_Index1"
-    {
-        quatd xformOp:orient = (0.9981472614739636, 0, -0.05394374885504803, 0.02814456040882738)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.01769999973475933, 0.0009999999310821295, 0.0019500000635161996)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "L_Index1" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.02087907, -0.0102, -0.0102), (0.02087907, 0.0102, 0.0102)]
-            double height = 0.02135813795030117
-            double radius = 0.010200000368058681
-        }
-    }
-}
-
-over "Flattened_Prototype_81"
-{
-    def Xform "L_Thumb1"
-    {
-        quatd xformOp:orient = (0.8753388894510735, 0, -0.4827041750378448, 0.027901972431794438)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.009150000289082527, 0.000800000037997961, 0.014449999667704105)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "L_Thumb1" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.023735967, -0.0135, -0.0135), (0.023735967, 0.0135, 0.0135)]
-            double height = 0.020471932366490364
-            double radius = 0.013500000350177288
-        }
-    }
-}
-
-over "Flattened_Prototype_82"
-{
-    def Xform "L_Middle1"
-    {
-        quatd xformOp:orient = (0.9976052425914776, 0, 0.0684697344819811, 0.009781391571605609)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.016850000247359276, 0.0003000000142492354, -0.002400000113993883)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "L_Middle1" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.020848049, -0.0106, -0.0106), (0.020848049, 0.0106, 0.0106)]
-            double height = 0.020496098324656487
-            double radius = 0.010599999688565731
-        }
-    }
-}
-
-over "Flattened_Prototype_83"
-{
-    def Xform "R_Toe" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (1, 0, 0, 0)
-        double3 xformOp:scale = (0.05350000038743019, 0.008899999782443047, 0.05469999834895134)
-        double3 xformOp:translate = (0.018400000408291817, 0.012900000438094139, 0.07500000298023224)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Cube "R_Toe"
-        {
-            float3[] extent = [(-0.0535, -0.0089, -0.0547), (0.0535, 0.0089, 0.0547)]
-        }
-    }
-}
-
-over "Flattened_Prototype_84"
-{
-    def Xform "R_Middle3"
-    {
-        quatd xformOp:orient = (0.061604760587215424, 0, 0.9575433731079102, -0.28163042664527893)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.011949999257922173, -0.00035000001662410796, -0.0014500000979751348)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "R_Middle3" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.014404685, -0.0072, -0.0072), (0.014404685, 0.0072, 0.0072)]
-            double height = 0.014409370720386505
-            double radius = 0.007199999876320362
-        }
-    }
-}
-
-over "Flattened_Prototype_85"
-{
-    def Xform "R_Wrist"
-    {
-        quatd xformOp:orient = (1, 0, 0, 0)
-        double3 xformOp:scale = (0.057100001722574234, 0.0066999997943639755, 0.05290000140666962)
-        double3 xformOp:translate = (-0.048900000751018524, -0.008200000040233135, -0.004000000189989805)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Cube "R_Wrist" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            float3[] extent = [(-0.0571, -0.0067, -0.0529), (0.0571, 0.0067, 0.0529)]
-        }
-    }
-}
-
 over "Flattened_Prototype_86"
-{
-    def Xform "L_Ankle" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (1, 0, 0, 0)
-        double3 xformOp:scale = (0.05570000037550926, 0.022600000724196434, 0.0989999994635582)
-        double3 xformOp:translate = (0.023499999195337296, -0.031700000166893005, 0.07050000131130219)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Cube "L_Ankle"
-        {
-            float3[] extent = [(-0.0557, -0.0226, -0.099), (0.0557, 0.0226, 0.099)]
-        }
-    }
-}
-
-over "Flattened_Prototype_87"
-{
-    def Xform "R_Thumb3"
-    {
-        quatd xformOp:orient = (-0.38362598419189453, 0, 0.9121261239051819, 0.14441995322704315)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.010050000622868538, -0.0015499999281018972, 0.010000000707805157)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "R_Thumb3" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.018473506, -0.0099, -0.0099), (0.018473506, 0.0099, 0.0099)]
-            double height = 0.017147012054920197
-            double radius = 0.00989999994635582
-        }
-    }
-}
-
-over "Flattened_Prototype_88"
-{
-    def Xform "L_Pinky1"
-    {
-        quatd xformOp:orient = (0.9508774976920986, 0, 0.3058752385291702, -0.04766886631023184)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.008949999697506428, -0.0009999999310821295, -0.006350000388920307)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "L_Pinky1" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.014018536, -0.0074, -0.0074), (0.014018536, 0.0074, 0.0074)]
-            double height = 0.01323707029223442
-            double radius = 0.007400000002235174
-        }
-    }
-}
-
-over "Flattened_Prototype_89"
-{
-    def Xform "R_Pinky2" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (0.299304336309433, 0, 0.9361323118209839, -0.1845894604921341)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.008700000122189522, -0.0010999999940395355, -0.005950000137090683)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "R_Pinky2"
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.013435021, -0.0071, -0.0071), (0.013435021, 0.0071, 0.0071)]
-            double height = 0.012670042924582958
-            double radius = 0.0071000000461936
-        }
-    }
-}
-
-over "Flattened_Prototype_90"
 {
     def Xform "R_Middle1" (
         apiSchemas = ["MaterialBindingAPI"]
@@ -1944,73 +1843,83 @@ over "Flattened_Prototype_90"
     }
 }
 
-over "Flattened_Prototype_91"
+over "Flattened_Prototype_87"
 {
-    def Xform "L_Ankle"
+    def Xform "Torso"
     {
-        quatd xformOp:orient = (1, 0, 0, 0)
-        double3 xformOp:scale = (0.05570000037550926, 0.022600000724196434, 0.0989999994635582)
-        double3 xformOp:translate = (0.023499999195337296, -0.031700000166893005, 0.07050000131130219)
+        quatd xformOp:orient = (0.7345722683048678, 0, -0.017968014851609784, 0.6782924791575482)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.006099999882280827, 0.0758500024676323, 0.0017999999690800905)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
-        def Cube "L_Ankle" (
+        def Capsule "Torso" (
             apiSchemas = ["PhysicsCollisionAPI"]
         )
         {
-            float3[] extent = [(-0.0557, -0.0226, -0.099), (0.0557, 0.0226, 0.099)]
+            uniform token axis = "X"
+            float3[] extent = [(-0.08327644, -0.0757, -0.0757), (0.08327644, 0.0757, 0.0757)]
+            double height = 0.015152890235185623
+            double radius = 0.07569999992847443
         }
     }
 }
 
-over "Flattened_Prototype_92"
+over "Flattened_Prototype_88"
 {
-    def Xform "R_Ankle"
+    def Xform "R_Thumb1"
     {
-        quatd xformOp:orient = (1, 0, 0, 0)
-        double3 xformOp:scale = (0.05570000037550926, 0.027000000700354576, 0.0989999994635582)
-        double3 xformOp:translate = (-0.018400000408291817, -0.031099999323487282, 0.07400000095367432)
+        quatd xformOp:orient = (-0.48350992798805237, 0, 0.87388014793396, -0.05051329731941223)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.009150000289082527, 0.000800000037997961, 0.014449999667704105)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
-        def Cube "R_Ankle" (
+        def Capsule "R_Thumb1" (
             apiSchemas = ["PhysicsCollisionAPI"]
         )
         {
-            float3[] extent = [(-0.0557, -0.027, -0.099), (0.0557, 0.027, 0.099)]
+            uniform token axis = "X"
+            float3[] extent = [(-0.023735967, -0.0135, -0.0135), (0.023735967, 0.0135, 0.0135)]
+            double height = 0.020471932366490364
+            double radius = 0.013500000350177288
         }
     }
 }
 
-over "Flattened_Prototype_93"
+over "Flattened_Prototype_89"
 {
-    def Xform "R_Ankle" (
+    def Xform "L_Knee" (
         apiSchemas = ["MaterialBindingAPI"]
     )
     {
         rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (1, 0, 0, 0)
-        double3 xformOp:scale = (0.05570000037550926, 0.027000000700354576, 0.0989999994635582)
-        double3 xformOp:translate = (-0.018400000408291817, -0.031099999323487282, 0.07400000095367432)
+        quatd xformOp:orient = (-0.6643343567848206, 0, -0.07046355307102203, 0.7441067695617676)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.025100000202655792, -0.2121499925851822, -0.02005000039935112)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
-        def Cube "R_Ankle"
+        def Capsule "L_Knee"
         {
-            float3[] extent = [(-0.0557, -0.027, -0.099), (0.0557, 0.027, 0.099)]
+            uniform token axis = "X"
+            float3[] extent = [(-0.18540812, -0.0567, -0.0567), (0.18540812, 0.0567, 0.0567)]
+            double height = 0.2574162185192108
+            double radius = 0.056699998676776886
         }
     }
 }
 
-over "Flattened_Prototype_94"
+over "Flattened_Prototype_90"
 {
-    def Xform "R_Knee"
+    def Xform "R_Knee" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
     {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
         quatd xformOp:orient = (0.7228565920174842, 0, 0.06074209420473249, -0.6883231298542143)
         double3 xformOp:scale = (1, 1, 1)
         double3 xformOp:translate = (0.009950000792741776, -0.21904999017715454, -0.019299998879432678)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
-        def Capsule "R_Knee" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
+        def Capsule "R_Knee"
         {
             uniform token axis = "X"
             float3[] extent = [(-0.1883949, -0.0563, -0.0563), (0.1883949, 0.0563, 0.0563)]
@@ -2020,46 +1929,7 @@ over "Flattened_Prototype_94"
     }
 }
 
-over "Flattened_Prototype_95"
-{
-    def Xform "R_Toe"
-    {
-        quatd xformOp:orient = (1, 0, 0, 0)
-        double3 xformOp:scale = (0.05350000038743019, 0.008899999782443047, 0.05469999834895134)
-        double3 xformOp:translate = (0.018400000408291817, 0.012900000438094139, 0.07500000298023224)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Cube "R_Toe" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            float3[] extent = [(-0.0535, -0.0089, -0.0547), (0.0535, 0.0089, 0.0547)]
-        }
-    }
-}
-
-over "Flattened_Prototype_96"
-{
-    def Xform "R_Elbow"
-    {
-        quatd xformOp:orient = (0.023862794041633606, 0, 0.9984362721443176, 0.05055374279618263)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.1379999965429306, 0.0004000000189989805, -0.006550000049173832)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "R_Elbow" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.1269944, -0.0441, -0.0441), (0.1269944, 0.0441, 0.0441)]
-            double height = 0.16578881442546844
-            double radius = 0.04410000145435333
-        }
-    }
-}
-
-over "Flattened_Prototype_97"
+over "Flattened_Prototype_91"
 {
     def Xform "L_Thumb3"
     {
@@ -2080,28 +1950,223 @@ over "Flattened_Prototype_97"
     }
 }
 
-over "Flattened_Prototype_98"
+over "Flattened_Prototype_92"
 {
-    def Xform "R_Thumb2"
+    def Xform "L_Ring1" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
     {
-        quatd xformOp:orient = (-0.3435923159122467, 0, 0.9026692509651184, 0.2590995132923126)
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (0.9965766627254765, 0, 0.08116745982237367, 0.015709832375410508)
         double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.011049999855458736, -0.0025500000920146704, 0.008999999612569809)
+        double3 xformOp:translate = (0.01575000025331974, 0.0004999999655410647, -0.0026499999221414328)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
-        def Capsule "R_Thumb2" (
+        def Capsule "L_Ring1"
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.018480971, -0.0089, -0.0089), (0.018480971, 0.0089, 0.0089)]
+            double height = 0.01916194148361683
+            double radius = 0.008899999782443047
+        }
+    }
+}
+
+over "Flattened_Prototype_93"
+{
+    def Xform "R_Shoulder"
+    {
+        quatd xformOp:orient = (-0.10184653848409653, 0, -0.5464382171630859, 0.8312837481498718)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.13780000805854797, -0.023800000548362732, -0.015699999406933784)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "R_Shoulder" (
             apiSchemas = ["PhysicsCollisionAPI"]
         )
         {
             uniform token axis = "X"
-            float3[] extent = [(-0.019305456, -0.0106, -0.0106), (0.019305456, 0.0106, 0.0106)]
-            double height = 0.017410915344953537
+            float3[] extent = [(-0.137752, -0.0533, -0.0533), (0.137752, 0.0533, 0.0533)]
+            double height = 0.16890399158000946
+            double radius = 0.053300000727176666
+        }
+    }
+}
+
+over "Flattened_Prototype_94"
+{
+    def Xform "R_Thorax" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (0.2338610738515854, 0, 0.2095106989145279, 0.949428379535675)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.059800002723932266, 0.029899999499320984, -0.006550000049173832)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "R_Thorax"
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.09710909, -0.0568, -0.0568), (0.09710909, 0.0568, 0.0568)]
+            double height = 0.08061817288398743
+            double radius = 0.0568000003695488
+        }
+    }
+}
+
+over "Flattened_Prototype_95"
+{
+    def Xform "L_Pinky1" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (0.9508774976920986, 0, 0.3058752385291702, -0.04766886631023184)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.008949999697506428, -0.0009999999310821295, -0.006350000388920307)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "L_Pinky1"
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.014018536, -0.0074, -0.0074), (0.014018536, 0.0074, 0.0074)]
+            double height = 0.01323707029223442
+            double radius = 0.007400000002235174
+        }
+    }
+}
+
+over "Flattened_Prototype_96"
+{
+    def Xform "R_Ring1"
+    {
+        quatd xformOp:orient = (0.0826738104224205, 0, 0.9784189462661743, 0.18937142193317413)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.01575000025331974, 0.0004999999655410647, -0.0026499999221414328)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "R_Ring1" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.01858097, -0.009, -0.009), (0.01858097, 0.009, 0.009)]
+            double height = 0.01916194148361683
+            double radius = 0.008999999612569809
+        }
+    }
+}
+
+over "Flattened_Prototype_97"
+{
+    def Xform "L_Middle1"
+    {
+        quatd xformOp:orient = (0.9976052425914776, 0, 0.0684697344819811, 0.009781391571605609)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.016850000247359276, 0.0003000000142492354, -0.002400000113993883)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "L_Middle1" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.020848049, -0.0106, -0.0106), (0.020848049, 0.0106, 0.0106)]
+            double height = 0.020496098324656487
             double radius = 0.010599999688565731
         }
     }
 }
 
+over "Flattened_Prototype_98"
+{
+    def Xform "R_Elbow" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (0.023862794041633606, 0, 0.9984362721443176, 0.05055374279618263)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.1379999965429306, 0.0004000000189989805, -0.006550000049173832)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "R_Elbow"
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.1269944, -0.0441, -0.0441), (0.1269944, 0.0441, 0.0441)]
+            double height = 0.16578881442546844
+            double radius = 0.04410000145435333
+        }
+    }
+}
+
 over "Flattened_Prototype_99"
+{
+    def Xform "L_Index3" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (0.9992986543582658, 0, -0.03408953844229361, -0.015495247794461816)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.013450000435113907, -0.00035000001662410796, 0.0008499999530613422)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "L_Index3"
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.015172639, -0.0071, -0.0071), (0.015172639, 0.0071, 0.0071)]
+            double height = 0.01614527776837349
+            double radius = 0.0071000000461936
+        }
+    }
+}
+
+over "Flattened_Prototype_100"
+{
+    def Xform "L_Ring3"
+    {
+        quatd xformOp:orient = (0.995288403863795, 0, 0.09676990183092403, -0.006048120261416653)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.01355000026524067, -0.00020000000949949026, -0.0026000000070780516)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "L_Ring3" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.014806173, -0.0065, -0.0065), (0.014806173, 0.0065, 0.0065)]
+            double height = 0.016612345352768898
+            double radius = 0.006500000134110451
+        }
+    }
+}
+
+over "Flattened_Prototype_101"
+{
+    def Xform "L_Middle3" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
+        quatd xformOp:orient = (0.9986034268446257, 0, 0.05068497614140525, -0.014907345759591682)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.013949999585747719, -0.00035000001662410796, -0.0014500000979751348)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Capsule "L_Middle3"
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.015296875, -0.0069, -0.0069), (0.015296875, 0.0069, 0.0069)]
+            double height = 0.0167937483638525
+            double radius = 0.006899999920278788
+        }
+    }
+}
+
+over "Flattened_Prototype_102"
 {
     def Xform "L_Wrist"
     {
@@ -2119,110 +2184,45 @@ over "Flattened_Prototype_99"
     }
 }
 
-over "Flattened_Prototype_100"
-{
-    def Xform "R_Index1"
-    {
-        quatd xformOp:orient = (-0.06084444373846054, 0, 0.8849422335624695, -0.4617089331150055)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (-0.01769999973475933, 0.0009999999310821295, 0.0019500000635161996)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "R_Index1" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.02087907, -0.0102, -0.0102), (0.02087907, 0.0102, 0.0102)]
-            double height = 0.02135813795030117
-            double radius = 0.010200000368058681
-        }
-    }
-}
-
-over "Flattened_Prototype_101"
-{
-    def Xform "L_Pinky3" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (0.972426678549562, 0, 0.233074942045853, -0.00790084598241873)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.009700000286102295, -0.00009999999747378752, -0.00494999997317791)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "L_Pinky3"
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.011907879, -0.0054, -0.0054), (0.011907879, 0.0054, 0.0054)]
-            double height = 0.01301575917750597
-            double radius = 0.005400000140070915
-        }
-    }
-}
-
-over "Flattened_Prototype_102"
-{
-    def Xform "L_Middle3"
-    {
-        quatd xformOp:orient = (0.9986034268446257, 0, 0.05068497614140525, -0.014907345759591682)
-        double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.013949999585747719, -0.00035000001662410796, -0.0014500000979751348)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Capsule "L_Middle3" (
-            apiSchemas = ["PhysicsCollisionAPI"]
-        )
-        {
-            uniform token axis = "X"
-            float3[] extent = [(-0.015296875, -0.0069, -0.0069), (0.015296875, 0.0069, 0.0069)]
-            double height = 0.0167937483638525
-            double radius = 0.006899999920278788
-        }
-    }
-}
-
 over "Flattened_Prototype_103"
 {
-    def Xform "L_Thumb2" (
+    def Xform "R_Middle3" (
         apiSchemas = ["MaterialBindingAPI"]
     )
     {
         rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (0.9391188904203339, 0, -0.33025663097011165, -0.0947958872990218)
+        quatd xformOp:orient = (0.061604760587215424, 0, 0.9575433731079102, -0.28163042664527893)
         double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.011049999855458736, -0.0025500000920146704, 0.008999999612569809)
+        double3 xformOp:translate = (-0.011949999257922173, -0.00035000001662410796, -0.0014500000979751348)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
-        def Capsule "L_Thumb2"
+        def Capsule "R_Middle3"
         {
             uniform token axis = "X"
-            float3[] extent = [(-0.019305456, -0.0106, -0.0106), (0.019305456, 0.0106, 0.0106)]
-            double height = 0.017410915344953537
-            double radius = 0.010599999688565731
+            float3[] extent = [(-0.014404685, -0.0072, -0.0072), (0.014404685, 0.0072, 0.0072)]
+            double height = 0.014409370720386505
+            double radius = 0.007199999876320362
         }
     }
 }
 
 over "Flattened_Prototype_104"
 {
-    def Xform "R_Knee" (
-        apiSchemas = ["MaterialBindingAPI"]
-    )
+    def Xform "R_Thumb3"
     {
-        rel material:binding = </sub12/Pelvis/Looks/material_rgba>
-        quatd xformOp:orient = (0.7228565920174842, 0, 0.06074209420473249, -0.6883231298542143)
+        quatd xformOp:orient = (-0.38362598419189453, 0, 0.9121261239051819, 0.14441995322704315)
         double3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (0.009950000792741776, -0.21904999017715454, -0.019299998879432678)
+        double3 xformOp:translate = (-0.010050000622868538, -0.0015499999281018972, 0.010000000707805157)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
-        def Capsule "R_Knee"
+        def Capsule "R_Thumb3" (
+            apiSchemas = ["PhysicsCollisionAPI"]
+        )
         {
             uniform token axis = "X"
-            float3[] extent = [(-0.1883949, -0.0563, -0.0563), (0.1883949, 0.0563, 0.0563)]
-            double height = 0.26418980956077576
-            double radius = 0.056299999356269836
+            float3[] extent = [(-0.018473506, -0.0099, -0.0099), (0.018473506, 0.0099, 0.0099)]
+            double height = 0.017147012054920197
+            double radius = 0.00989999994635582
         }
     }
 }
@@ -2416,10 +2416,7 @@ def Xform "sub12" (
         apiSchemas = ["PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsMassAPI", "PhysicsArticulationRootAPI", "PhysxArticulationAPI", "PhysicsFilteredPairsAPI", "IsaacLinkAPI"]
     )
     {
-        string isaac:nameOverride (
-            displayName = "Name Override"
-            doc = "Name override for prim lookup in base name search"
-        )
+        string isaac:nameOverride
         float physics:density = 0
         bool physxArticulation:enabledSelfCollisions = 1
         quatd xformOp:orient = (1, 0, 0, 0)
@@ -2429,14 +2426,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_15>
+            add references = </Flattened_Prototype_48>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_50>
+            add references = </Flattened_Prototype_78>
         )
         {
         }
@@ -2455,14 +2452,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_16>
+            add references = </Flattened_Prototype_10>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_71>
+            add references = </Flattened_Prototype_61>
         )
         {
         }
@@ -2486,14 +2483,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_17>
+            add references = </Flattened_Prototype_89>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_70>
+            add references = </Flattened_Prototype_34>
         )
         {
         }
@@ -2513,14 +2510,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_86>
+            add references = </Flattened_Prototype_73>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_91>
+            add references = </Flattened_Prototype_5>
         )
         {
         }
@@ -2543,14 +2540,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_35>
+            add references = </Flattened_Prototype_38>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_48>
+            add references = </Flattened_Prototype_40>
         )
         {
         }
@@ -2569,14 +2566,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_44>
+            add references = </Flattened_Prototype_55>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_57>
+            add references = </Flattened_Prototype_58>
         )
         {
         }
@@ -2600,14 +2597,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_104>
+            add references = </Flattened_Prototype_90>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_94>
+            add references = </Flattened_Prototype_56>
         )
         {
         }
@@ -2627,14 +2624,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_93>
+            add references = </Flattened_Prototype_68>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_92>
+            add references = </Flattened_Prototype_76>
         )
         {
         }
@@ -2657,14 +2654,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_83>
+            add references = </Flattened_Prototype_63>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_95>
+            add references = </Flattened_Prototype_14>
         )
         {
         }
@@ -2684,14 +2681,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_2>
+            add references = </Flattened_Prototype_36>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_7>
+            add references = </Flattened_Prototype_87>
         )
         {
         }
@@ -2710,14 +2707,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_51>
+            add references = </Flattened_Prototype_18>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_28>
+            add references = </Flattened_Prototype_50>
         )
         {
         }
@@ -2742,14 +2739,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_20>
+            add references = </Flattened_Prototype_74>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_38>
+            add references = </Flattened_Prototype_33>
         )
         {
         }
@@ -2768,7 +2765,7 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_13>
+            add references = </Flattened_Prototype_79>
         )
         {
         }
@@ -2795,14 +2792,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_9>
+            add references = </Flattened_Prototype_16>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_3>
+            add references = </Flattened_Prototype_2>
         )
         {
         }
@@ -2821,14 +2818,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_53>
+            add references = </Flattened_Prototype_9>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_5>
+            add references = </Flattened_Prototype_26>
         )
         {
         }
@@ -2848,14 +2845,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_69>
+            add references = </Flattened_Prototype_85>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_60>
+            add references = </Flattened_Prototype_52>
         )
         {
         }
@@ -2874,14 +2871,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_34>
+            add references = </Flattened_Prototype_22>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_56>
+            add references = </Flattened_Prototype_35>
         )
         {
         }
@@ -2900,14 +2897,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_72>
+            add references = </Flattened_Prototype_15>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_99>
+            add references = </Flattened_Prototype_102>
         )
         {
         }
@@ -2926,14 +2923,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_19>
+            add references = </Flattened_Prototype_39>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_80>
+            add references = </Flattened_Prototype_60>
         )
         {
         }
@@ -2952,14 +2949,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_22>
+            add references = </Flattened_Prototype_28>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_61>
+            add references = </Flattened_Prototype_41>
         )
         {
         }
@@ -2978,14 +2975,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_58>
+            add references = </Flattened_Prototype_99>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_65>
+            add references = </Flattened_Prototype_8>
         )
         {
         }
@@ -3004,14 +3001,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_14>
+            add references = </Flattened_Prototype_53>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_82>
+            add references = </Flattened_Prototype_97>
         )
         {
         }
@@ -3030,14 +3027,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_68>
+            add references = </Flattened_Prototype_83>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_54>
+            add references = </Flattened_Prototype_77>
         )
         {
         }
@@ -3056,14 +3053,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_79>
+            add references = </Flattened_Prototype_101>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_102>
+            add references = </Flattened_Prototype_44>
         )
         {
         }
@@ -3082,14 +3079,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_18>
+            add references = </Flattened_Prototype_95>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_88>
+            add references = </Flattened_Prototype_70>
         )
         {
         }
@@ -3108,14 +3105,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_64>
+            add references = </Flattened_Prototype_42>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_24>
+            add references = </Flattened_Prototype_65>
         )
         {
         }
@@ -3134,14 +3131,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_101>
+            add references = </Flattened_Prototype_17>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_52>
+            add references = </Flattened_Prototype_59>
         )
         {
         }
@@ -3160,14 +3157,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_77>
+            add references = </Flattened_Prototype_92>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_41>
+            add references = </Flattened_Prototype_1>
         )
         {
         }
@@ -3186,14 +3183,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_27>
+            add references = </Flattened_Prototype_20>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_31>
+            add references = </Flattened_Prototype_47>
         )
         {
         }
@@ -3212,14 +3209,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_55>
+            add references = </Flattened_Prototype_7>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_46>
+            add references = </Flattened_Prototype_100>
         )
         {
         }
@@ -3238,14 +3235,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_37>
+            add references = </Flattened_Prototype_30>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_81>
+            add references = </Flattened_Prototype_49>
         )
         {
         }
@@ -3264,14 +3261,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_103>
+            add references = </Flattened_Prototype_31>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_43>
+            add references = </Flattened_Prototype_12>
         )
         {
         }
@@ -3290,14 +3287,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_25>
+            add references = </Flattened_Prototype_3>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_97>
+            add references = </Flattened_Prototype_91>
         )
         {
         }
@@ -3316,14 +3313,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_29>
+            add references = </Flattened_Prototype_94>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_8>
+            add references = </Flattened_Prototype_13>
         )
         {
         }
@@ -3343,14 +3340,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_32>
+            add references = </Flattened_Prototype_37>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_67>
+            add references = </Flattened_Prototype_93>
         )
         {
         }
@@ -3369,14 +3366,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_6>
+            add references = </Flattened_Prototype_98>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_96>
+            add references = </Flattened_Prototype_69>
         )
         {
         }
@@ -3395,14 +3392,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_23>
+            add references = </Flattened_Prototype_29>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_85>
+            add references = </Flattened_Prototype_84>
         )
         {
         }
@@ -3421,14 +3418,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_42>
+            add references = </Flattened_Prototype_32>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_100>
+            add references = </Flattened_Prototype_75>
         )
         {
         }
@@ -3447,14 +3444,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_1>
+            add references = </Flattened_Prototype_4>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_74>
+            add references = </Flattened_Prototype_54>
         )
         {
         }
@@ -3473,14 +3470,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_62>
+            add references = </Flattened_Prototype_67>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_39>
+            add references = </Flattened_Prototype_71>
         )
         {
         }
@@ -3499,14 +3496,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_90>
+            add references = </Flattened_Prototype_86>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_75>
+            add references = </Flattened_Prototype_25>
         )
         {
         }
@@ -3525,14 +3522,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_78>
+            add references = </Flattened_Prototype_57>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_12>
+            add references = </Flattened_Prototype_23>
         )
         {
         }
@@ -3551,14 +3548,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_26>
+            add references = </Flattened_Prototype_103>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_84>
+            add references = </Flattened_Prototype_27>
         )
         {
         }
@@ -3577,14 +3574,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_36>
+            add references = </Flattened_Prototype_45>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_40>
+            add references = </Flattened_Prototype_72>
         )
         {
         }
@@ -3603,14 +3600,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_89>
+            add references = </Flattened_Prototype_43>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_49>
+            add references = </Flattened_Prototype_21>
         )
         {
         }
@@ -3629,14 +3626,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_11>
+            add references = </Flattened_Prototype_81>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_47>
+            add references = </Flattened_Prototype_64>
         )
         {
         }
@@ -3655,14 +3652,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_33>
+            add references = </Flattened_Prototype_6>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_21>
+            add references = </Flattened_Prototype_96>
         )
         {
         }
@@ -3681,14 +3678,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_73>
+            add references = </Flattened_Prototype_11>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_4>
+            add references = </Flattened_Prototype_62>
         )
         {
         }
@@ -3707,14 +3704,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_30>
+            add references = </Flattened_Prototype_82>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_10>
+            add references = </Flattened_Prototype_46>
         )
         {
         }
@@ -3733,14 +3730,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_45>
+            add references = </Flattened_Prototype_51>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_59>
+            add references = </Flattened_Prototype_88>
         )
         {
         }
@@ -3759,14 +3756,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_63>
+            add references = </Flattened_Prototype_80>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_98>
+            add references = </Flattened_Prototype_24>
         )
         {
         }
@@ -3785,14 +3782,14 @@ def Xform "sub12" (
 
         def Xform "visuals" (
             instanceable = true
-            add references = </Flattened_Prototype_76>
+            add references = </Flattened_Prototype_19>
         )
         {
         }
 
         def Xform "collisions" (
             instanceable = true
-            add references = </Flattened_Prototype_87>
+            add references = </Flattened_Prototype_104>
         )
         {
         }
@@ -4812,12 +4809,12 @@ def Xform "sub12" (
             int isaac:physics:Tr_X:DofOffset
             int isaac:physics:Tr_Y:DofOffset
             int isaac:physics:Tr_Z:DofOffset
-            float limit:rotX:physics:high = 180
-            float limit:rotX:physics:low = -180
-            float limit:rotY:physics:high = 180
-            float limit:rotY:physics:low = -180
-            float limit:rotZ:physics:high = 180
-            float limit:rotZ:physics:low = -180
+            float limit:rotX:physics:high = 5.625
+            float limit:rotX:physics:low = -5.625
+            float limit:rotY:physics:high = 5.625
+            float limit:rotY:physics:low = -5.625
+            float limit:rotZ:physics:high = 0
+            float limit:rotZ:physics:low = -55.625
             float limit:transX:physics:high = -1
             float limit:transX:physics:low = 1
             float limit:transY:physics:high = -1
@@ -4870,12 +4867,12 @@ def Xform "sub12" (
             int isaac:physics:Tr_X:DofOffset
             int isaac:physics:Tr_Y:DofOffset
             int isaac:physics:Tr_Z:DofOffset
-            float limit:rotX:physics:high = 180
-            float limit:rotX:physics:low = -180
-            float limit:rotY:physics:high = 180
-            float limit:rotY:physics:low = -180
-            float limit:rotZ:physics:high = 180
-            float limit:rotZ:physics:low = -180
+            float limit:rotX:physics:high = 5.625
+            float limit:rotX:physics:low = -5.625
+            float limit:rotY:physics:high = 5.625
+            float limit:rotY:physics:low = -5.625
+            float limit:rotZ:physics:high = 0
+            float limit:rotZ:physics:low = -55.625
             float limit:transX:physics:high = -1
             float limit:transX:physics:low = 1
             float limit:transY:physics:high = -1
@@ -4928,12 +4925,12 @@ def Xform "sub12" (
             int isaac:physics:Tr_X:DofOffset
             int isaac:physics:Tr_Y:DofOffset
             int isaac:physics:Tr_Z:DofOffset
-            float limit:rotX:physics:high = 180
-            float limit:rotX:physics:low = -180
-            float limit:rotY:physics:high = 180
-            float limit:rotY:physics:low = -180
-            float limit:rotZ:physics:high = 180
-            float limit:rotZ:physics:low = -180
+            float limit:rotX:physics:high = 5.625
+            float limit:rotX:physics:low = -5.625
+            float limit:rotY:physics:high = 5.625
+            float limit:rotY:physics:low = -5.625
+            float limit:rotZ:physics:high = 0
+            float limit:rotZ:physics:low = -90
             float limit:transX:physics:high = -1
             float limit:transX:physics:low = 1
             float limit:transY:physics:high = -1
@@ -4986,12 +4983,12 @@ def Xform "sub12" (
             int isaac:physics:Tr_X:DofOffset
             int isaac:physics:Tr_Y:DofOffset
             int isaac:physics:Tr_Z:DofOffset
-            float limit:rotX:physics:high = 180
-            float limit:rotX:physics:low = -180
-            float limit:rotY:physics:high = 180
-            float limit:rotY:physics:low = -180
-            float limit:rotZ:physics:high = 180
-            float limit:rotZ:physics:low = -180
+            float limit:rotX:physics:high = 5.625
+            float limit:rotX:physics:low = -5.625
+            float limit:rotY:physics:high = 5.625
+            float limit:rotY:physics:low = -5.625
+            float limit:rotZ:physics:high = 0
+            float limit:rotZ:physics:low = -55.625
             float limit:transX:physics:high = -1
             float limit:transX:physics:low = 1
             float limit:transY:physics:high = -1
@@ -5044,12 +5041,12 @@ def Xform "sub12" (
             int isaac:physics:Tr_X:DofOffset
             int isaac:physics:Tr_Y:DofOffset
             int isaac:physics:Tr_Z:DofOffset
-            float limit:rotX:physics:high = 180
-            float limit:rotX:physics:low = -180
-            float limit:rotY:physics:high = 180
-            float limit:rotY:physics:low = -180
-            float limit:rotZ:physics:high = 180
-            float limit:rotZ:physics:low = -180
+            float limit:rotX:physics:high = 5.625
+            float limit:rotX:physics:low = -5.625
+            float limit:rotY:physics:high = 5.625
+            float limit:rotY:physics:low = -5.625
+            float limit:rotZ:physics:high = 0
+            float limit:rotZ:physics:low = -55.625
             float limit:transX:physics:high = -1
             float limit:transX:physics:low = 1
             float limit:transY:physics:high = -1
@@ -5102,12 +5099,12 @@ def Xform "sub12" (
             int isaac:physics:Tr_X:DofOffset
             int isaac:physics:Tr_Y:DofOffset
             int isaac:physics:Tr_Z:DofOffset
-            float limit:rotX:physics:high = 180
-            float limit:rotX:physics:low = -180
-            float limit:rotY:physics:high = 180
-            float limit:rotY:physics:low = -180
-            float limit:rotZ:physics:high = 180
-            float limit:rotZ:physics:low = -180
+            float limit:rotX:physics:high = 5.625
+            float limit:rotX:physics:low = -5.625
+            float limit:rotY:physics:high = 5.625
+            float limit:rotY:physics:low = -5.625
+            float limit:rotZ:physics:high = 0
+            float limit:rotZ:physics:low = -90
             float limit:transX:physics:high = -1
             float limit:transX:physics:low = 1
             float limit:transY:physics:high = -1
@@ -5160,12 +5157,12 @@ def Xform "sub12" (
             int isaac:physics:Tr_X:DofOffset
             int isaac:physics:Tr_Y:DofOffset
             int isaac:physics:Tr_Z:DofOffset
-            float limit:rotX:physics:high = 180
-            float limit:rotX:physics:low = -180
-            float limit:rotY:physics:high = 180
-            float limit:rotY:physics:low = -180
-            float limit:rotZ:physics:high = 180
-            float limit:rotZ:physics:low = -180
+            float limit:rotX:physics:high = 5.625
+            float limit:rotX:physics:low = -5.625
+            float limit:rotY:physics:high = 5.625
+            float limit:rotY:physics:low = -5.625
+            float limit:rotZ:physics:high = 0
+            float limit:rotZ:physics:low = -55.625
             float limit:transX:physics:high = -1
             float limit:transX:physics:low = 1
             float limit:transY:physics:high = -1
@@ -5218,12 +5215,12 @@ def Xform "sub12" (
             int isaac:physics:Tr_X:DofOffset
             int isaac:physics:Tr_Y:DofOffset
             int isaac:physics:Tr_Z:DofOffset
-            float limit:rotX:physics:high = 180
-            float limit:rotX:physics:low = -180
-            float limit:rotY:physics:high = 180
-            float limit:rotY:physics:low = -180
-            float limit:rotZ:physics:high = 180
-            float limit:rotZ:physics:low = -180
+            float limit:rotX:physics:high = 5.625
+            float limit:rotX:physics:low = -5.625
+            float limit:rotY:physics:high = 5.625
+            float limit:rotY:physics:low = -5.625
+            float limit:rotZ:physics:high = 0
+            float limit:rotZ:physics:low = -55.625
             float limit:transX:physics:high = -1
             float limit:transX:physics:low = 1
             float limit:transY:physics:high = -1
@@ -5276,12 +5273,12 @@ def Xform "sub12" (
             int isaac:physics:Tr_X:DofOffset
             int isaac:physics:Tr_Y:DofOffset
             int isaac:physics:Tr_Z:DofOffset
-            float limit:rotX:physics:high = 180
-            float limit:rotX:physics:low = -180
-            float limit:rotY:physics:high = 180
-            float limit:rotY:physics:low = -180
-            float limit:rotZ:physics:high = 180
-            float limit:rotZ:physics:low = -180
+            float limit:rotX:physics:high = 5.625
+            float limit:rotX:physics:low = -5.625
+            float limit:rotY:physics:high = 5.625
+            float limit:rotY:physics:low = -5.625
+            float limit:rotZ:physics:high = 0
+            float limit:rotZ:physics:low = -90
             float limit:transX:physics:high = -1
             float limit:transX:physics:low = 1
             float limit:transY:physics:high = -1
@@ -5334,12 +5331,12 @@ def Xform "sub12" (
             int isaac:physics:Tr_X:DofOffset
             int isaac:physics:Tr_Y:DofOffset
             int isaac:physics:Tr_Z:DofOffset
-            float limit:rotX:physics:high = 180
-            float limit:rotX:physics:low = -180
-            float limit:rotY:physics:high = 180
-            float limit:rotY:physics:low = -180
-            float limit:rotZ:physics:high = 180
-            float limit:rotZ:physics:low = -180
+            float limit:rotX:physics:high = 5.625
+            float limit:rotX:physics:low = -5.625
+            float limit:rotY:physics:high = 5.625
+            float limit:rotY:physics:low = -5.625
+            float limit:rotZ:physics:high = 0
+            float limit:rotZ:physics:low = -55.625
             float limit:transX:physics:high = -1
             float limit:transX:physics:low = 1
             float limit:transY:physics:high = -1
@@ -5392,12 +5389,12 @@ def Xform "sub12" (
             int isaac:physics:Tr_X:DofOffset
             int isaac:physics:Tr_Y:DofOffset
             int isaac:physics:Tr_Z:DofOffset
-            float limit:rotX:physics:high = 180
-            float limit:rotX:physics:low = -180
-            float limit:rotY:physics:high = 180
-            float limit:rotY:physics:low = -180
-            float limit:rotZ:physics:high = 180
-            float limit:rotZ:physics:low = -180
+            float limit:rotX:physics:high = 5.625
+            float limit:rotX:physics:low = -5.625
+            float limit:rotY:physics:high = 5.625
+            float limit:rotY:physics:low = -5.625
+            float limit:rotZ:physics:high = 0
+            float limit:rotZ:physics:low = -55.625
             float limit:transX:physics:high = -1
             float limit:transX:physics:low = 1
             float limit:transY:physics:high = -1
@@ -5450,12 +5447,12 @@ def Xform "sub12" (
             int isaac:physics:Tr_X:DofOffset
             int isaac:physics:Tr_Y:DofOffset
             int isaac:physics:Tr_Z:DofOffset
-            float limit:rotX:physics:high = 180
-            float limit:rotX:physics:low = -180
-            float limit:rotY:physics:high = 180
-            float limit:rotY:physics:low = -180
-            float limit:rotZ:physics:high = 180
-            float limit:rotZ:physics:low = -180
+            float limit:rotX:physics:high = 5.625
+            float limit:rotX:physics:low = -5.625
+            float limit:rotY:physics:high = 5.625
+            float limit:rotY:physics:low = -5.625
+            float limit:rotZ:physics:high = 0
+            float limit:rotZ:physics:low = -90
             float limit:transX:physics:high = -1
             float limit:transX:physics:low = 1
             float limit:transY:physics:high = -1
@@ -5508,12 +5505,12 @@ def Xform "sub12" (
             int isaac:physics:Tr_X:DofOffset
             int isaac:physics:Tr_Y:DofOffset
             int isaac:physics:Tr_Z:DofOffset
-            float limit:rotX:physics:high = 180
-            float limit:rotX:physics:low = -180
-            float limit:rotY:physics:high = 180
-            float limit:rotY:physics:low = -180
-            float limit:rotZ:physics:high = 180
-            float limit:rotZ:physics:low = -180
+            float limit:rotX:physics:high = 55.625
+            float limit:rotX:physics:low = -55.625
+            float limit:rotY:physics:high = 55.625
+            float limit:rotY:physics:low = -55.625
+            float limit:rotZ:physics:high = 55.625
+            float limit:rotZ:physics:low = -55.625
             float limit:transX:physics:high = -1
             float limit:transX:physics:low = 1
             float limit:transY:physics:high = -1
@@ -5566,12 +5563,12 @@ def Xform "sub12" (
             int isaac:physics:Tr_X:DofOffset
             int isaac:physics:Tr_Y:DofOffset
             int isaac:physics:Tr_Z:DofOffset
-            float limit:rotX:physics:high = 180
-            float limit:rotX:physics:low = -180
-            float limit:rotY:physics:high = 180
-            float limit:rotY:physics:low = -180
-            float limit:rotZ:physics:high = 180
-            float limit:rotZ:physics:low = -180
+            float limit:rotX:physics:high = 5.625
+            float limit:rotX:physics:low = -5.625
+            float limit:rotY:physics:high = 5.625
+            float limit:rotY:physics:low = -5.625
+            float limit:rotZ:physics:high = 5.625
+            float limit:rotZ:physics:low = -5.625
             float limit:transX:physics:high = -1
             float limit:transX:physics:low = 1
             float limit:transY:physics:high = -1
@@ -5624,12 +5621,12 @@ def Xform "sub12" (
             int isaac:physics:Tr_X:DofOffset
             int isaac:physics:Tr_Y:DofOffset
             int isaac:physics:Tr_Z:DofOffset
-            float limit:rotX:physics:high = 180
-            float limit:rotX:physics:low = -180
-            float limit:rotY:physics:high = 180
-            float limit:rotY:physics:low = -180
-            float limit:rotZ:physics:high = 180
-            float limit:rotZ:physics:low = -180
+            float limit:rotX:physics:high = 5.625
+            float limit:rotX:physics:low = -5.625
+            float limit:rotY:physics:high = 5.625
+            float limit:rotY:physics:low = -5.625
+            float limit:rotZ:physics:high = 0
+            float limit:rotZ:physics:low = -90
             float limit:transX:physics:high = -1
             float limit:transX:physics:low = 1
             float limit:transY:physics:high = -1
@@ -5914,12 +5911,12 @@ def Xform "sub12" (
             int isaac:physics:Tr_X:DofOffset
             int isaac:physics:Tr_Y:DofOffset
             int isaac:physics:Tr_Z:DofOffset
-            float limit:rotX:physics:high = 180
-            float limit:rotX:physics:low = -180
-            float limit:rotY:physics:high = 180
-            float limit:rotY:physics:low = -180
-            float limit:rotZ:physics:high = 180
-            float limit:rotZ:physics:low = -180
+            float limit:rotX:physics:high = 5.625
+            float limit:rotX:physics:low = -5.625
+            float limit:rotY:physics:high = 5.625
+            float limit:rotY:physics:low = -5.625
+            float limit:rotZ:physics:high = 55.625
+            float limit:rotZ:physics:low = 0
             float limit:transX:physics:high = -1
             float limit:transX:physics:low = 1
             float limit:transY:physics:high = -1
@@ -5972,12 +5969,12 @@ def Xform "sub12" (
             int isaac:physics:Tr_X:DofOffset
             int isaac:physics:Tr_Y:DofOffset
             int isaac:physics:Tr_Z:DofOffset
-            float limit:rotX:physics:high = 180
-            float limit:rotX:physics:low = -180
-            float limit:rotY:physics:high = 180
-            float limit:rotY:physics:low = -180
-            float limit:rotZ:physics:high = 180
-            float limit:rotZ:physics:low = -180
+            float limit:rotX:physics:high = 5.625
+            float limit:rotX:physics:low = -5.625
+            float limit:rotY:physics:high = 5.625
+            float limit:rotY:physics:low = -5.625
+            float limit:rotZ:physics:high = 55.625
+            float limit:rotZ:physics:low = 0
             float limit:transX:physics:high = -1
             float limit:transX:physics:low = 1
             float limit:transY:physics:high = -1
@@ -6030,12 +6027,12 @@ def Xform "sub12" (
             int isaac:physics:Tr_X:DofOffset
             int isaac:physics:Tr_Y:DofOffset
             int isaac:physics:Tr_Z:DofOffset
-            float limit:rotX:physics:high = 180
-            float limit:rotX:physics:low = -180
-            float limit:rotY:physics:high = 180
-            float limit:rotY:physics:low = -180
-            float limit:rotZ:physics:high = 180
-            float limit:rotZ:physics:low = -180
+            float limit:rotX:physics:high = 5.625
+            float limit:rotX:physics:low = -5.625
+            float limit:rotY:physics:high = 5.625
+            float limit:rotY:physics:low = -5.625
+            float limit:rotZ:physics:high = 90
+            float limit:rotZ:physics:low = 0
             float limit:transX:physics:high = -1
             float limit:transX:physics:low = 1
             float limit:transY:physics:high = -1
@@ -6088,12 +6085,12 @@ def Xform "sub12" (
             int isaac:physics:Tr_X:DofOffset
             int isaac:physics:Tr_Y:DofOffset
             int isaac:physics:Tr_Z:DofOffset
-            float limit:rotX:physics:high = 180
-            float limit:rotX:physics:low = -180
-            float limit:rotY:physics:high = 180
-            float limit:rotY:physics:low = -180
-            float limit:rotZ:physics:high = 180
-            float limit:rotZ:physics:low = -180
+            float limit:rotX:physics:high = 5.625
+            float limit:rotX:physics:low = -5.625
+            float limit:rotY:physics:high = 5.625
+            float limit:rotY:physics:low = -5.625
+            float limit:rotZ:physics:high = 55.625
+            float limit:rotZ:physics:low = 0
             float limit:transX:physics:high = -1
             float limit:transX:physics:low = 1
             float limit:transY:physics:high = -1
@@ -6146,12 +6143,12 @@ def Xform "sub12" (
             int isaac:physics:Tr_X:DofOffset
             int isaac:physics:Tr_Y:DofOffset
             int isaac:physics:Tr_Z:DofOffset
-            float limit:rotX:physics:high = 180
-            float limit:rotX:physics:low = -180
-            float limit:rotY:physics:high = 180
-            float limit:rotY:physics:low = -180
-            float limit:rotZ:physics:high = 180
-            float limit:rotZ:physics:low = -180
+            float limit:rotX:physics:high = 5.625
+            float limit:rotX:physics:low = -5.625
+            float limit:rotY:physics:high = 5.625
+            float limit:rotY:physics:low = -5.625
+            float limit:rotZ:physics:high = 55.625
+            float limit:rotZ:physics:low = 0
             float limit:transX:physics:high = -1
             float limit:transX:physics:low = 1
             float limit:transY:physics:high = -1
@@ -6204,12 +6201,12 @@ def Xform "sub12" (
             int isaac:physics:Tr_X:DofOffset
             int isaac:physics:Tr_Y:DofOffset
             int isaac:physics:Tr_Z:DofOffset
-            float limit:rotX:physics:high = 180
-            float limit:rotX:physics:low = -180
-            float limit:rotY:physics:high = 180
-            float limit:rotY:physics:low = -180
-            float limit:rotZ:physics:high = 180
-            float limit:rotZ:physics:low = -180
+            float limit:rotX:physics:high = 5.625
+            float limit:rotX:physics:low = -5.625
+            float limit:rotY:physics:high = 5.625
+            float limit:rotY:physics:low = -5.625
+            float limit:rotZ:physics:high = 90
+            float limit:rotZ:physics:low = 0
             float limit:transX:physics:high = -1
             float limit:transX:physics:low = 1
             float limit:transY:physics:high = -1
@@ -6262,12 +6259,12 @@ def Xform "sub12" (
             int isaac:physics:Tr_X:DofOffset
             int isaac:physics:Tr_Y:DofOffset
             int isaac:physics:Tr_Z:DofOffset
-            float limit:rotX:physics:high = 180
-            float limit:rotX:physics:low = -180
-            float limit:rotY:physics:high = 180
-            float limit:rotY:physics:low = -180
-            float limit:rotZ:physics:high = 180
-            float limit:rotZ:physics:low = -180
+            float limit:rotX:physics:high = 5.625
+            float limit:rotX:physics:low = -5.625
+            float limit:rotY:physics:high = 5.625
+            float limit:rotY:physics:low = -5.625
+            float limit:rotZ:physics:high = 55.625
+            float limit:rotZ:physics:low = 0
             float limit:transX:physics:high = -1
             float limit:transX:physics:low = 1
             float limit:transY:physics:high = -1
@@ -6320,12 +6317,12 @@ def Xform "sub12" (
             int isaac:physics:Tr_X:DofOffset
             int isaac:physics:Tr_Y:DofOffset
             int isaac:physics:Tr_Z:DofOffset
-            float limit:rotX:physics:high = 180
-            float limit:rotX:physics:low = -180
-            float limit:rotY:physics:high = 180
-            float limit:rotY:physics:low = -180
-            float limit:rotZ:physics:high = 180
-            float limit:rotZ:physics:low = -180
+            float limit:rotX:physics:high = 5.625
+            float limit:rotX:physics:low = -5.625
+            float limit:rotY:physics:high = 5.625
+            float limit:rotY:physics:low = -5.625
+            float limit:rotZ:physics:high = 55.625
+            float limit:rotZ:physics:low = 0
             float limit:transX:physics:high = -1
             float limit:transX:physics:low = 1
             float limit:transY:physics:high = -1
@@ -6378,12 +6375,12 @@ def Xform "sub12" (
             int isaac:physics:Tr_X:DofOffset
             int isaac:physics:Tr_Y:DofOffset
             int isaac:physics:Tr_Z:DofOffset
-            float limit:rotX:physics:high = 180
-            float limit:rotX:physics:low = -180
-            float limit:rotY:physics:high = 180
-            float limit:rotY:physics:low = -180
-            float limit:rotZ:physics:high = 180
-            float limit:rotZ:physics:low = -180
+            float limit:rotX:physics:high = 5.625
+            float limit:rotX:physics:low = -5.625
+            float limit:rotY:physics:high = 5.625
+            float limit:rotY:physics:low = -5.625
+            float limit:rotZ:physics:high = 90
+            float limit:rotZ:physics:low = 0
             float limit:transX:physics:high = -1
             float limit:transX:physics:low = 1
             float limit:transY:physics:high = -1
@@ -6436,12 +6433,12 @@ def Xform "sub12" (
             int isaac:physics:Tr_X:DofOffset
             int isaac:physics:Tr_Y:DofOffset
             int isaac:physics:Tr_Z:DofOffset
-            float limit:rotX:physics:high = 180
-            float limit:rotX:physics:low = -180
-            float limit:rotY:physics:high = 180
-            float limit:rotY:physics:low = -180
-            float limit:rotZ:physics:high = 180
-            float limit:rotZ:physics:low = -180
+            float limit:rotX:physics:high = 5.625
+            float limit:rotX:physics:low = -5.625
+            float limit:rotY:physics:high = 5.625
+            float limit:rotY:physics:low = -5.625
+            float limit:rotZ:physics:high = 55.625
+            float limit:rotZ:physics:low = 0
             float limit:transX:physics:high = -1
             float limit:transX:physics:low = 1
             float limit:transY:physics:high = -1
@@ -6494,12 +6491,12 @@ def Xform "sub12" (
             int isaac:physics:Tr_X:DofOffset
             int isaac:physics:Tr_Y:DofOffset
             int isaac:physics:Tr_Z:DofOffset
-            float limit:rotX:physics:high = 180
-            float limit:rotX:physics:low = -180
-            float limit:rotY:physics:high = 180
-            float limit:rotY:physics:low = -180
-            float limit:rotZ:physics:high = 180
-            float limit:rotZ:physics:low = -180
+            float limit:rotX:physics:high = 5.625
+            float limit:rotX:physics:low = -5.625
+            float limit:rotY:physics:high = 5.625
+            float limit:rotY:physics:low = -5.625
+            float limit:rotZ:physics:high = 55.625
+            float limit:rotZ:physics:low = 0
             float limit:transX:physics:high = -1
             float limit:transX:physics:low = 1
             float limit:transY:physics:high = -1
@@ -6552,12 +6549,12 @@ def Xform "sub12" (
             int isaac:physics:Tr_X:DofOffset
             int isaac:physics:Tr_Y:DofOffset
             int isaac:physics:Tr_Z:DofOffset
-            float limit:rotX:physics:high = 180
-            float limit:rotX:physics:low = -180
-            float limit:rotY:physics:high = 180
-            float limit:rotY:physics:low = -180
-            float limit:rotZ:physics:high = 180
-            float limit:rotZ:physics:low = -180
+            float limit:rotX:physics:high = 5.625
+            float limit:rotX:physics:low = -5.625
+            float limit:rotY:physics:high = 5.625
+            float limit:rotY:physics:low = -5.625
+            float limit:rotZ:physics:high = 90
+            float limit:rotZ:physics:low = 0
             float limit:transX:physics:high = -1
             float limit:transX:physics:low = 1
             float limit:transY:physics:high = -1
@@ -6610,12 +6607,12 @@ def Xform "sub12" (
             int isaac:physics:Tr_X:DofOffset
             int isaac:physics:Tr_Y:DofOffset
             int isaac:physics:Tr_Z:DofOffset
-            float limit:rotX:physics:high = 180
-            float limit:rotX:physics:low = -180
-            float limit:rotY:physics:high = 180
-            float limit:rotY:physics:low = -180
-            float limit:rotZ:physics:high = 180
-            float limit:rotZ:physics:low = -180
+            float limit:rotX:physics:high = 55.625
+            float limit:rotX:physics:low = -55.625
+            float limit:rotY:physics:high = 55.625
+            float limit:rotY:physics:low = -55.625
+            float limit:rotZ:physics:high = 55.625
+            float limit:rotZ:physics:low = -55.625
             float limit:transX:physics:high = -1
             float limit:transX:physics:low = 1
             float limit:transY:physics:high = -1
@@ -6668,12 +6665,12 @@ def Xform "sub12" (
             int isaac:physics:Tr_X:DofOffset
             int isaac:physics:Tr_Y:DofOffset
             int isaac:physics:Tr_Z:DofOffset
-            float limit:rotX:physics:high = 180
-            float limit:rotX:physics:low = -180
-            float limit:rotY:physics:high = 180
-            float limit:rotY:physics:low = -180
-            float limit:rotZ:physics:high = 180
-            float limit:rotZ:physics:low = -180
+            float limit:rotX:physics:high = 5.625
+            float limit:rotX:physics:low = -5.625
+            float limit:rotY:physics:high = 5.625
+            float limit:rotY:physics:low = -5.625
+            float limit:rotZ:physics:high = 5.625
+            float limit:rotZ:physics:low = -5.625
             float limit:transX:physics:high = -1
             float limit:transX:physics:low = 1
             float limit:transY:physics:high = -1
@@ -6726,12 +6723,12 @@ def Xform "sub12" (
             int isaac:physics:Tr_X:DofOffset
             int isaac:physics:Tr_Y:DofOffset
             int isaac:physics:Tr_Z:DofOffset
-            float limit:rotX:physics:high = 180
-            float limit:rotX:physics:low = -180
-            float limit:rotY:physics:high = 180
-            float limit:rotY:physics:low = -180
-            float limit:rotZ:physics:high = 180
-            float limit:rotZ:physics:low = -180
+            float limit:rotX:physics:high = 5.625
+            float limit:rotX:physics:low = -5.625
+            float limit:rotY:physics:high = 5.625
+            float limit:rotY:physics:low = -5.625
+            float limit:rotZ:physics:high = 90
+            float limit:rotZ:physics:low = 0
             float limit:transX:physics:high = -1
             float limit:transX:physics:low = 1
             float limit:transY:physics:high = -1

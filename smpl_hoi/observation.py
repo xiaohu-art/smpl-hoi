@@ -79,7 +79,6 @@ class contact(Observation[SMPLHOITask]):
         super().__init__(env)
         self.robot = self.command_manager.robot
         self.threshold = threshold
-        self.contact_body_ids = self.command_manager.contact_body_ids
         self.contact_sensor = self.env.scene["contact_forces"]
 
     def compute(self) -> torch.Tensor:
@@ -87,11 +86,11 @@ class contact(Observation[SMPLHOITask]):
         max_t = self.command_manager.motion.num_frames - 1
         t = torch.clamp(t, max=max_t)
 
-        contact_forces = self.contact_sensor.data.net_forces_w[:, self.contact_body_ids, :]
+        contact_forces = self.contact_sensor.data.net_forces_w
         contact_norm = torch.norm(contact_forces, dim=-1)
         contact_flag = (contact_norm > self.threshold).float()
 
-        ref_contact_flag = self.command_manager.motion.contacts[t][:, self.contact_body_ids]
+        ref_contact_flag = self.command_manager.motion.contacts[t]
         diff_contact = ref_contact_flag * (( ref_contact_flag + 1 ) / 2 - contact_flag)
         return torch.cat([contact_flag, diff_contact], dim=-1).reshape(self.num_envs, -1)
 

@@ -82,7 +82,6 @@ class SMPLHOITask(Command):
         env, 
         motion_file: str, 
         key_body: list[str],
-        contact_body: list[str],
     ):
         super().__init__(env)
         motion_file = DATA_ROOT / motion_file
@@ -93,7 +92,6 @@ class SMPLHOITask(Command):
         self.env_origin = self.env.scene.env_origins
 
         self.key_body_ids, self.key_body_names = self.robot.find_bodies(key_body)
-        self.contact_body_ids, self.contact_body_names = self.robot.find_bodies(contact_body)
 
         self.motion = MotionLoader(motion_file, object_name, device=self.device)
         # self.bps = torch.load(BPS_PATH).to(torch.float32).to(self.device)
