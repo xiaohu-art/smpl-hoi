@@ -26,7 +26,8 @@ class MotionLoader:
         data = joblib.load(motion_file)["largebox"]["sub12_largebox_000"]
 
         mesh_obj = trimesh.load(os.path.join(OBJECT_PATH, f"{object_name}.obj"), force='mesh')
-        self.obj_verts = torch.tensor(mesh_obj.vertices, dtype=torch.float32, device=device)
+        object_points, _ = trimesh.sample.sample_surface_even(mesh_obj, count=1024, seed=2024)
+        self.obj_verts = torch.tensor(object_points, dtype=torch.float32, device=device)
         
         self.fps = data["fps"]
         self.joint_pos = torch.tensor(data["joint_pos"], dtype=torch.float32, device=device)
@@ -94,7 +95,6 @@ class SMPLHOITask(Command):
         self.key_body_ids, self.key_body_names = self.robot.find_bodies(key_body)
 
         self.motion = MotionLoader(motion_file, object_name, device=self.device)
-        # self.bps = torch.load(BPS_PATH).to(torch.float32).to(self.device)
 
         assert self.motion.num_joints == self.robot.num_joints
         assert self.motion.num_bodies == self.robot.num_bodies

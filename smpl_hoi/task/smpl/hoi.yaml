@@ -18,17 +18,18 @@ num_envs: 4096
 max_episode_length: 1000
 
 sim:
-  step_dt: 0.033
-  isaac_physics_dt: 0.0167
-  mujoco_physics_dt: 0.003
+  step_dt: ${frac:1/30}
+  isaac_physics_dt: ${frac:1/120}
+  mujoco_physics_dt: ${frac:1/300}
   gpu_max_rigid_patch_count: 262144 # 2**18
+  enable_ccd: true
 
 input:
   action:
     _target_: active_adaptation.envs.mdp.action.JointPosition
     action_scaling: {
-      .*(Hip|Torso|Knee|Ankle|Shoulder|Elbow|Wrist).*: 0.5,
-      .*(Index|Middle|Pinky|Ring|Thumb).*: 0.1,
+      .*(Hip|Torso|Knee|Ankle|Shoulder|Elbow|Wrist).*: 1.0,
+      .*(Index|Middle|Pinky|Ring|Thumb).*: 1.0,
     }
     alpha_range: [0.7, 0.9]
 
@@ -37,11 +38,10 @@ command:
   motion_file: sub12_largebox_000_replay.pkl
   key_body: [ 
               "Pelvis",
-              "L_Hip", "L_Knee", "L_Ankle", "L_Toe", 
-              "R_Hip", "R_Knee", "R_Ankle", "R_Toe", 
+              ".*Hip", ".*Knee", ".*Ankle", ".*Toe", 
               "Torso", "Spine", "Chest", "Neck", "Head", 
-              "L_Thorax", "L_Shoulder", "L_Elbow", "L_Wrist", 
-              "R_Thorax", "R_Shoulder", "R_Elbow", "R_Wrist"
+              ".*Thorax", ".*Shoulder", ".*Elbow", ".*Wrist", 
+              # ".*Index3", ".*Middle3", ".*Pinky3", ".*Ring3",".*Thumb3"
             ]
 
 observation:
@@ -67,8 +67,7 @@ reward:
     track_kp:       {weight: 1.0}
     track_obj:      {weight: 1.0}
     track_cg:       {weight: 1.0}
-    
-    joint_acc_l2:   {weight: 1.0e-7}
+    # _eval_:         {mulxxx}
 
 # randomization:
 #   reset_joint_states_uniform:
