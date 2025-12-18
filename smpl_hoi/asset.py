@@ -135,5 +135,19 @@ LARGEBOX = RigidObjectCfg(
     disable_gravity=False,
 )
 
+MONITOR = RigidObjectCfg(
+    usd_path=Path(__file__).parent / "assets" / "objects" / "monitor.usd",
+    activate_contact_sensors=True,
+    disable_gravity=False,
+)
+
+TRASHCAN = RigidObjectCfg(
+    usd_path=Path(__file__).parent / "assets" / "objects" / "trashcan.usd",
+    activate_contact_sensors=True,
+    disable_gravity=False,
+)
+
 registry.register("asset", "smpl", SMPL)
 registry.register("asset", "largebox", LARGEBOX)
+registry.register("asset", "monitor", MONITOR)
+registry.register("asset", "trashcan", TRASHCAN)
