@@ -483,7 +483,7 @@ def process_single_motion(sim: sim_utils.SimulationContext, scene: InteractiveSc
             log["object_quat_w"].append(object.data.root_quat_w[0, :].cpu().numpy().copy())
             log["object_lin_vel_w"].append(object.data.root_lin_vel_w[0, :].cpu().numpy().copy())
             log["object_ang_vel_w"].append(object.data.root_ang_vel_w[0, :].cpu().numpy().copy())
-            log["contact"].append(human_contact_reordered[0, :].cpu().numpy().copy().astype(bool))
+            log["contact"].append(human_contact_reordered[0, :].cpu().numpy().copy())
 
         if reset_flag and not file_saved:
             file_saved = True

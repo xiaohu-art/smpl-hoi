@@ -81,12 +81,12 @@ class cg_reset(Termination[SMPLHOITask]):
         human_contact = (contact_forces.norm(dim=-1) > 0.1).float()
 
         ref_left_contact_hand = ref_human_contact[:, self.left_hand_ids]
-        ref_left_contact_hand_any = ref_left_contact_hand.any(dim=-1, keepdim=True).float()
+        ref_left_contact_hand_any = (ref_left_contact_hand>0.0).any(dim=-1, keepdim=True).float()
         left_hand_contact = human_contact[:, self.left_hand_ids]
         left_hand_contact_any = left_hand_contact.any(dim=-1, keepdim=True).float()
 
         ref_right_contact_hand = ref_human_contact[:, self.right_hand_ids]
-        ref_right_contact_hand_any = ref_right_contact_hand.any(dim=-1, keepdim=True).float()
+        ref_right_contact_hand_any = (ref_right_contact_hand>0.0).any(dim=-1, keepdim=True).float()
         right_hand_contact = human_contact[:, self.right_hand_ids]
         right_hand_contact_any = right_hand_contact.any(dim=-1, keepdim=True).float()
 

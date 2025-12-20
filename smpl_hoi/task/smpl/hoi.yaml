@@ -21,8 +21,9 @@ sim:
   step_dt: ${frac:1/30}
   isaac_physics_dt: ${frac:1/120}
   mujoco_physics_dt: ${frac:1/300}
-  gpu_max_rigid_patch_count: 262144 # 2**18
-  enable_ccd: true
+  physx:
+    gpu_max_rigid_patch_count: ${eval:'2**18'}
+    enable_ccd: true
 
 input:
   action:
@@ -63,11 +64,12 @@ observation:
     # interaction_guidance: {}
 
 reward:
+  _mult_dt_:        false
   loco:
     track_kp:       {weight: 1.0}
     track_obj:      {weight: 1.0}
     track_cg:       {weight: 1.0}
-    # _eval_:         {mulxxx}
+    _eval_:         "lambda *args: args[0] * args[1] * args[2]"
 
 # randomization:
 #   reset_joint_states_uniform:

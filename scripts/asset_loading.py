@@ -2,6 +2,7 @@ import argparse
 import os
 import numpy as np
 from scipy.spatial.transform import Rotation as sRot
+from torch.nn.parallel import replicate
 
 from isaaclab.app import AppLauncher
 
@@ -21,18 +22,13 @@ simulation_app = app_launcher.app
 """Rest everything follows."""
 
 import torch
-import joblib
-from tqdm import tqdm
 
 import isaaclab.sim as sim_utils
-from isaaclab.assets import ArticulationCfg, AssetBaseCfg, RigidObjectCfg, RigidObject
+from isaaclab.assets import AssetBaseCfg, RigidObjectCfg, RigidObject
 from isaaclab.scene import InteractiveScene, InteractiveSceneCfg
-from isaaclab.sensors import ContactSensorCfg
 from isaaclab.sim import SimulationContext
 from isaaclab.utils import configclass
 from isaaclab.utils.assets import ISAAC_NUCLEUS_DIR
-from isaaclab.utils.math import axis_angle_from_quat, quat_conjugate, quat_mul, quat_slerp
-from isaaclab.utils.math import matrix_from_quat, quat_from_matrix, quat_unique, quat_from_angle_axis
 
 ##
 # Pre-defined configs
@@ -40,7 +36,7 @@ from isaaclab.utils.math import matrix_from_quat, quat_from_matrix, quat_unique,
 import active_adaptation as aa
 aa.set_backend("isaac")
 
-from smpl_hoi.asset import SMPL, LARGEBOX, MONITOR, TRASHCAN
+from smpl_hoi.asset import LARGEBOX, MONITOR, TRASHCAN
 
 object_list = [
     LARGEBOX.isaaclab(),
@@ -66,15 +62,10 @@ class SceneCfg(InteractiveSceneCfg):
         ),
     )
 
-
+    replicate_physics = False
 
 def main():
     sim_cfg = sim_utils.SimulationCfg(device=args_cli.device)
-    sim_cfg.dt = 1.0 / 200
-    # Increase solver iterations for better collision stability
-    sim_cfg.physx.solver_type = 1  # TGS (Temporal Gauss-Seidel) usually more stable
-    sim_cfg.physx.solver_position_iteration_count = 8
-    sim_cfg.physx.solver_velocity_iteration_count = 4
     sim = SimulationContext(sim_cfg)
 
     scene_cfg = SceneCfg(num_envs=args_cli.num_envs, env_spacing=2.0)
