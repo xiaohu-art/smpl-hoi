@@ -130,19 +130,31 @@ SMPL = AssetCfg(
 )
 
 LARGEBOX = RigidObjectCfg(
-    usd_path=Path(__file__).parent / "assets" / "objects" / "largebox.usd",
+    usd_path=Path(__file__).parent / "assets" / "objects" / "largebox" / "largebox.usd",
     activate_contact_sensors=True,
     disable_gravity=False,
 )
 
 MONITOR = RigidObjectCfg(
-    usd_path=Path(__file__).parent / "assets" / "objects" / "monitor.usd",
+    usd_path=Path(__file__).parent / "assets" / "objects" / "monitor" / "monitor.usd",
+    activate_contact_sensors=True,
+    disable_gravity=False,
+)
+
+PLASTICBOX = RigidObjectCfg(
+    usd_path=Path(__file__).parent / "assets" / "objects" / "plasticbox" / "plasticbox.usd",
+    activate_contact_sensors=True,
+    disable_gravity=False,
+)
+
+SMALLTABLE = RigidObjectCfg(
+    usd_path=Path(__file__).parent / "assets" / "objects" / "smalltable" / "smalltable.usd",
     activate_contact_sensors=True,
     disable_gravity=False,
 )
 
 TRASHCAN = RigidObjectCfg(
-    usd_path=Path(__file__).parent / "assets" / "objects" / "trashcan.usd",
+    usd_path=Path(__file__).parent / "assets" / "objects" / "trashcan" / "trashcan.usd",
     activate_contact_sensors=True,
     disable_gravity=False,
 )
@@ -150,4 +162,6 @@ TRASHCAN = RigidObjectCfg(
 registry.register("asset", "smpl", SMPL)
 registry.register("asset", "largebox", LARGEBOX)
 registry.register("asset", "monitor", MONITOR)
+registry.register("asset", "plasticbox", PLASTICBOX)
+registry.register("asset", "smalltable", SMALLTABLE)
 registry.register("asset", "trashcan", TRASHCAN)

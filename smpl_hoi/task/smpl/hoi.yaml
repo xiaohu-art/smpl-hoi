@@ -36,7 +36,7 @@ input:
 
 command:
   class: SMPLHOITask
-  motion_file: sub12_largebox_000_replay.pkl
+  motion_file: sub12_largebox_000.pkl
   key_body: [ 
               "Pelvis",
               ".*Hip", ".*Knee", ".*Ankle", ".*Toe", 

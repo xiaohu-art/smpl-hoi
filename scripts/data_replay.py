@@ -38,9 +38,8 @@ import joblib
 from tqdm import tqdm
 
 import isaaclab.sim as sim_utils
-from isaaclab.assets import ArticulationCfg, AssetBaseCfg, RigidObjectCfg
+from isaaclab.assets import AssetBaseCfg
 from isaaclab.scene import InteractiveScene, InteractiveSceneCfg
-from isaaclab.sensors import ContactSensorCfg
 from isaaclab.sim import SimulationContext
 from isaaclab.utils import configclass
 from isaaclab.utils.assets import ISAAC_NUCLEUS_DIR
@@ -53,7 +52,15 @@ from isaaclab.utils.math import matrix_from_quat, quat_from_matrix, quat_unique,
 import active_adaptation as aa
 aa.set_backend("isaac")
 
-from smpl_hoi.asset import SMPL, LARGEBOX
+from smpl_hoi.asset import SMPL, LARGEBOX, MONITOR, PLASTICBOX, SMALLTABLE, TRASHCAN
+
+object_dict = {
+    "largebox": LARGEBOX.isaaclab(),
+    "monitor": MONITOR.isaaclab(),
+    "plasticbox": PLASTICBOX.isaaclab(),
+    "smalltable": SMALLTABLE.isaaclab(),
+    "trashcan": TRASHCAN.isaaclab(),
+}
 
 SMPLH_BONE_ORDER_NAMES = [
     "Pelvis",
@@ -128,7 +135,6 @@ class ReplayMotionsSceneCfg(InteractiveSceneCfg):
 
     # articulation
     robot = SMPL.isaaclab().replace(prim_path="{ENV_REGEX_NS}/Robot")
-    largebox = LARGEBOX.isaaclab().replace(prim_path="{ENV_REGEX_NS}/LargeBox")
 
 from pxr import Usd, UsdGeom, Gf, Vt
 import omni.usd
@@ -395,7 +401,7 @@ def process_single_motion(sim: sim_utils.SimulationContext, scene: InteractiveSc
     robot_body_indexes, robot_body_names = robot.find_bodies(body_names, preserve_order=True)
     assert len(robot_body_indexes) == len(robot.body_names)
 
-    object = scene["largebox"]
+    object = scene["object"]
 
     # ------- data logger -------------------------------------------------------
     log = {
@@ -549,7 +555,13 @@ def main():
     sim_cfg.dt = 1.0 / args_cli.output_fps
     sim = SimulationContext(sim_cfg)
     # Design scene
+
+    # Setup object
+    obj_name = args_cli.input_file.split("_")[1]
+    obj_cfg = object_dict[obj_name].replace(prim_path="{ENV_REGEX_NS}/Object")
+
     scene_cfg = ReplayMotionsSceneCfg(num_envs=1, env_spacing=2.0)
+    setattr(scene_cfg, "object", obj_cfg)
     scene = InteractiveScene(scene_cfg)
     # Play the simulator
     sim.reset()

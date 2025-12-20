@@ -25,7 +25,7 @@ class MotionLoader:
         assert os.path.isfile(motion_file), f"Invalid file path: {motion_file}"
         data = joblib.load(motion_file)["largebox"]["sub12_largebox_000"]
 
-        mesh_obj = trimesh.load(os.path.join(OBJECT_PATH, f"{object_name}.obj"), force='mesh')
+        mesh_obj = trimesh.load(os.path.join(OBJECT_PATH, object_name, f"{object_name}.obj"), force='mesh')
         object_points, _ = trimesh.sample.sample_surface_even(mesh_obj, count=1024, seed=2024)
         self.obj_verts = torch.tensor(object_points, dtype=torch.float32, device=device)
         
