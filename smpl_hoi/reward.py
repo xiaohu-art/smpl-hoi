@@ -69,13 +69,19 @@ class track_cg(Reward[SMPLHOITask]):
         self.robot = self.command_manager.robot
         self.contact_sensor = self.env.scene.sensors["contact_forces"]
  
-        self.contact_body_ids, self.contact_body_names = self.robot.find_bodies([
+        self.contact_body_ids, self.contact_body_names = self.contact_sensor.find_bodies([
               ".*Hip", ".*Knee", ".*Ankle", ".*Toe", 
               "Torso", "Spine", "Chest", "Neck", "Head", 
               ".*Thorax", ".*Shoulder", ".*Elbow", ".*Wrist",
               ])
-        self.left_hand_ids, self.left_hand_names = self.robot.find_bodies(["L_Index.*", "L_Middle.*", "L_Pinky.*", "L_Ring.*", "L_Thumb.*"])
-        self.right_hand_ids, self.right_hand_names = self.robot.find_bodies(["R_Index.*", "R_Middle.*", "R_Pinky.*", "R_Ring.*", "R_Thumb.*"])
+        self.left_hand_ids, self.left_hand_names = self.contact_sensor.find_bodies(["L_Index.*", "L_Middle.*", "L_Pinky.*", "L_Ring.*", "L_Thumb.*"])
+        self.right_hand_ids, self.right_hand_names = self.contact_sensor.find_bodies(["R_Index.*", "R_Middle.*", "R_Pinky.*", "R_Ring.*", "R_Thumb.*"])
+
+        robot_body_names = self.robot.body_names
+        sensor_body_names = self.contact_sensor.body_names
+        to_sensor_indices = [robot_body_names.index(name) for name in sensor_body_names]
+            
+        self.to_sensor_indices = torch.tensor(to_sensor_indices, device=self.env.device, dtype=torch.long)
 
         self.lambda_hand = 5.0
         self.lambda_other = 5.0
@@ -83,7 +89,7 @@ class track_cg(Reward[SMPLHOITask]):
 
     def compute(self) -> torch.Tensor:
         t = self.env.episode_length_buf - 1
-        ref_human_contact = self.command_manager.motion.contacts[t]
+        ref_human_contact = self.command_manager.motion.contacts[t][:, self.to_sensor_indices]
         contact_forces = self.contact_sensor.data.net_forces_w
         human_contact = (contact_forces.norm(dim=-1) > 0.1).float()
 

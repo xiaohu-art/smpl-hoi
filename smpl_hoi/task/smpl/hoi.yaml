@@ -71,6 +71,9 @@ reward:
     track_cg:       {weight: 1.0}
     _eval_:         "lambda *args: args[0] * args[1] * args[2]"
 
+  reg:
+    action_rate_l2: {weight: 2e-5}
+
 # randomization:
 #   reset_joint_states_uniform:
 #     pos_ranges:

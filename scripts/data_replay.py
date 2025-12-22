@@ -40,6 +40,7 @@ from tqdm import tqdm
 import isaaclab.sim as sim_utils
 from isaaclab.assets import AssetBaseCfg
 from isaaclab.scene import InteractiveScene, InteractiveSceneCfg
+from isaaclab.sensors import ContactSensorCfg
 from isaaclab.sim import SimulationContext
 from isaaclab.utils import configclass
 from isaaclab.utils.assets import ISAAC_NUCLEUS_DIR
@@ -135,6 +136,11 @@ class ReplayMotionsSceneCfg(InteractiveSceneCfg):
 
     # articulation
     robot = SMPL.isaaclab().replace(prim_path="{ENV_REGEX_NS}/Robot")
+    contact_forces = ContactSensorCfg(
+        prim_path="{ENV_REGEX_NS}/Robot/.*",
+        track_air_time=True,
+        history_length=3,
+    )
 
 from pxr import Usd, UsdGeom, Gf, Vt
 import omni.usd
@@ -402,6 +408,9 @@ def process_single_motion(sim: sim_utils.SimulationContext, scene: InteractiveSc
     assert len(robot_body_indexes) == len(robot.body_names)
 
     object = scene["object"]
+
+    contact_sensor = scene["contact_forces"]
+    contact_sensor_body_indexes, contact_sensor_body_names = contact_sensor.find_bodies(body_names)
 
     # ------- data logger -------------------------------------------------------
     log = {
