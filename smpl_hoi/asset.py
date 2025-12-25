@@ -25,24 +25,24 @@ SMPL = AssetCfg(
             effort_limit=500,
             velocity_limit=32.0,
             stiffness={
-                "L_Hip_.": 200,
-                "R_Hip_.": 200,
-                "L_Knee_.": 200,
-                "R_Knee_.": 200,
-                "L_Ankle_.": 200,
-                "R_Ankle_.": 200,
-                "L_Toe_.": 100,
-                "R_Toe_.": 100,
+                "L_Hip_.": 800,
+                "R_Hip_.": 800,
+                "L_Knee_.": 800,
+                "R_Knee_.": 800,
+                "L_Ankle_.": 800,
+                "R_Ankle_.": 800,
+                "L_Toe_.": 500,
+                "R_Toe_.": 500,
             },
             damping={
-                "L_Hip_.": 10,
-                "R_Hip_.": 10,
-                "L_Knee_.": 10,
-                "R_Knee_.": 10,
-                "L_Ankle_.": 10,
-                "R_Ankle_.": 10,
-                "L_Toe_.": 5,
-                "R_Toe_.": 5,
+                "L_Hip_.": 80,
+                "R_Hip_.": 80,
+                "L_Knee_.": 80,
+                "R_Knee_.": 80,
+                "L_Ankle_.": 80,
+                "R_Ankle_.": 80,
+                "L_Toe_.": 50,
+                "R_Toe_.": 50,
                 
             },
             friction=0.01,
@@ -53,22 +53,22 @@ SMPL = AssetCfg(
             effort_limit=500,
             velocity_limit=32.0,
             stiffness={
-                "Torso_.": 200,
-                "Spine_.": 200,
-                "Chest_.": 200,
-                "Neck_.": 100,
-                "Head_.": 100,
-                "L_Thorax_.": 100,
-                "R_Thorax_.": 100,
+                "Torso_.": 1000,
+                "Spine_.": 1000,
+                "Chest_.": 1000,
+                "Neck_.": 500,
+                "Head_.": 500,
+                "L_Thorax_.": 500,
+                "R_Thorax_.": 500,
             },
             damping={
-                "Torso_.": 10,
-                "Spine_.": 10,
-                "Chest_.": 10,
-                "Neck_.": 5,
-                "Head_.": 5,
-                "L_Thorax_.": 5,
-                "R_Thorax_.": 5,
+                "Torso_.": 100,
+                "Spine_.": 100,
+                "Chest_.": 100,
+                "Neck_.": 50,
+                "Head_.": 50,
+                "L_Thorax_.": 50,
+                "R_Thorax_.": 50,
             },
             friction=0.01,
             armature=0.01,
@@ -78,20 +78,20 @@ SMPL = AssetCfg(
             effort_limit=300,
             velocity_limit=32.0,
             stiffness={
-                "L_Shoulder_.": 200,
-                "R_Shoulder_.": 200,
-                "L_Elbow_.": 100,
-                "R_Elbow_.": 100,
-                "L_Wrist_.": 100,
-                "R_Wrist_.": 100,
+                "L_Shoulder_.": 500,
+                "R_Shoulder_.": 500,
+                "L_Elbow_.": 300,
+                "R_Elbow_.": 300,
+                "L_Wrist_.": 300,
+                "R_Wrist_.": 300,
             },
             damping={
-                "L_Shoulder_.": 5,
-                "R_Shoulder_.": 5,
-                "L_Elbow_.": 3,
-                "R_Elbow_.": 3,
-                "L_Wrist_.": 3,
-                "R_Wrist_.": 3,
+                "L_Shoulder_.": 50,
+                "R_Shoulder_.": 50,
+                "L_Elbow_.": 30,
+                "R_Elbow_.": 30,
+                "L_Wrist_.": 30,
+                "R_Wrist_.": 30,
             },
             friction=0.01,
             armature=0.01,
@@ -112,8 +112,8 @@ SMPL = AssetCfg(
             ],
             effort_limit=100,
             velocity_limit=10.0,
-            stiffness=10.0,
-            damping=1.0,
+            stiffness=100.0,
+            damping=10.0,
             friction=0.01,
             armature=0.01,
         ),
@@ -131,15 +131,16 @@ SMPL = AssetCfg(
 
 LARGEBOX = RigidObjectCfg(
     usd_path=Path(__file__).parent / "assets" / "objects" / "largebox" / "largebox.usd",
+    # urdf_path=Path(__file__).parent / "assets" / "objects" / "largebox" / "largebox.urdf",
     activate_contact_sensors=True,
     disable_gravity=False,
 )
 
-MONITOR = RigidObjectCfg(
-    usd_path=Path(__file__).parent / "assets" / "objects" / "monitor" / "monitor.usd",
-    activate_contact_sensors=True,
-    disable_gravity=False,
-)
+# MONITOR = RigidObjectCfg(
+#     usd_path=Path(__file__).parent / "assets" / "objects" / "monitor" / "monitor.usd",
+#     activate_contact_sensors=True,
+#     disable_gravity=False,
+# )
 
 PLASTICBOX = RigidObjectCfg(
     usd_path=Path(__file__).parent / "assets" / "objects" / "plasticbox" / "plasticbox.usd",
@@ -153,15 +154,15 @@ SMALLTABLE = RigidObjectCfg(
     disable_gravity=False,
 )
 
-TRASHCAN = RigidObjectCfg(
-    usd_path=Path(__file__).parent / "assets" / "objects" / "trashcan" / "trashcan.usd",
-    activate_contact_sensors=True,
-    disable_gravity=False,
-)
+# TRASHCAN = RigidObjectCfg(
+#     usd_path=Path(__file__).parent / "assets" / "objects" / "trashcan" / "trashcan.usd",
+#     activate_contact_sensors=True,
+#     disable_gravity=False,
+# )
 
 registry.register("asset", "smpl", SMPL)
 registry.register("asset", "largebox", LARGEBOX)
-registry.register("asset", "monitor", MONITOR)
+# registry.register("asset", "monitor", MONITOR)
 registry.register("asset", "plasticbox", PLASTICBOX)
 registry.register("asset", "smalltable", SMALLTABLE)
-registry.register("asset", "trashcan", TRASHCAN)
+# registry.register("asset", "trashcan", TRASHCAN)

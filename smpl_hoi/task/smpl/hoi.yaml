@@ -10,7 +10,9 @@ viewer:
 robot:
   name: smpl
 objects:
-  - name: largebox
+  # - name: largebox
+  - name: plasticbox
+  # - name: smalltable
 terrain: plane
 
 # common
@@ -23,7 +25,7 @@ sim:
   mujoco_physics_dt: ${frac:1/300}
   physx:
     gpu_max_rigid_patch_count: ${eval:'2**18'}
-    enable_ccd: true
+    # enable_ccd: true
 
 input:
   action:
@@ -36,7 +38,7 @@ input:
 
 command:
   class: SMPLHOITask
-  motion_file: sub12_largebox_000.pkl
+  motion_file: sub12_plasticbox_000.pkl
   key_body: [ 
               "Pelvis",
               ".*Hip", ".*Knee", ".*Ankle", ".*Toe", 
@@ -72,7 +74,7 @@ reward:
     _eval_:         "lambda *args: args[0] * args[1] * args[2]"
 
   reg:
-    action_rate_l2: {weight: 2e-5}
+    action_rate_l2: {weight: 5e-5}
 
 # randomization:
 #   reset_joint_states_uniform:

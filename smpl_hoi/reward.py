@@ -74,8 +74,8 @@ class track_cg(Reward[SMPLHOITask]):
               "Torso", "Spine", "Chest", "Neck", "Head", 
               ".*Thorax", ".*Shoulder", ".*Elbow", ".*Wrist",
               ])
-        self.left_hand_ids, self.left_hand_names = self.contact_sensor.find_bodies(["L_Index.*", "L_Middle.*", "L_Pinky.*", "L_Ring.*", "L_Thumb.*"])
-        self.right_hand_ids, self.right_hand_names = self.contact_sensor.find_bodies(["R_Index.*", "R_Middle.*", "R_Pinky.*", "R_Ring.*", "R_Thumb.*"])
+        self.left_hand_ids, self.left_hand_names = self.contact_sensor.find_bodies(["L_Index3", "L_Middle3", "L_Pinky3", "L_Ring3", "L_Thumb3"])
+        self.right_hand_ids, self.right_hand_names = self.contact_sensor.find_bodies(["R_Index3", "R_Middle3", "R_Pinky3", "R_Ring3", "R_Thumb3"])
 
         robot_body_names = self.robot.body_names
         sensor_body_names = self.contact_sensor.body_names
@@ -90,8 +90,10 @@ class track_cg(Reward[SMPLHOITask]):
     def compute(self) -> torch.Tensor:
         t = self.env.episode_length_buf - 1
         ref_human_contact = self.command_manager.motion.contacts[t][:, self.to_sensor_indices]
-        contact_forces = self.contact_sensor.data.net_forces_w
-        human_contact = (contact_forces.norm(dim=-1) > 0.1).float()
+        # contact_forces = self.contact_sensor.data.net_forces_w
+        # human_contact = (contact_forces.norm(dim=-1) > 0.1).float()
+        human_contact = (self.contact_sensor.data.current_contact_time > 0.01).float()
+
 
         ref_left_contact_hand = ref_human_contact[:, self.left_hand_ids]
         ref_left_contact_hand_any = (ref_left_contact_hand>0.0).any(dim=-1, keepdim=True).float()
@@ -108,9 +110,9 @@ class track_cg(Reward[SMPLHOITask]):
         rcg_right = 0.5 * ( 1+torch.exp(-ecg_right * self.lambda_hand) ) * ref_right_contact_hand_any + ( 1-ref_right_contact_hand_any)
 
         ref_other_contact = ref_human_contact[:, self.contact_body_ids]
-        ref_other_contact_any = (ref_other_contact>0.0).any(dim=-1, keepdim=True).float()
+        mask = (ref_other_contact>0.0).float()
         other_contact = human_contact[:, self.contact_body_ids]
-        ecg_other = (torch.abs(other_contact - ref_other_contact) * ref_other_contact_any).mean(dim=-1, keepdim=True)
+        ecg_other = (torch.abs(other_contact - ref_other_contact) * mask).mean(dim=-1, keepdim=True)
         rcg_other = torch.exp(-ecg_other * self.lambda_other)
 
         no_contact = 1.0 - human_contact

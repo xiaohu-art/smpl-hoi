@@ -8,7 +8,7 @@
             }
             dictionary Perspective = {
                 double3 position = (1.6237727185115531, 1.6237727185115547, 1.6237727990961228)
-                double3 target = (-3.9780384541998615e-8, -3.9780382321552565e-8, 7.9560767529685e-8)
+                double3 target = (-3.9780384986087824e-8, -3.9780382765641775e-8, 7.956076686355118e-8)
             }
             dictionary Right = {
                 double3 position = (0, -5, 0)
@@ -2416,7 +2416,10 @@ def Xform "sub12" (
         apiSchemas = ["PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsMassAPI", "PhysicsArticulationRootAPI", "PhysxArticulationAPI", "PhysicsFilteredPairsAPI", "IsaacLinkAPI"]
     )
     {
-        string isaac:nameOverride
+        string isaac:nameOverride (
+            displayName = "Name Override"
+            doc = "Name override for prim lookup in base name search"
+        )
         float physics:density = 0
         bool physxArticulation:enabledSelfCollisions = 1
         quatd xformOp:orient = (1, 0, 0, 0)
@@ -2425,14 +2428,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_17>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_16>
         )
         {
@@ -2451,14 +2454,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_91>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_49>
         )
         {
@@ -2482,14 +2485,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_54>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_35>
         )
         {
@@ -2509,14 +2512,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_20>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_53>
         )
         {
@@ -2539,14 +2542,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_50>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_85>
         )
         {
@@ -2565,14 +2568,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_9>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_92>
         )
         {
@@ -2596,14 +2599,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_48>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_7>
         )
         {
@@ -2623,14 +2626,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_6>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_78>
         )
         {
@@ -2653,14 +2656,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_59>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_21>
         )
         {
@@ -2680,14 +2683,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_15>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_103>
         )
         {
@@ -2706,14 +2709,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_83>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_43>
         )
         {
@@ -2738,14 +2741,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_12>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_1>
         )
         {
@@ -2764,14 +2767,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_40>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_39>
         )
         {
@@ -2791,14 +2794,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_98>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_18>
         )
         {
@@ -2817,14 +2820,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_56>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_100>
         )
         {
@@ -2844,14 +2847,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_68>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_45>
         )
         {
@@ -2870,14 +2873,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_57>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_70>
         )
         {
@@ -2896,14 +2899,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_62>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_34>
         )
         {
@@ -2922,14 +2925,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_89>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_97>
         )
         {
@@ -2948,14 +2951,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_13>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_80>
         )
         {
@@ -2974,14 +2977,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_46>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_23>
         )
         {
@@ -3000,14 +3003,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_72>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_86>
         )
         {
@@ -3026,14 +3029,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_27>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_32>
         )
         {
@@ -3052,14 +3055,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_67>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_2>
         )
         {
@@ -3078,14 +3081,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_33>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_11>
         )
         {
@@ -3104,14 +3107,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_82>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_102>
         )
         {
@@ -3130,14 +3133,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_30>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_88>
         )
         {
@@ -3156,14 +3159,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_99>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_47>
         )
         {
@@ -3182,14 +3185,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_74>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_44>
         )
         {
@@ -3208,14 +3211,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_26>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_41>
         )
         {
@@ -3234,14 +3237,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_94>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_65>
         )
         {
@@ -3260,14 +3263,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_5>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_24>
         )
         {
@@ -3286,14 +3289,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_25>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_8>
         )
         {
@@ -3312,14 +3315,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_95>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_55>
         )
         {
@@ -3339,14 +3342,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_64>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_42>
         )
         {
@@ -3365,14 +3368,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_73>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_76>
         )
         {
@@ -3391,14 +3394,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_87>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_19>
         )
         {
@@ -3417,14 +3420,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_69>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_52>
         )
         {
@@ -3443,14 +3446,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_77>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_51>
         )
         {
@@ -3469,14 +3472,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_81>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_14>
         )
         {
@@ -3495,14 +3498,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_4>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_29>
         )
         {
@@ -3521,14 +3524,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_10>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_58>
         )
         {
@@ -3547,14 +3550,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_28>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_61>
         )
         {
@@ -3573,14 +3576,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_71>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_3>
         )
         {
@@ -3599,14 +3602,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_84>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_31>
         )
         {
@@ -3625,14 +3628,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_79>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_37>
         )
         {
@@ -3651,14 +3654,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_63>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_75>
         )
         {
@@ -3677,14 +3680,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_104>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_101>
         )
         {
@@ -3703,14 +3706,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_22>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_36>
         )
         {
@@ -3729,14 +3732,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_60>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_93>
         )
         {
@@ -3755,14 +3758,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_38>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_96>
         )
         {
@@ -3781,14 +3784,14 @@ def Xform "sub12" (
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "visuals" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_90>
         )
         {
         }
 
         def Xform "collisions" (
-            instanceable = true
+            instanceable = false
             add references = </Flattened_Prototype_66>
         )
         {
@@ -3813,7 +3816,10 @@ def Xform "sub12" (
             float drive:rotZ:physics:maxForce = 0
             float drive:rotZ:physics:stiffness = 800
             uniform token drive:rotZ:physics:type = "force"
-            string isaac:nameOverride
+            string isaac:nameOverride (
+                displayName = "Name Override"
+                doc = "Name override for prim lookup in base name search"
+            )
             float[] isaac:physics:AccelerationLimit
             int isaac:physics:index
             float[] isaac:physics:JerkLimit
@@ -3847,12 +3853,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 80
-            float physxLimit:rotX:stiffness = 800
-            float physxLimit:rotY:damping = 80
-            float physxLimit:rotY:stiffness = 800
-            float physxLimit:rotZ:damping = 80
-            float physxLimit:rotZ:stiffness = 800
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "L_Knee" (
@@ -3908,12 +3914,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 80
-            float physxLimit:rotX:stiffness = 800
-            float physxLimit:rotY:damping = 80
-            float physxLimit:rotY:stiffness = 800
-            float physxLimit:rotZ:damping = 80
-            float physxLimit:rotZ:stiffness = 800
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "L_Ankle" (
@@ -3932,7 +3938,10 @@ def Xform "sub12" (
             float drive:rotZ:physics:maxForce = 0
             float drive:rotZ:physics:stiffness = 800
             uniform token drive:rotZ:physics:type = "force"
-            string isaac:nameOverride
+            string isaac:nameOverride (
+                displayName = "Name Override"
+                doc = "Name override for prim lookup in base name search"
+            )
             float[] isaac:physics:AccelerationLimit
             int isaac:physics:index
             float[] isaac:physics:JerkLimit
@@ -3966,12 +3975,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 80
-            float physxLimit:rotX:stiffness = 800
-            float physxLimit:rotY:damping = 80
-            float physxLimit:rotY:stiffness = 800
-            float physxLimit:rotZ:damping = 80
-            float physxLimit:rotZ:stiffness = 800
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "L_Toe" (
@@ -3990,7 +3999,10 @@ def Xform "sub12" (
             float drive:rotZ:physics:maxForce = 0
             float drive:rotZ:physics:stiffness = 500
             uniform token drive:rotZ:physics:type = "force"
-            string isaac:nameOverride
+            string isaac:nameOverride (
+                displayName = "Name Override"
+                doc = "Name override for prim lookup in base name search"
+            )
             float[] isaac:physics:AccelerationLimit
             int isaac:physics:index
             float[] isaac:physics:JerkLimit
@@ -4024,12 +4036,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 50
-            float physxLimit:rotX:stiffness = 500
-            float physxLimit:rotY:damping = 50
-            float physxLimit:rotY:stiffness = 500
-            float physxLimit:rotZ:damping = 50
-            float physxLimit:rotZ:stiffness = 500
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "R_Hip" (
@@ -4048,7 +4060,10 @@ def Xform "sub12" (
             float drive:rotZ:physics:maxForce = 0
             float drive:rotZ:physics:stiffness = 800
             uniform token drive:rotZ:physics:type = "force"
-            string isaac:nameOverride
+            string isaac:nameOverride (
+                displayName = "Name Override"
+                doc = "Name override for prim lookup in base name search"
+            )
             float[] isaac:physics:AccelerationLimit
             int isaac:physics:index
             float[] isaac:physics:JerkLimit
@@ -4082,12 +4097,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 80
-            float physxLimit:rotX:stiffness = 800
-            float physxLimit:rotY:damping = 80
-            float physxLimit:rotY:stiffness = 800
-            float physxLimit:rotZ:damping = 80
-            float physxLimit:rotZ:stiffness = 800
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "R_Knee" (
@@ -4140,12 +4155,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 80
-            float physxLimit:rotX:stiffness = 800
-            float physxLimit:rotY:damping = 80
-            float physxLimit:rotY:stiffness = 800
-            float physxLimit:rotZ:damping = 80
-            float physxLimit:rotZ:stiffness = 800
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "R_Ankle" (
@@ -4198,12 +4213,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 80
-            float physxLimit:rotX:stiffness = 800
-            float physxLimit:rotY:damping = 80
-            float physxLimit:rotY:stiffness = 800
-            float physxLimit:rotZ:damping = 80
-            float physxLimit:rotZ:stiffness = 800
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "R_Toe" (
@@ -4222,7 +4237,10 @@ def Xform "sub12" (
             float drive:rotZ:physics:maxForce = 0
             float drive:rotZ:physics:stiffness = 500
             uniform token drive:rotZ:physics:type = "force"
-            string isaac:nameOverride
+            string isaac:nameOverride (
+                displayName = "Name Override"
+                doc = "Name override for prim lookup in base name search"
+            )
             float[] isaac:physics:AccelerationLimit
             int isaac:physics:index
             float[] isaac:physics:JerkLimit
@@ -4256,12 +4274,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 50
-            float physxLimit:rotX:stiffness = 500
-            float physxLimit:rotY:damping = 50
-            float physxLimit:rotY:stiffness = 500
-            float physxLimit:rotZ:damping = 50
-            float physxLimit:rotZ:stiffness = 500
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "Torso" (
@@ -4280,7 +4298,10 @@ def Xform "sub12" (
             float drive:rotZ:physics:maxForce = 0
             float drive:rotZ:physics:stiffness = 1000
             uniform token drive:rotZ:physics:type = "force"
-            string isaac:nameOverride
+            string isaac:nameOverride (
+                displayName = "Name Override"
+                doc = "Name override for prim lookup in base name search"
+            )
             float[] isaac:physics:AccelerationLimit
             int isaac:physics:index
             float[] isaac:physics:JerkLimit
@@ -4314,12 +4335,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 100
-            float physxLimit:rotX:stiffness = 1000
-            float physxLimit:rotY:damping = 100
-            float physxLimit:rotY:stiffness = 1000
-            float physxLimit:rotZ:damping = 100
-            float physxLimit:rotZ:stiffness = 1000
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "Spine" (
@@ -4372,12 +4393,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 100
-            float physxLimit:rotX:stiffness = 1000
-            float physxLimit:rotY:damping = 100
-            float physxLimit:rotY:stiffness = 1000
-            float physxLimit:rotZ:damping = 100
-            float physxLimit:rotZ:stiffness = 1000
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "Chest" (
@@ -4430,12 +4451,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 100
-            float physxLimit:rotX:stiffness = 1000
-            float physxLimit:rotY:damping = 100
-            float physxLimit:rotY:stiffness = 1000
-            float physxLimit:rotZ:damping = 100
-            float physxLimit:rotZ:stiffness = 1000
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "Neck" (
@@ -4454,7 +4475,10 @@ def Xform "sub12" (
             float drive:rotZ:physics:maxForce = 0
             float drive:rotZ:physics:stiffness = 500
             uniform token drive:rotZ:physics:type = "force"
-            string isaac:nameOverride
+            string isaac:nameOverride (
+                displayName = "Name Override"
+                doc = "Name override for prim lookup in base name search"
+            )
             float[] isaac:physics:AccelerationLimit
             int isaac:physics:index
             float[] isaac:physics:JerkLimit
@@ -4488,12 +4512,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 50
-            float physxLimit:rotX:stiffness = 500
-            float physxLimit:rotY:damping = 50
-            float physxLimit:rotY:stiffness = 500
-            float physxLimit:rotZ:damping = 50
-            float physxLimit:rotZ:stiffness = 500
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "Head" (
@@ -4546,12 +4570,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 50
-            float physxLimit:rotX:stiffness = 500
-            float physxLimit:rotY:damping = 50
-            float physxLimit:rotY:stiffness = 500
-            float physxLimit:rotZ:damping = 50
-            float physxLimit:rotZ:stiffness = 500
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "L_Thorax" (
@@ -4570,7 +4594,10 @@ def Xform "sub12" (
             float drive:rotZ:physics:maxForce = 0
             float drive:rotZ:physics:stiffness = 500
             uniform token drive:rotZ:physics:type = "force"
-            string isaac:nameOverride
+            string isaac:nameOverride (
+                displayName = "Name Override"
+                doc = "Name override for prim lookup in base name search"
+            )
             float[] isaac:physics:AccelerationLimit
             int isaac:physics:index
             float[] isaac:physics:JerkLimit
@@ -4604,12 +4631,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 50
-            float physxLimit:rotX:stiffness = 500
-            float physxLimit:rotY:damping = 50
-            float physxLimit:rotY:stiffness = 500
-            float physxLimit:rotZ:damping = 50
-            float physxLimit:rotZ:stiffness = 500
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "L_Shoulder" (
@@ -4662,12 +4689,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 50
-            float physxLimit:rotX:stiffness = 500
-            float physxLimit:rotY:damping = 50
-            float physxLimit:rotY:stiffness = 500
-            float physxLimit:rotZ:damping = 50
-            float physxLimit:rotZ:stiffness = 500
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "L_Elbow" (
@@ -4720,12 +4747,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 50
-            float physxLimit:rotX:stiffness = 500
-            float physxLimit:rotY:damping = 50
-            float physxLimit:rotY:stiffness = 500
-            float physxLimit:rotZ:damping = 50
-            float physxLimit:rotZ:stiffness = 500
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "L_Wrist" (
@@ -4744,7 +4771,10 @@ def Xform "sub12" (
             float drive:rotZ:physics:maxForce = 0
             float drive:rotZ:physics:stiffness = 300
             uniform token drive:rotZ:physics:type = "force"
-            string isaac:nameOverride
+            string isaac:nameOverride (
+                displayName = "Name Override"
+                doc = "Name override for prim lookup in base name search"
+            )
             float[] isaac:physics:AccelerationLimit
             int isaac:physics:index
             float[] isaac:physics:JerkLimit
@@ -4778,12 +4808,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 30
-            float physxLimit:rotX:stiffness = 300
-            float physxLimit:rotY:damping = 30
-            float physxLimit:rotY:stiffness = 300
-            float physxLimit:rotZ:damping = 30
-            float physxLimit:rotZ:stiffness = 300
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "L_Index1" (
@@ -4802,7 +4832,10 @@ def Xform "sub12" (
             float drive:rotZ:physics:maxForce = 0
             float drive:rotZ:physics:stiffness = 100
             uniform token drive:rotZ:physics:type = "force"
-            string isaac:nameOverride
+            string isaac:nameOverride (
+                displayName = "Name Override"
+                doc = "Name override for prim lookup in base name search"
+            )
             float[] isaac:physics:AccelerationLimit
             int isaac:physics:index
             float[] isaac:physics:JerkLimit
@@ -4836,12 +4869,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 10
-            float physxLimit:rotX:stiffness = 100
-            float physxLimit:rotY:damping = 10
-            float physxLimit:rotY:stiffness = 100
-            float physxLimit:rotZ:damping = 10
-            float physxLimit:rotZ:stiffness = 100
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "L_Index2" (
@@ -4894,12 +4927,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 10
-            float physxLimit:rotX:stiffness = 100
-            float physxLimit:rotY:damping = 10
-            float physxLimit:rotY:stiffness = 100
-            float physxLimit:rotZ:damping = 10
-            float physxLimit:rotZ:stiffness = 100
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "L_Index3" (
@@ -4952,12 +4985,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 10
-            float physxLimit:rotX:stiffness = 100
-            float physxLimit:rotY:damping = 10
-            float physxLimit:rotY:stiffness = 100
-            float physxLimit:rotZ:damping = 10
-            float physxLimit:rotZ:stiffness = 100
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "L_Middle1" (
@@ -5010,12 +5043,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 10
-            float physxLimit:rotX:stiffness = 100
-            float physxLimit:rotY:damping = 10
-            float physxLimit:rotY:stiffness = 100
-            float physxLimit:rotZ:damping = 10
-            float physxLimit:rotZ:stiffness = 100
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "L_Middle2" (
@@ -5068,12 +5101,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 10
-            float physxLimit:rotX:stiffness = 100
-            float physxLimit:rotY:damping = 10
-            float physxLimit:rotY:stiffness = 100
-            float physxLimit:rotZ:damping = 10
-            float physxLimit:rotZ:stiffness = 100
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "L_Middle3" (
@@ -5126,12 +5159,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 10
-            float physxLimit:rotX:stiffness = 100
-            float physxLimit:rotY:damping = 10
-            float physxLimit:rotY:stiffness = 100
-            float physxLimit:rotZ:damping = 10
-            float physxLimit:rotZ:stiffness = 100
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "L_Pinky1" (
@@ -5184,12 +5217,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 10
-            float physxLimit:rotX:stiffness = 100
-            float physxLimit:rotY:damping = 10
-            float physxLimit:rotY:stiffness = 100
-            float physxLimit:rotZ:damping = 10
-            float physxLimit:rotZ:stiffness = 100
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "L_Pinky2" (
@@ -5242,12 +5275,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 10
-            float physxLimit:rotX:stiffness = 100
-            float physxLimit:rotY:damping = 10
-            float physxLimit:rotY:stiffness = 100
-            float physxLimit:rotZ:damping = 10
-            float physxLimit:rotZ:stiffness = 100
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "L_Pinky3" (
@@ -5300,12 +5333,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 10
-            float physxLimit:rotX:stiffness = 100
-            float physxLimit:rotY:damping = 10
-            float physxLimit:rotY:stiffness = 100
-            float physxLimit:rotZ:damping = 10
-            float physxLimit:rotZ:stiffness = 100
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "L_Ring1" (
@@ -5358,12 +5391,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 10
-            float physxLimit:rotX:stiffness = 100
-            float physxLimit:rotY:damping = 10
-            float physxLimit:rotY:stiffness = 100
-            float physxLimit:rotZ:damping = 10
-            float physxLimit:rotZ:stiffness = 100
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "L_Ring2" (
@@ -5416,12 +5449,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 10
-            float physxLimit:rotX:stiffness = 100
-            float physxLimit:rotY:damping = 10
-            float physxLimit:rotY:stiffness = 100
-            float physxLimit:rotZ:damping = 10
-            float physxLimit:rotZ:stiffness = 100
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "L_Ring3" (
@@ -5474,12 +5507,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 10
-            float physxLimit:rotX:stiffness = 100
-            float physxLimit:rotY:damping = 10
-            float physxLimit:rotY:stiffness = 100
-            float physxLimit:rotZ:damping = 10
-            float physxLimit:rotZ:stiffness = 100
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "L_Thumb1" (
@@ -5532,12 +5565,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 10
-            float physxLimit:rotX:stiffness = 100
-            float physxLimit:rotY:damping = 10
-            float physxLimit:rotY:stiffness = 100
-            float physxLimit:rotZ:damping = 10
-            float physxLimit:rotZ:stiffness = 100
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "L_Thumb2" (
@@ -5590,12 +5623,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 10
-            float physxLimit:rotX:stiffness = 100
-            float physxLimit:rotY:damping = 10
-            float physxLimit:rotY:stiffness = 100
-            float physxLimit:rotZ:damping = 10
-            float physxLimit:rotZ:stiffness = 100
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "L_Thumb3" (
@@ -5648,12 +5681,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 10
-            float physxLimit:rotX:stiffness = 100
-            float physxLimit:rotY:damping = 10
-            float physxLimit:rotY:stiffness = 100
-            float physxLimit:rotZ:damping = 10
-            float physxLimit:rotZ:stiffness = 100
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "R_Thorax" (
@@ -5672,7 +5705,10 @@ def Xform "sub12" (
             float drive:rotZ:physics:maxForce = 0
             float drive:rotZ:physics:stiffness = 500
             uniform token drive:rotZ:physics:type = "force"
-            string isaac:nameOverride
+            string isaac:nameOverride (
+                displayName = "Name Override"
+                doc = "Name override for prim lookup in base name search"
+            )
             float[] isaac:physics:AccelerationLimit
             int isaac:physics:index
             float[] isaac:physics:JerkLimit
@@ -5706,12 +5742,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 50
-            float physxLimit:rotX:stiffness = 500
-            float physxLimit:rotY:damping = 50
-            float physxLimit:rotY:stiffness = 500
-            float physxLimit:rotZ:damping = 50
-            float physxLimit:rotZ:stiffness = 500
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "R_Shoulder" (
@@ -5764,12 +5800,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 50
-            float physxLimit:rotX:stiffness = 500
-            float physxLimit:rotY:damping = 50
-            float physxLimit:rotY:stiffness = 500
-            float physxLimit:rotZ:damping = 50
-            float physxLimit:rotZ:stiffness = 500
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "R_Elbow" (
@@ -5822,12 +5858,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 50
-            float physxLimit:rotX:stiffness = 500
-            float physxLimit:rotY:damping = 50
-            float physxLimit:rotY:stiffness = 500
-            float physxLimit:rotZ:damping = 50
-            float physxLimit:rotZ:stiffness = 500
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "R_Wrist" (
@@ -5846,7 +5882,10 @@ def Xform "sub12" (
             float drive:rotZ:physics:maxForce = 0
             float drive:rotZ:physics:stiffness = 300
             uniform token drive:rotZ:physics:type = "force"
-            string isaac:nameOverride
+            string isaac:nameOverride (
+                displayName = "Name Override"
+                doc = "Name override for prim lookup in base name search"
+            )
             float[] isaac:physics:AccelerationLimit
             int isaac:physics:index
             float[] isaac:physics:JerkLimit
@@ -5880,12 +5919,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 30
-            float physxLimit:rotX:stiffness = 300
-            float physxLimit:rotY:damping = 30
-            float physxLimit:rotY:stiffness = 300
-            float physxLimit:rotZ:damping = 30
-            float physxLimit:rotZ:stiffness = 300
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "R_Index1" (
@@ -5904,7 +5943,10 @@ def Xform "sub12" (
             float drive:rotZ:physics:maxForce = 0
             float drive:rotZ:physics:stiffness = 100
             uniform token drive:rotZ:physics:type = "force"
-            string isaac:nameOverride
+            string isaac:nameOverride (
+                displayName = "Name Override"
+                doc = "Name override for prim lookup in base name search"
+            )
             float[] isaac:physics:AccelerationLimit
             int isaac:physics:index
             float[] isaac:physics:JerkLimit
@@ -5938,12 +5980,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 10
-            float physxLimit:rotX:stiffness = 100
-            float physxLimit:rotY:damping = 10
-            float physxLimit:rotY:stiffness = 100
-            float physxLimit:rotZ:damping = 10
-            float physxLimit:rotZ:stiffness = 100
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "R_Index2" (
@@ -5996,12 +6038,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 10
-            float physxLimit:rotX:stiffness = 100
-            float physxLimit:rotY:damping = 10
-            float physxLimit:rotY:stiffness = 100
-            float physxLimit:rotZ:damping = 10
-            float physxLimit:rotZ:stiffness = 100
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "R_Index3" (
@@ -6054,12 +6096,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 10
-            float physxLimit:rotX:stiffness = 100
-            float physxLimit:rotY:damping = 10
-            float physxLimit:rotY:stiffness = 100
-            float physxLimit:rotZ:damping = 10
-            float physxLimit:rotZ:stiffness = 100
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "R_Middle1" (
@@ -6112,12 +6154,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 10
-            float physxLimit:rotX:stiffness = 100
-            float physxLimit:rotY:damping = 10
-            float physxLimit:rotY:stiffness = 100
-            float physxLimit:rotZ:damping = 10
-            float physxLimit:rotZ:stiffness = 100
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "R_Middle2" (
@@ -6170,12 +6212,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 10
-            float physxLimit:rotX:stiffness = 100
-            float physxLimit:rotY:damping = 10
-            float physxLimit:rotY:stiffness = 100
-            float physxLimit:rotZ:damping = 10
-            float physxLimit:rotZ:stiffness = 100
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "R_Middle3" (
@@ -6228,12 +6270,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 10
-            float physxLimit:rotX:stiffness = 100
-            float physxLimit:rotY:damping = 10
-            float physxLimit:rotY:stiffness = 100
-            float physxLimit:rotZ:damping = 10
-            float physxLimit:rotZ:stiffness = 100
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "R_Pinky1" (
@@ -6286,12 +6328,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 10
-            float physxLimit:rotX:stiffness = 100
-            float physxLimit:rotY:damping = 10
-            float physxLimit:rotY:stiffness = 100
-            float physxLimit:rotZ:damping = 10
-            float physxLimit:rotZ:stiffness = 100
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "R_Pinky2" (
@@ -6344,12 +6386,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 10
-            float physxLimit:rotX:stiffness = 100
-            float physxLimit:rotY:damping = 10
-            float physxLimit:rotY:stiffness = 100
-            float physxLimit:rotZ:damping = 10
-            float physxLimit:rotZ:stiffness = 100
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "R_Pinky3" (
@@ -6402,12 +6444,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 10
-            float physxLimit:rotX:stiffness = 100
-            float physxLimit:rotY:damping = 10
-            float physxLimit:rotY:stiffness = 100
-            float physxLimit:rotZ:damping = 10
-            float physxLimit:rotZ:stiffness = 100
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "R_Ring1" (
@@ -6460,12 +6502,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 10
-            float physxLimit:rotX:stiffness = 100
-            float physxLimit:rotY:damping = 10
-            float physxLimit:rotY:stiffness = 100
-            float physxLimit:rotZ:damping = 10
-            float physxLimit:rotZ:stiffness = 100
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "R_Ring2" (
@@ -6518,12 +6560,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 10
-            float physxLimit:rotX:stiffness = 100
-            float physxLimit:rotY:damping = 10
-            float physxLimit:rotY:stiffness = 100
-            float physxLimit:rotZ:damping = 10
-            float physxLimit:rotZ:stiffness = 100
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "R_Ring3" (
@@ -6576,12 +6618,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 10
-            float physxLimit:rotX:stiffness = 100
-            float physxLimit:rotY:damping = 10
-            float physxLimit:rotY:stiffness = 100
-            float physxLimit:rotZ:damping = 10
-            float physxLimit:rotZ:stiffness = 100
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "R_Thumb1" (
@@ -6634,12 +6676,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 10
-            float physxLimit:rotX:stiffness = 100
-            float physxLimit:rotY:damping = 10
-            float physxLimit:rotY:stiffness = 100
-            float physxLimit:rotZ:damping = 10
-            float physxLimit:rotZ:stiffness = 100
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "R_Thumb2" (
@@ -6658,7 +6700,10 @@ def Xform "sub12" (
             float drive:rotZ:physics:maxForce = 0
             float drive:rotZ:physics:stiffness = 100
             uniform token drive:rotZ:physics:type = "force"
-            string isaac:nameOverride
+            string isaac:nameOverride (
+                displayName = "Name Override"
+                doc = "Name override for prim lookup in base name search"
+            )
             float[] isaac:physics:AccelerationLimit
             int isaac:physics:index
             float[] isaac:physics:JerkLimit
@@ -6692,12 +6737,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 10
-            float physxLimit:rotX:stiffness = 100
-            float physxLimit:rotY:damping = 10
-            float physxLimit:rotY:stiffness = 100
-            float physxLimit:rotZ:damping = 10
-            float physxLimit:rotZ:stiffness = 100
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
 
         def PhysicsJoint "R_Thumb3" (
@@ -6716,7 +6761,10 @@ def Xform "sub12" (
             float drive:rotZ:physics:maxForce = 0
             float drive:rotZ:physics:stiffness = 100
             uniform token drive:rotZ:physics:type = "force"
-            string isaac:nameOverride
+            string isaac:nameOverride (
+                displayName = "Name Override"
+                doc = "Name override for prim lookup in base name search"
+            )
             float[] isaac:physics:AccelerationLimit
             int isaac:physics:index
             float[] isaac:physics:JerkLimit
@@ -6750,12 +6798,12 @@ def Xform "sub12" (
             quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
             float physxJoint:armature = 0.02
-            float physxLimit:rotX:damping = 10
-            float physxLimit:rotX:stiffness = 100
-            float physxLimit:rotY:damping = 10
-            float physxLimit:rotY:stiffness = 100
-            float physxLimit:rotZ:damping = 10
-            float physxLimit:rotZ:stiffness = 100
+            float physxLimit:rotX:damping = 0
+            float physxLimit:rotX:stiffness = 0
+            float physxLimit:rotY:damping = 0
+            float physxLimit:rotY:stiffness = 0
+            float physxLimit:rotZ:damping = 0
+            float physxLimit:rotZ:stiffness = 0
         }
     }
 

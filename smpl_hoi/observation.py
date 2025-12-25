@@ -79,18 +79,24 @@ class contact(Observation[SMPLHOITask]):
         super().__init__(env)
         self.robot = self.command_manager.robot
         self.threshold = threshold
-        self.contact_sensor = self.env.scene["contact_forces"]
+        self.contact_sensor = self.env.scene.sensors["contact_forces"]
+
+        robot_body_names = self.robot.body_names
+        sensor_body_names = self.contact_sensor.body_names
+        to_sensor_indices = [robot_body_names.index(name) for name in sensor_body_names]
+        self.to_sensor_indices = torch.tensor(to_sensor_indices, device=self.env.device, dtype=torch.long)
 
     def compute(self) -> torch.Tensor:
         t = self.env.episode_length_buf
         max_t = self.command_manager.motion.num_frames - 1
         t = torch.clamp(t, max=max_t)
 
-        contact_forces = self.contact_sensor.data.net_forces_w
-        contact_norm = torch.norm(contact_forces, dim=-1)
-        contact_flag = (contact_norm > self.threshold).float()
+        # contact_forces = self.contact_sensor.data.net_forces_w
+        # contact_norm = torch.norm(contact_forces, dim=-1)
+        # contact_flag = (contact_norm > self.threshold).float()
+        contact_flag = (self.contact_sensor.data.current_contact_time > 0.01).float()
 
-        ref_contact_flag = self.command_manager.motion.contacts[t]
+        ref_contact_flag = self.command_manager.motion.contacts[t][:, self.to_sensor_indices]
         diff_contact = ref_contact_flag * (( ref_contact_flag + 1 ) / 2 - contact_flag)
         return torch.cat([contact_flag, diff_contact], dim=-1).reshape(self.num_envs, -1)
 

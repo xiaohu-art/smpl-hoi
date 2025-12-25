@@ -83,8 +83,10 @@ class cg_reset(Termination[SMPLHOITask]):
     def compute(self, termination: torch.Tensor) -> torch.Tensor:
         t = self.env.episode_length_buf - 1
         ref_human_contact = self.command_manager.motion.contacts[t][:, self.to_sensor_indices]
-        contact_forces = self.contact_sensor.data.net_forces_w
-        human_contact = (contact_forces.norm(dim=-1) > 0.1).float()
+        # contact_forces = self.contact_sensor.data.net_forces_w
+        # human_contact = (contact_forces.norm(dim=-1) > 0.1).float()
+        human_contact = (self.contact_sensor.data.current_contact_time > 0.01).float()
+
 
         ref_left_contact_hand = ref_human_contact[:, self.left_hand_ids]
         ref_left_contact_hand_any = (ref_left_contact_hand>0.0).any(dim=-1, keepdim=True).float()

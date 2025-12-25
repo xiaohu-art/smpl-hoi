@@ -23,7 +23,8 @@ from smpl_hoi.utils import obj_forward, compute_sdf
 class MotionLoader:
     def __init__(self, motion_file: str, object_name: str, device: str = "cpu"):
         assert os.path.isfile(motion_file), f"Invalid file path: {motion_file}"
-        data = joblib.load(motion_file)["largebox"]["sub12_largebox_000"]
+        seq_name = motion_file.stem
+        data = joblib.load(motion_file)[object_name][seq_name]
 
         mesh_obj = trimesh.load(os.path.join(OBJECT_PATH, object_name, f"{object_name}.obj"), force='mesh')
         object_points, _ = trimesh.sample.sample_surface_even(mesh_obj, count=1024, seed=2024)
@@ -88,13 +89,13 @@ class SMPLHOITask(Command):
         motion_file = DATA_ROOT / motion_file
 
         self.robot = env.scene["robot"]
-        object_name = self.env.cfg.objects[0].name
-        self.object = env.scene[object_name]
+        self.object_name = self.env.cfg.objects[0].name
+        self.object = env.scene[self.object_name]
         self.env_origin = self.env.scene.env_origins
 
         self.key_body_ids, self.key_body_names = self.robot.find_bodies(key_body)
 
-        self.motion = MotionLoader(motion_file, object_name, device=self.device)
+        self.motion = MotionLoader(motion_file, self.object_name, device=self.device)
 
         assert self.motion.num_joints == self.robot.num_joints
         assert self.motion.num_bodies == self.robot.num_bodies
@@ -121,7 +122,7 @@ class SMPLHOITask(Command):
         init_object_state[:, 7:10] = self.motion.object_lin_vel_w[0]
         init_object_state[:, 10:] = self.motion.object_ang_vel_w[0]
 
-        return {"robot": init_root_state, "largebox": init_object_state}
+        return {"robot": init_root_state, self.object_name: init_object_state}
 
     # def update(self):
     #     t = self.env.episode_length_buf
